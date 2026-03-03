@@ -1,0 +1,42 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Env
+.env
+*.env
+
+# Dataset / large binary files -- obtain separately
+dataset/*.mp4
+dataset/*.avi
+dataset/*.mov
+
+# Node / frontend
+web/node_modules/
+web/dist/
+web/.vite/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/settings.json
+.idea/
+
+# Temp helper scripts used during development
+_fix_progress.py
+_write_mapper.py
+german_sentences.md

@@ -1,0 +1,1589 @@
+{
+  "source_eaf": "D:\\College\\Semester 6\\Lab\\NLIP\\Project\\signlanguage-german-text2sign\\dataset\\1413451-11105600-11163240.eaf",
+  "german_tier": "Deutsche_Übersetzung_A",
+  "gloss_tier": "Lexem_Gebärde_r_A",
+  "num_segments": 105,
+  "segments": [
+    {
+      "id": "seg_0001",
+      "german_text": "Wie mein Leben aussieht?",
+      "start_ms": 240,
+      "end_ms": 2160,
+      "gloss_sequence": [
+        "SEHEN1*",
+        "SELBST1A*",
+        "LEBEN1A*",
+        "SEHEN1",
+        "$GEST-OFF^"
+      ]
+    },
+    {
+      "id": "seg_0002",
+      "german_text": "Na ja, ich bin als Gehörloser aufgewachsen.",
+      "start_ms": 2160,
+      "end_ms": 4120,
+      "gloss_sequence": [
+        "AUFWACHSEN1A*",
+        "ICH1",
+        "TAUB-GEHÖRLOS1A*"
+      ]
+    },
+    {
+      "id": "seg_0003",
+      "german_text": "Ich habe eher das Gefühl, wenn ich mir vorstelle, dass ich allein bin, dann wäre ich einsam.",
+      "start_ms": 4120,
+      "end_ms": 7860,
+      "gloss_sequence": [
+        "MEHR1*",
+        "MEIN1*",
+        "GEFÜHL3",
+        "VORSTELLUNG1A*",
+        "ICH1*",
+        "ALLEIN1C*",
+        "ICH1",
+        "BEREICH1A*",
+        "GEFÜHL3*",
+        "VORSTELLUNG1A"
+      ]
+    },
+    {
+      "id": "seg_0004",
+      "german_text": "Da treffe ich lieber viele Gehörlose und mache mit denen was, dann ist mein Leben schön.",
+      "start_ms": 7860,
+      "end_ms": 11180,
+      "gloss_sequence": [
+        "ICH1",
+        "MEHR1*",
+        "TAUB-GEHÖRLOS1A*",
+        "TREFFEN1*",
+        "ZUSAMMEN1A*",
+        "ICH1*",
+        "GUT1*",
+        "LEBEN4",
+        "GUT3*",
+        "ZUSAMMEN1A*",
+        "$GEST-OFF^"
+      ]
+    },
+    {
+      "id": "seg_0005",
+      "german_text": "Aber das ist ja klar.",
+      "start_ms": 11180,
+      "end_ms": 12340,
+      "gloss_sequence": [
+        "KLAR1A*",
+        "$GEST^"
+      ]
+    },
+    {
+      "id": "seg_0006",
+      "german_text": "Dann ist Alleinsein nicht schlimm.",
+      "start_ms": 12340,
+      "end_ms": 13500,
+      "gloss_sequence": [
+        "ALLEIN1C",
+        "SCHLIMM3C*",
+        "$GEST^"
+      ]
+    },
+    {
+      "id": "seg_0007",
+      "german_text": "Als ich damals in den Kindergarten kam, wusste ich noch nichts.",
+      "start_ms": 14420,
+      "end_ms": 18700,
+      "gloss_sequence": [
+        "ICH1",
+        "UNGEFÄHR1^",
+        "FRÜHER1",
+        "ANFANG1A*",
+        "KINDERGARTEN1A",
+        "BEREICH1A*",
+        "ICH1",
+        "$GEST-OFF^*"
+      ]
+    },
+    {
+      "id": "seg_0008",
+      "german_text": "Ich spielte mit hörenden Kindern und kann mich nicht an Unterschiede zwischen Hörenden und Gehörlosen erinnern.",
+      "start_ms": 18700,
+      "end_ms": 22460,
+      "gloss_sequence": [
+        "ICH1",
+        "HÖREND1A*",
+        "EINTRETEN1A*",
+        "SPIELEN2*",
+        "$PROD*",
+        "INTERESSE1A",
+        "UNTERSCHIED1C^*",
+        "DENKEN1B",
+        "DAMALS1*",
+        "NICHTS1B",
+        "ERINNERUNG2*",
+        "NICHTS1B*"
+      ]
+    },
+    {
+      "id": "seg_0009",
+      "german_text": "So ging es weiter, bis ich in den Kindergarten in Halberstadt kam.",
+      "start_ms": 22460,
+      "end_ms": 25500,
+      "gloss_sequence": [
+        "SPÄTER7*",
+        "GENAU4^",
+        "ICH1",
+        "$INDEX1*",
+        "HALB1B",
+        "STADT2",
+        "KINDERGARTEN1A*",
+        "EINTRETEN1A*"
+      ]
+    },
+    {
+      "id": "seg_0010",
+      "german_text": "Das war interessant, ich war fasziniert von den Gebärden und wir spielten zusammen, das war klasse.",
+      "start_ms": 25500,
+      "end_ms": 28580,
+      "gloss_sequence": [
+        "BEREICH1A*",
+        "INTERESSE1A",
+        "MERKWÜRDIG1^*",
+        "GEBÄRDEN1A*",
+        "FASZINIEREND2*",
+        "GEBÄRDEN1A*",
+        "SPIELEN2*",
+        "BEREICH1A*",
+        "INTERESSE1A*",
+        "$GEST-OFF^"
+      ]
+    },
+    {
+      "id": "seg_0011",
+      "german_text": "Ja, wir haben gespielt.",
+      "start_ms": 28580,
+      "end_ms": 30160,
+      "gloss_sequence": [
+        "SPIELEN2*",
+        "BEREICH1A*",
+        "$GEST^"
+      ]
+    },
+    {
+      "id": "seg_0012",
+      "german_text": "Ich habe schöne Erinnerungen an früher.",
+      "start_ms": 30160,
+      "end_ms": 31140,
+      "gloss_sequence": [
+        "FRÜHER1*",
+        "SCHÖN1A",
+        "ERINNERUNG2*"
+      ]
+    },
+    {
+      "id": "seg_0013",
+      "german_text": "Wir haben gespielt und Quatsch gemacht, verschiedenes ausgeheckt, bis/",
+      "start_ms": 31140,
+      "end_ms": 35380,
+      "gloss_sequence": [
+        "SPIELEN2*",
+        "SITZEN1A^*",
+        "BEREICH1A*",
+        "QUATSCH1*",
+        "SITZEN1A^*",
+        "VERSCHIEDEN1*",
+        "UND2A",
+        "MERKWÜRDIG1^*",
+        "BIS1*"
+      ]
+    },
+    {
+      "id": "seg_0014",
+      "german_text": "Ja, die Zeit verging da so schnell, schon war ich eingeschult.",
+      "start_ms": 35380,
+      "end_ms": 38000,
+      "gloss_sequence": [
+        "ICH1",
+        "SCHNELL3A",
+        "STUNDENLANG1",
+        "FERTIG1A",
+        "ICH1",
+        "ANFANG1A",
+        "SCHULE1A*",
+        "EINSCHULEN1",
+        "MERKWÜRDIG1^*"
+      ]
+    },
+    {
+      "id": "seg_0015",
+      "german_text": "Ich musste dort zum Mathe- und Deutschunterricht und so weiter.",
+      "start_ms": 38000,
+      "end_ms": 40180,
+      "gloss_sequence": [
+        "ICH1",
+        "UNTERRICHTEN1*",
+        "MUSS1*",
+        "RECHNEN1*",
+        "DEUTSCH1",
+        "UND-SO-WEITER4*"
+      ]
+    },
+    {
+      "id": "seg_0016",
+      "german_text": "Ich war im Unterricht ganz gut, aber weil ich meistens mit den anderen zusammen spielte, verpasste ich einiges.",
+      "start_ms": 40180,
+      "end_ms": 44100,
+      "gloss_sequence": [
+        "ICH1",
+        "UNTERRICHTEN1*",
+        "GUT3*",
+        "ICH1*",
+        "UNTERRICHTEN1*",
+        "ETWAS-NICHT-MITBEKOMMEN1^*",
+        "ICH1",
+        "MEISTENS1B*",
+        "SPIELEN2*",
+        "ZUSAMMEN1A",
+        "ETWAS-NICHT-MITBEKOMMEN1^*",
+        "UNTERSCHIED3^*"
+      ]
+    },
+    {
+      "id": "seg_0017",
+      "german_text": "So ging es ungefähr 10 Jahre lang, das war schön.",
+      "start_ms": 44100,
+      "end_ms": 47080,
+      "gloss_sequence": [
+        "SPÄTER7*",
+        "BIS1",
+        "JETZT1",
+        "$GEST-SKEPTISCH1^",
+        "SCHON1A",
+        "JAHR1B*",
+        "SCHÖN1A",
+        "LIEGEN-BEIN1A^"
+      ]
+    },
+    {
+      "id": "seg_0018",
+      "german_text": "Den meisten Kontakt hatte ich mit einem, der durch und durch gehörlos ist, weil er der Sohn von gehörlosen Eltern ist.",
+      "start_ms": 48540,
+      "end_ms": 54680,
+      "gloss_sequence": [
+        "KONTAKT2B",
+        "ICH1",
+        "MEISTENS1A*",
+        "ICH1",
+        "PERSON1",
+        "TAUB-GEHÖRLOS1A*",
+        "ECHT1",
+        "ELTERN1A",
+        "PERSON1*",
+        "$INDEX1*",
+        "SOHN1",
+        "TAUB-GEHÖRLOS1A*",
+        "PERSON1*",
+        "$GEST^",
+        "LASSEN1^*"
+      ]
+    },
+    {
+      "id": "seg_0019",
+      "german_text": "Wir sind zusammen aufgewachsen, bis zu seiner Entlassung als Geselle waren wir immer zusammen, aber jetzt gehen wir jeweils unseren eigenen Lebensweg.",
+      "start_ms": 54680,
+      "end_ms": 60140,
+      "gloss_sequence": [
+        "ICH1",
+        "MEHR1*",
+        "ZUSAMMEN1A*",
+        "AUFWACHSEN1A*",
+        "ABLAUF1^*",
+        "BIS1*",
+        "$INDEX1*",
+        "GESELLE2*",
+        "WEG-ENTFERNEN1C",
+        "ANDERS2",
+        "AB1C*",
+        "ICH1",
+        "ANDERS2",
+        "LEBEN1C",
+        "WEG2A*",
+        "$GEST^"
+      ]
+    },
+    {
+      "id": "seg_0020",
+      "german_text": "Na ja, gehörlos zu sein hat so seine Nachteile.",
+      "start_ms": 66140,
+      "end_ms": 70100,
+      "gloss_sequence": [
+        "$GEST-ÜBERLEGEN1^",
+        "$GEST-ÜBERLEGEN1^",
+        "$GEST-ÜBERLEGEN1^",
+        "TAUB-GEHÖRLOS1A",
+        "FÜR1",
+        "NACHTEIL3",
+        "GEBÄRDEN1A*"
+      ]
+    },
+    {
+      "id": "seg_0021",
+      "german_text": "Ich kann die Welt nicht so erleben wie ein Hörender und mit anderen Hörenden kommunizieren. Da stoße ich immer auf Barrieren.",
+      "start_ms": 70100,
+      "end_ms": 76160,
+      "gloss_sequence": [
+        "ICH1",
+        "$GEST^",
+        "KANN2A",
+        "NICHT3A*",
+        "WELT1",
+        "LEBEN4*",
+        "BEISPIEL1*",
+        "LEUTE2*",
+        "HÖREND1A*",
+        "ICH1",
+        "KOMMUNIKATION1A*",
+        "KANN1*",
+        "BARRIERE1*",
+        "$GEST-OFF^"
+      ]
+    },
+    {
+      "id": "seg_0022",
+      "german_text": "Und wenn ich mir zum Beispiel einen Film oder Infos anschauen will, sind die meist ohne Untertitel.",
+      "start_ms": 76160,
+      "end_ms": 79600,
+      "gloss_sequence": [
+        "UND2A",
+        "$GEST-ÜBERLEGEN1^*",
+        "KANN1*",
+        "BEISPIEL1*",
+        "NORMAL1*",
+        "FILM1",
+        "INFORMATION1*",
+        "$INDEX1*",
+        "UNTERTITEL1*",
+        "KEIN1*",
+        "$INDEX1"
+      ]
+    },
+    {
+      "id": "seg_0023",
+      "german_text": "Das Gesprochene ist mühsam.",
+      "start_ms": 79600,
+      "end_ms": 81300,
+      "gloss_sequence": [
+        "SPRECHEN5A",
+        "$INDEX1",
+        "MÜHE1"
+      ]
+    },
+    {
+      "id": "seg_0024",
+      "german_text": "Oder ein anderes Beispiel: in der Disco gibt es viele hübsche Frauen, die ich gerne kennengelernt hätte.",
+      "start_ms": 81300,
+      "end_ms": 84840,
+      "gloss_sequence": [
+        "ODER4B*",
+        "ANDERS2*",
+        "ICH1",
+        "DISCO2",
+        "ICH1",
+        "WOLLEN1B",
+        "HÖREND1A*",
+        "ICH1",
+        "KENNENLERNEN1*",
+        "MÄDCHEN2C*",
+        "HÜBSCH1A"
+      ]
+    },
+    {
+      "id": "seg_0025",
+      "german_text": "Ich bedauere, dass ich sie mir nicht angeln kann, weil die Kommunikation ein Problem ist.",
+      "start_ms": 84840,
+      "end_ms": 86900,
+      "gloss_sequence": [
+        "BEDAUERN1*",
+        "ICH1",
+        "ANGELN-PERSON1*",
+        "$INDEX1",
+        "KOMMUNIKATION1A*",
+        "PROBLEM1",
+        "KOMMUNIKATIONSDEFIZIT1"
+      ]
+    },
+    {
+      "id": "seg_0026",
+      "german_text": "Das ist mühsam.",
+      "start_ms": 86900,
+      "end_ms": 87460,
+      "gloss_sequence": [
+        "MÜHE1"
+      ]
+    },
+    {
+      "id": "seg_0027",
+      "german_text": "Oder/",
+      "start_ms": 87460,
+      "end_ms": 88280,
+      "gloss_sequence": [
+        "ODER2*"
+      ]
+    },
+    {
+      "id": "seg_0028",
+      "german_text": "Ach, es gibt viele weitere Nachteile.",
+      "start_ms": 88280,
+      "end_ms": 91500,
+      "gloss_sequence": [
+        "$GEST^",
+        "VIEL1A*",
+        "TEXT3^",
+        "$GEST^"
+      ]
+    },
+    {
+      "id": "seg_0029",
+      "german_text": "Oh, und ein Nachteil ist auch, dass ein Hörender es typischerweise mit dem Lernen viel leichter hat.",
+      "start_ms": 92140,
+      "end_ms": 97020,
+      "gloss_sequence": [
+        "UND2A*",
+        "UNGEFÄHR1^",
+        "NACHTEIL3",
+        "AUCH1A*",
+        "$INDEX1*",
+        "HÖREND1A",
+        "STARK2A*",
+        "TYPISCH1*",
+        "$INDEX1*",
+        "MEISTENS1B",
+        "WAHRNEHMEN-AUGE1A^",
+        "KANN2A",
+        "LEICHT1*"
+      ]
+    },
+    {
+      "id": "seg_0030",
+      "german_text": "Er braucht nur zuzuhören und muss nicht noch viel lernen/",
+      "start_ms": 97020,
+      "end_ms": 98040,
+      "gloss_sequence": [
+        "LERNEN1*",
+        "SELBST1A*",
+        "BRAUCHEN1*",
+        "LERNEN1*"
+      ]
+    },
+    {
+      "id": "seg_0031",
+      "german_text": "Ich, als Gehörloser, muss viel lesen und verstehe viele Wörter nicht.",
+      "start_ms": 98040,
+      "end_ms": 100680,
+      "gloss_sequence": [
+        "ICH1",
+        "TAUB-GEHÖRLOS1A*",
+        "MUSS1*",
+        "ICH1",
+        "LESEN1C*",
+        "SEHR7^*",
+        "ANSTRENGEND5",
+        "WORT3",
+        "KENNEN1B*"
+      ]
+    },
+    {
+      "id": "seg_0032",
+      "german_text": "Das macht mir zu schaffen.",
+      "start_ms": 100680,
+      "end_ms": 100960,
+      "gloss_sequence": [
+        "MÜHE1"
+      ]
+    },
+    {
+      "id": "seg_0033",
+      "german_text": "Das Lesen ist echt mühsam.",
+      "start_ms": 100960,
+      "end_ms": 102240,
+      "gloss_sequence": [
+        "LESEN1C*",
+        "ZUNGE1^*",
+        "MÜHE1"
+      ]
+    },
+    {
+      "id": "seg_0034",
+      "german_text": "Das ist der typische Nachteil für einen Gehörlosen.",
+      "start_ms": 102240,
+      "end_ms": 103400,
+      "gloss_sequence": [
+        "NACHTEIL3",
+        "TAUB-GEHÖRLOS1A*",
+        "SO1A"
+      ]
+    },
+    {
+      "id": "seg_0035",
+      "german_text": "Aber was wäre ein Vorteil?",
+      "start_ms": 103400,
+      "end_ms": 105180,
+      "gloss_sequence": [
+        "ABER1*",
+        "VORTEIL2",
+        "WAS1B*"
+      ]
+    },
+    {
+      "id": "seg_0036",
+      "german_text": "Interessant ist, dass wir viel Mimik einsetzen und lachen.",
+      "start_ms": 105180,
+      "end_ms": 107780,
+      "gloss_sequence": [
+        "INTERESSE1A",
+        "TAUB-GEHÖRLOS1A*",
+        "GEBÄRDEN1E*",
+        "MIMIK1",
+        "LACHEN1*",
+        "DA1*"
+      ]
+    },
+    {
+      "id": "seg_0037",
+      "german_text": "Die Hörenden dagegen haben keine Mimik, das ist bei denen so gehaltlos.",
+      "start_ms": 107780,
+      "end_ms": 109620,
+      "gloss_sequence": [
+        "HÖREND1A*",
+        "NICHT3A",
+        "MIMIK1",
+        "BANAL1^*",
+        "$INDEX1*"
+      ]
+    },
+    {
+      "id": "seg_0038",
+      "german_text": "Und was ist noch gut oder interessant am Gehörlossein, hm?",
+      "start_ms": 109620,
+      "end_ms": 112580,
+      "gloss_sequence": [
+        "INTERESSE1A",
+        "WAS1A",
+        "TAUB-GEHÖRLOS1A*",
+        "GUT1",
+        "WAS1A*",
+        "$LIST1:2of2d*",
+        "WAS1B*"
+      ]
+    },
+    {
+      "id": "seg_0039",
+      "german_text": "Was sind noch andere Vorteile?",
+      "start_ms": 112580,
+      "end_ms": 114420,
+      "gloss_sequence": [
+        "MEHR1*",
+        "VORTEIL2",
+        "WAS1B*"
+      ]
+    },
+    {
+      "id": "seg_0040",
+      "german_text": "Ja, wir hören nichts und haben so unsere Ruhe.",
+      "start_ms": 114420,
+      "end_ms": 116060,
+      "gloss_sequence": [
+        "OHR1*",
+        "ABSCHALTEN-OHR1",
+        "OHR1*",
+        "RUHE1*"
+      ]
+    },
+    {
+      "id": "seg_0041",
+      "german_text": "Hörende werden nervös oder bekommen Ohrenschmerzen. Die Ruhe ist ein Vorteil.",
+      "start_ms": 116060,
+      "end_ms": 119020,
+      "gloss_sequence": [
+        "$INDEX1",
+        "NERVÖS1B*",
+        "$GEST-OHREN-ZU1^*",
+        "SCHMERZ3*",
+        "VORTEIL2",
+        "RUHE1",
+        "$GEST^"
+      ]
+    },
+    {
+      "id": "seg_0042",
+      "german_text": "Noch mehr Vorteile sehe ich sonst nicht.",
+      "start_ms": 119020,
+      "end_ms": 122380,
+      "gloss_sequence": [
+        "$GEST^",
+        "MEHR1",
+        "$GEST^",
+        "MEHR1*",
+        "$GEST^",
+        "NICHTS1A*",
+        "$GEST^"
+      ]
+    },
+    {
+      "id": "seg_0043",
+      "german_text": "Schlechte Erfahrungen?",
+      "start_ms": 132340,
+      "end_ms": 134140,
+      "gloss_sequence": [
+        "SCHLECHT1*",
+        "ERFAHRUNG6A*",
+        "$GEST-OFF^*"
+      ]
+    },
+    {
+      "id": "seg_0044",
+      "german_text": "Mein größtes Problem war mit meinen Eltern.",
+      "start_ms": 136260,
+      "end_ms": 140420,
+      "gloss_sequence": [
+        "ICH1",
+        "BESONDERS1A*",
+        "ICH1",
+        "PROBLEM1",
+        "NUR2A",
+        "ELTERN7",
+        "$INDEX1*"
+      ]
+    },
+    {
+      "id": "seg_0045",
+      "german_text": "Denn ich wünschte mir so sehr, dass meine Eltern die Gebärdensprache können.",
+      "start_ms": 140420,
+      "end_ms": 143560,
+      "gloss_sequence": [
+        "GRUND4B",
+        "$INDEX1*",
+        "ICH1",
+        "WÜNSCHEN1B",
+        "ELTERN7",
+        "KANN2B*",
+        "GEBÄRDEN1E",
+        "KANN1*",
+        "$INDEX1*"
+      ]
+    },
+    {
+      "id": "seg_0046",
+      "german_text": "Aber sie taten nichts dafür.",
+      "start_ms": 143560,
+      "end_ms": 144960,
+      "gloss_sequence": [
+        "ELTERN7",
+        "MACHEN4*",
+        "NICHTS1B*",
+        "$INDEX1*"
+      ]
+    },
+    {
+      "id": "seg_0047",
+      "german_text": "Ich gebärde/",
+      "start_ms": 144960,
+      "end_ms": 145400,
+      "gloss_sequence": [
+        "ICH1",
+        "GEBÄRDEN1A*"
+      ]
+    },
+    {
+      "id": "seg_0048",
+      "german_text": "Ich brauche zum Beispiel tiefgründige Unterhaltungen und den Austausch.",
+      "start_ms": 145400,
+      "end_ms": 148400,
+      "gloss_sequence": [
+        "ICH1",
+        "BEISPIEL1*",
+        "ICH1",
+        "TIEF1*",
+        "ICH1",
+        "ERZÄHLEN4*",
+        "TAUSCHEN1",
+        "ICH1",
+        "BRAUCHEN1"
+      ]
+    },
+    {
+      "id": "seg_0049",
+      "german_text": "Dadurch habe ich bessere Lebenserfahrungen.",
+      "start_ms": 148400,
+      "end_ms": 149880,
+      "gloss_sequence": [
+        "ICH1",
+        "KOMMA1^",
+        "ICH1",
+        "BESSER1*",
+        "ERFAHRUNG6A*",
+        "LEBEN1A*",
+        "WEG2A*"
+      ]
+    },
+    {
+      "id": "seg_0050",
+      "german_text": "Aber von ihnen kam nichts, da musste ich selber aktiv werden. Das war mühsam.",
+      "start_ms": 149880,
+      "end_ms": 151480,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "NICHTS1B*",
+        "ICH1",
+        "SELBST1A*",
+        "AKTIV1",
+        "LÄSTIG1*"
+      ]
+    },
+    {
+      "id": "seg_0051",
+      "german_text": "Die gehörlosen Eltern meiner Freunde konnten mir vieles erklären, dafür bin ich ihnen sehr dankbar.",
+      "start_ms": 151480,
+      "end_ms": 155300,
+      "gloss_sequence": [
+        "ANDERS2*",
+        "KONTAKT2A",
+        "PERSON1*",
+        "ELTERN7",
+        "TAUB-GEHÖRLOS1A*",
+        "ICH1",
+        "ERKLÄREN1*",
+        "GENUG2*",
+        "WOHL1*",
+        "PERSON1*",
+        "GUT3*"
+      ]
+    },
+    {
+      "id": "seg_0052",
+      "german_text": "Mit meinen Eltern war es leider nicht so.",
+      "start_ms": 155300,
+      "end_ms": 157140,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "NICHT3A",
+        "$GEST^"
+      ]
+    },
+    {
+      "id": "seg_0053",
+      "german_text": "Und, na ja, es gab Probleme, über die ich mit ihnen reden wollte, aber das war schwer.",
+      "start_ms": 157140,
+      "end_ms": 161940,
+      "gloss_sequence": [
+        "UND2A*",
+        "$GEST^",
+        "ICH1",
+        "GEBEN1*",
+        "ICH1",
+        "PROBLEM2A*",
+        "MUSS1*",
+        "BESCHEID1A*",
+        "$INDEX1*",
+        "SCHWER1B^*",
+        "LÄSTIG1*",
+        "AUF-PERSON1*",
+        "$GEST-OFF^*"
+      ]
+    },
+    {
+      "id": "seg_0054",
+      "german_text": "Sie verstanden mich nicht, das war sehr schwer für mich.",
+      "start_ms": 161940,
+      "end_ms": 164040,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "VERSTEHEN1*",
+        "NICHTS1B*",
+        "MÜHE1",
+        "$GEST^"
+      ]
+    },
+    {
+      "id": "seg_0055",
+      "german_text": "In der Schule in Essen war das auch ein Problem, wir konnten schlecht mit den Lehrern kommunizieren.",
+      "start_ms": 164040,
+      "end_ms": 168160,
+      "gloss_sequence": [
+        "$LIST1:2of2d",
+        "BESONDERS1A",
+        "PROBLEM1",
+        "AUCH1A*",
+        "ESSEN2*",
+        "SCHULE1A*",
+        "$INDEX1*",
+        "LEHRER2*",
+        "SCHLECHT2",
+        "KOMMUNIKATION1A*",
+        "PROBLEM1"
+      ]
+    },
+    {
+      "id": "seg_0056",
+      "german_text": "Es gab Kommunikationsprobleme und Mobbing und ich habe mich geärgert, dass ich schlechte Noten bekommen habe, das war schwierig.",
+      "start_ms": 168160,
+      "end_ms": 172360,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "KOMMUNIKATION1A*",
+        "PROBLEM2A*",
+        "$INDEX1*",
+        "MOBBING1B*",
+        "SICH-ÄRGERN5^*",
+        "ICH1",
+        "SCHLECHT2",
+        "NOTE2",
+        "MÜHE1",
+        "$LIST-ZUSAMMEN3:3-5of5"
+      ]
+    },
+    {
+      "id": "seg_0057",
+      "german_text": "Es passierten viele schlimme Dinge. Ich war zum Beispiel in einer Gruppe, die schlimme Kritik ausgeteilt hat.",
+      "start_ms": 172360,
+      "end_ms": 174420,
+      "gloss_sequence": [
+        "VIEL1A*",
+        "SCHLIMM3B",
+        "$INDEX1*",
+        "GRUPPE1A*",
+        "KRITISIEREN1A*",
+        "SCHLIMM3A*"
+      ]
+    },
+    {
+      "id": "seg_0058",
+      "german_text": "Ich habe mich auch ein bisschen geprügelt. Ach, das war schlecht.",
+      "start_ms": 174420,
+      "end_ms": 176560,
+      "gloss_sequence": [
+        "ICH1",
+        "BISSCHEN2A",
+        "SCHLAGEN10",
+        "$GEST^",
+        "SCHLECHT1*"
+      ]
+    },
+    {
+      "id": "seg_0059",
+      "german_text": "In Halberstadt gab es das nicht.",
+      "start_ms": 178580,
+      "end_ms": 179880,
+      "gloss_sequence": [
+        "HALB1A",
+        "STADT2",
+        "NICHTS1B"
+      ]
+    },
+    {
+      "id": "seg_0060",
+      "german_text": "Da waren alle viel netter und freundlicher.",
+      "start_ms": 179880,
+      "end_ms": 181660,
+      "gloss_sequence": [
+        "FREUNDLICH3*",
+        "LIEB1A",
+        "GEBÄRDEN1E*"
+      ]
+    },
+    {
+      "id": "seg_0061",
+      "german_text": "Aber in Essen war es richtig schlecht, also im Vergleich zu Essen war es in Halberstadt einfach besser.",
+      "start_ms": 181660,
+      "end_ms": 184180,
+      "gloss_sequence": [
+        "$INDEX1",
+        "ESSEN-STADT1",
+        "$INDEX1*",
+        "SCHLECHT2*",
+        "$INDEX1*",
+        "ESSEN2*",
+        "$INDEX1*",
+        "HALB1A",
+        "BESSER1*"
+      ]
+    },
+    {
+      "id": "seg_0062",
+      "german_text": "Da ist es locker und man wird unterstützt.",
+      "start_ms": 184180,
+      "end_ms": 185960,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "LOCKER1",
+        "UNTERSTÜTZEN4"
+      ]
+    },
+    {
+      "id": "seg_0063",
+      "german_text": "Zum Beispiel sorgen sich die Lehrer um dich, wenn man Probleme hat, und sie helfen dir, unterstützen und fördern dich.",
+      "start_ms": 185960,
+      "end_ms": 190480,
+      "gloss_sequence": [
+        "BEISPIEL1*",
+        "ICH1",
+        "PROBLEM2A*",
+        "$INDEX1",
+        "DA1",
+        "LEHRER2*",
+        "SORGEN-SICH5B*",
+        "AUF-PERSON1*",
+        "UNTERSTÜTZEN4",
+        "BESSER1*",
+        "HELFEN1",
+        "FÖRDERN1B*",
+        "DA1",
+        "FÖRDERN1B*",
+        "DA1"
+      ]
+    },
+    {
+      "id": "seg_0064",
+      "german_text": "In Essen ist das nicht so, da war ich auf mich alleine gestellt, so war das da.",
+      "start_ms": 190480,
+      "end_ms": 194180,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "ESSEN2*",
+        "NICHT3A*",
+        "NICHTS-DAMIT-ZU-TUN-HABEN-WOLLEN2",
+        "NICHTS-DAMIT-ZU-TUN-HABEN-WOLLEN1",
+        "$GEST-OFF^",
+        "$GEST^"
+      ]
+    },
+    {
+      "id": "seg_0065",
+      "german_text": "Aber was jetzt gut war?",
+      "start_ms": 196240,
+      "end_ms": 201620,
+      "gloss_sequence": [
+        "GUT1",
+        "WAS-BEDEUTET1*",
+        "GUT1",
+        "ICH1*",
+        "IRGENDWAS1*",
+        "$GEST-ICH-WEISS-NICHT1^"
+      ]
+    },
+    {
+      "id": "seg_0066",
+      "german_text": "Nicht wirklich, vieles war einfach gewöhnlich.",
+      "start_ms": 201620,
+      "end_ms": 204520,
+      "gloss_sequence": [
+        "$GEST-ICH-WEISS-NICHT1^",
+        "ICH1",
+        "GUT1*",
+        "ICH1",
+        "BANAL1^",
+        "NORMAL1",
+        "$GEST^"
+      ]
+    },
+    {
+      "id": "seg_0067",
+      "german_text": "Ich/ Oh ja, das ist gut.",
+      "start_ms": 204540,
+      "end_ms": 205680,
+      "gloss_sequence": [
+        "ICH1",
+        "ACHTUNG1A^*",
+        "GUT1"
+      ]
+    },
+    {
+      "id": "seg_0068",
+      "german_text": "In Essen konnte ich mehr Gehörlose kennenlernen.",
+      "start_ms": 205680,
+      "end_ms": 208020,
+      "gloss_sequence": [
+        "ICH1",
+        "ESSEN-STADT1",
+        "$INDEX1*",
+        "BEREICH1A^*",
+        "MEHR1*",
+        "TAUB-GEHÖRLOS1A",
+        "KENNENLERNEN1*"
+      ]
+    },
+    {
+      "id": "seg_0069",
+      "german_text": "Sie kamen von überall her zusammen, aus Hamburg, aus München oder aus Berlin, das war ganz verschieden.",
+      "start_ms": 208020,
+      "end_ms": 212040,
+      "gloss_sequence": [
+        "MASSE-PERSON-AKTIV1^*",
+        "$INDEX1*",
+        "HAMBURG2*",
+        "$INDEX1*",
+        "MÜNCHEN1A*",
+        "$INDEX1*",
+        "BERLIN1C*",
+        "$INDEX1*",
+        "$GEST-OFF^",
+        "VERSCHIEDEN1*"
+      ]
+    },
+    {
+      "id": "seg_0070",
+      "german_text": "Dort lernte ich andere Gebärden und wir tauschten gemeinsam unsere Lebenserfahrungen aus.",
+      "start_ms": 212040,
+      "end_ms": 215940,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "MERKWÜRDIG1^*",
+        "ANDERS2",
+        "GEBÄRDEN1A*",
+        "ODER4A",
+        "ZUSAMMEN1A*",
+        "WAS-BEDEUTET1*",
+        "SO1A*",
+        "WAS-BEDEUTET1*",
+        "GEHÖREN1^*",
+        "LEBEN4*",
+        "ICH1*",
+        "TAUSCHEN1"
+      ]
+    },
+    {
+      "id": "seg_0071",
+      "german_text": "Dinge, von denen ich keine Ahnung hatte, wurden mir erklärt und ich verstand immer mehr.",
+      "start_ms": 215940,
+      "end_ms": 219160,
+      "gloss_sequence": [
+        "$INDEX1",
+        "MERKWÜRDIG1^*",
+        "$INDEX1*",
+        "BEREICH1A^*",
+        "MERKWÜRDIG1^*",
+        "ICH1*",
+        "KEINE-AHNUNG1",
+        "UNTERRICHTEN1*",
+        "BERGAUF-SICH-VERBESSERN1*"
+      ]
+    },
+    {
+      "id": "seg_0072",
+      "german_text": "Oder, was auch noch komisch war/",
+      "start_ms": 219160,
+      "end_ms": 220420,
+      "gloss_sequence": [
+        "ODER4B*",
+        "$LIST1:3of3d",
+        "MERKWÜRDIG1^*"
+      ]
+    },
+    {
+      "id": "seg_0073",
+      "german_text": "Es gab auch eine tolle Kameradschaft, in der man sich locker austauschen konnte.",
+      "start_ms": 220420,
+      "end_ms": 223600,
+      "gloss_sequence": [
+        "ICH1",
+        "KANN2B",
+        "MEHR1*",
+        "KAMERAD1",
+        "ZUSAMMEN1A*",
+        "KANN2B",
+        "LOCKER1*",
+        "TAUSCHEN1",
+        "MASSE-PERSON-AKTIV1^*"
+      ]
+    },
+    {
+      "id": "seg_0074",
+      "german_text": "In Essen war es einfach ASL zu lernen, im Osten gab es das nicht.",
+      "start_ms": 223600,
+      "end_ms": 226540,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "ESSEN2*",
+        "LEICHT1*",
+        "$INDEX1*",
+        "GEBÄRDEN1E*",
+        "ASL1",
+        "MERKWÜRDIG1^*",
+        "OSTEN1B",
+        "KEIN8",
+        "LEER1^*"
+      ]
+    },
+    {
+      "id": "seg_0075",
+      "german_text": "Dort, im Osten, wusste ich nicht viel über die Weltkultur.",
+      "start_ms": 226540,
+      "end_ms": 229700,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "KENNEN1A*",
+        "NICHT3A*",
+        "WELT1",
+        "KULTUR1A",
+        "OSTEN1B",
+        "NIEMALS2A",
+        "$INDEX1*"
+      ]
+    },
+    {
+      "id": "seg_0076",
+      "german_text": "Ja genau, ich bekam dort ASL-Unterricht und wurde darin besser.",
+      "start_ms": 229700,
+      "end_ms": 236500,
+      "gloss_sequence": [
+        "$GEST^",
+        "JA2",
+        "GENAU3",
+        "ESSEN2*",
+        "BEKOMMEN1*",
+        "ANFANG1A",
+        "UNTERRICHTEN1*",
+        "ASL1",
+        "UNTERRICHTEN1*",
+        "BERGAUF-SICH-VERBESSERN1*",
+        "KANN2B",
+        "$GEST-OFF^"
+      ]
+    },
+    {
+      "id": "seg_0077",
+      "german_text": "Ja, oh, und in Essen war es so, dass man immer auf Partys eingeladen wurde, das war gut.",
+      "start_ms": 236500,
+      "end_ms": 242140,
+      "gloss_sequence": [
+        "ZUSAMMEN1A*",
+        "MEISTENS1B",
+        "ESSEN2*",
+        "KOMMEN-AUFFORDERN1*",
+        "PARTY1B*",
+        "SPÄT1*",
+        "KOMMEN-AUFFORDERN1*",
+        "$INDEX1*",
+        "$GEST-OFF^*",
+        "GUT1",
+        "$GEST^"
+      ]
+    },
+    {
+      "id": "seg_0078",
+      "german_text": "Ja, zusammen ist es besser. Zum Beispiel trennen sich jetzt wegen der Ausbildung oder der Arbeit unsere Lebenswege, nachdem wir in Essen in der Klasse zusammen waren.",
+      "start_ms": 242140,
+      "end_ms": 249060,
+      "gloss_sequence": [
+        "ZUSAMMEN1A",
+        "$GEST^",
+        "ZUSAMMEN1A*",
+        "JETZT3",
+        "ICH1",
+        "ESSEN-STADT1",
+        "KLASSE5*",
+        "DANN1A*",
+        "ANDERS1",
+        "LEBEN1A*",
+        "WEG2A*",
+        "GRUND4B*",
+        "$INDEX1*",
+        "BILDUNG1*",
+        "ARBEITEN2*",
+        "$INDEX1*",
+        "TRENNEN1A"
+      ]
+    },
+    {
+      "id": "seg_0079",
+      "german_text": "Wenn man sich auf Gehörlosenpartys trifft, ist man dann endlich wieder zusammen.",
+      "start_ms": 249060,
+      "end_ms": 250620,
+      "gloss_sequence": [
+        "TREFFEN1",
+        "PARTY1A*",
+        "ENDLICH3",
+        "ZUSAMMEN1A*"
+      ]
+    },
+    {
+      "id": "seg_0080",
+      "german_text": "Dennoch bin ich bis jetzt nicht so zufrieden wie in den drei Jahren in Essen.",
+      "start_ms": 250620,
+      "end_ms": 254580,
+      "gloss_sequence": [
+        "ABER1*",
+        "ZUSAMMEN1A*",
+        "BIS-HEUTE1A^",
+        "ZUFRIEDEN3*",
+        "$INDEX1*",
+        "ESSEN2*",
+        "JAHR1B*",
+        "JA2",
+        "$GEST-OFF^"
+      ]
+    },
+    {
+      "id": "seg_0081",
+      "german_text": "Ja, so war es.",
+      "start_ms": 254580,
+      "end_ms": 255720,
+      "gloss_sequence": [
+        "$GEST-OFF^"
+      ]
+    },
+    {
+      "id": "seg_0082",
+      "german_text": "Gehörlose oder hörende Vorbilder?",
+      "start_ms": 265420,
+      "end_ms": 268160,
+      "gloss_sequence": [
+        "UNBESTIMMT1^*",
+        "TAUB-GEHÖRLOS1A",
+        "PERSON1*",
+        "ODER4B*",
+        "HÖREND1A*",
+        "ODER4B*"
+      ]
+    },
+    {
+      "id": "seg_0083",
+      "german_text": "Hm, Vorbilder?",
+      "start_ms": 268160,
+      "end_ms": 272980,
+      "gloss_sequence": [
+        "GEFÜHL3^*",
+        "$GEST-OFF^",
+        "ICH1",
+        "VORBILD1",
+        "$GEST-OFF^"
+      ]
+    },
+    {
+      "id": "seg_0084",
+      "german_text": "Ja, es gibt einen Gehörlosen, der ist mein Vorbild.",
+      "start_ms": 272980,
+      "end_ms": 276200,
+      "gloss_sequence": [
+        "$NUM-EINER1A:1d",
+        "PERSON1*",
+        "ICH1",
+        "JA2",
+        "$NUM-EINER1A:1d",
+        "PERSON1*",
+        "TAUB-GEHÖRLOS1A",
+        "VORBILD1*",
+        "$INDEX1*"
+      ]
+    },
+    {
+      "id": "seg_0085",
+      "german_text": "Er ist aus Frankfurt.",
+      "start_ms": 276200,
+      "end_ms": 277140,
+      "gloss_sequence": [
+        "AUS7",
+        "FRANKFURT1"
+      ]
+    },
+    {
+      "id": "seg_0086",
+      "german_text": "Sein Verhalten und Charakter sind gut.",
+      "start_ms": 277140,
+      "end_ms": 279700,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "VERHALTEN2",
+        "CHARAKTER2A",
+        "PERSON1*",
+        "GUT3*",
+        "ER-SIE-ES2*"
+      ]
+    },
+    {
+      "id": "seg_0087",
+      "german_text": "Er gebärdet sauber, benutzt viel Mimik und er ist nicht/",
+      "start_ms": 279700,
+      "end_ms": 282720,
+      "gloss_sequence": [
+        "SAUBER1",
+        "GEBÄRDEN1A*",
+        "MIMIK1",
+        "$LIST1:3of3d",
+        "ANSTÄNDIG2*",
+        "NICHT3A*"
+      ]
+    },
+    {
+      "id": "seg_0088",
+      "german_text": "Ja, ein Gehörloser.",
+      "start_ms": 282720,
+      "end_ms": 283440,
+      "gloss_sequence": [
+        "TAUB-GEHÖRLOS1A*"
+      ]
+    },
+    {
+      "id": "seg_0089",
+      "german_text": "Er verachtete niemanden mit niedrigem Niveau und brachte mir viel bei, ab da ging es mit mir bergauf.",
+      "start_ms": 283440,
+      "end_ms": 287920,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "NICHT3A*",
+        "UNTEN5^",
+        "$INDEX1*",
+        "HASSEN1*",
+        "ANFÜHRUNGSZEICHEN1^*",
+        "$GEST^",
+        "GEFÜHL3",
+        "VERHALTEN2",
+        "ICH1",
+        "UNTERRICHTEN1*",
+        "$INDEX1*",
+        "ICH1",
+        "BERGAUF-SICH-VERBESSERN1*"
+      ]
+    },
+    {
+      "id": "seg_0090",
+      "german_text": "Früher hatte ich noch einen anderen Charakter und habe mich anders verhalten, na ja.",
+      "start_ms": 287920,
+      "end_ms": 291340,
+      "gloss_sequence": [
+        "ICH1",
+        "FRÜHER1*",
+        "ICH1",
+        "ÄNDERN1*",
+        "ANDERS1*",
+        "CHARAKTER2A",
+        "LEBEN1A*",
+        "VERHALTEN2",
+        "WIE6*",
+        "$GEST-OFF^",
+        "VERHALTEN2*",
+        "$GEST-OFF^"
+      ]
+    },
+    {
+      "id": "seg_0091",
+      "german_text": "Ich wusste noch nicht so viel, war noch nicht auf seinem Niveau, aber er brachte mir viel bei und ich wurde immer besser.",
+      "start_ms": 291340,
+      "end_ms": 294080,
+      "gloss_sequence": [
+        "DENKEN1B*",
+        "NICHT3A",
+        "DENKEN1B",
+        "NIVEAU1",
+        "NOCH-NICHT2*",
+        "ICH1",
+        "UNTERRICHTEN1*",
+        "ICH1",
+        "BERGAUF-SICH-VERBESSERN1*"
+      ]
+    },
+    {
+      "id": "seg_0092",
+      "german_text": "Dafür bin ich ihm dankbar und deshalb ist er mein Vorbild.",
+      "start_ms": 294080,
+      "end_ms": 296320,
+      "gloss_sequence": [
+        "DANKBAR1",
+        "PERSON1*",
+        "VORBILD1*",
+        "PERSON1*",
+        "GUT3*",
+        "PERSON1*",
+        "GUT3*",
+        "$GEST-OFF^"
+      ]
+    },
+    {
+      "id": "seg_0093",
+      "german_text": "Nein, er kommt aus Frankfurt.",
+      "start_ms": 297960,
+      "end_ms": 299260,
+      "gloss_sequence": [
+        "NEIN1A",
+        "PERSON1*",
+        "FRANKFURT1*",
+        "PERSON1*",
+        "FRANKFURT1*"
+      ]
+    },
+    {
+      "id": "seg_0094",
+      "german_text": "Ich lernte ihn durch meinen Umzug nach Essen kennen.",
+      "start_ms": 299260,
+      "end_ms": 300700,
+      "gloss_sequence": [
+        "ICH1*",
+        "DURCH2A",
+        "ICH1",
+        "ESSEN2*",
+        "UMZIEHEN1*"
+      ]
+    },
+    {
+      "id": "seg_0095",
+      "german_text": "In Halberstadt hat mir niemand was beigebracht.",
+      "start_ms": 300700,
+      "end_ms": 302900,
+      "gloss_sequence": [
+        "ICH1",
+        "HALB1B",
+        "STADT2",
+        "UNTERRICHTEN1*",
+        "KEIN8",
+        "UNTERRICHTEN1*",
+        "GESCHICHTE1^*"
+      ]
+    },
+    {
+      "id": "seg_0096",
+      "german_text": "Erst als ich nach Essen zog, lernte ich den Frankfurter und interessante Personen kennen, von denen ich etwas lernen konnte.",
+      "start_ms": 302900,
+      "end_ms": 307800,
+      "gloss_sequence": [
+        "ICH1",
+        "ESSEN2*",
+        "UMZIEHEN1*",
+        "FRANKFURT1*",
+        "$INDEX1*",
+        "MERKWÜRDIG1^*",
+        "KENNENLERNEN1",
+        "ABLAUF2^*",
+        "INTERESSE1A",
+        "WAHRNEHMEN-AUGE1A^",
+        "INTERESSE1A",
+        "PERSON1*",
+        "$GEST^"
+      ]
+    },
+    {
+      "id": "seg_0097",
+      "german_text": "Aber/",
+      "start_ms": 309040,
+      "end_ms": 309680,
+      "gloss_sequence": [
+        "ABER1*"
+      ]
+    },
+    {
+      "id": "seg_0098",
+      "german_text": "Ja, wir stehen noch im Kontakt.",
+      "start_ms": 309680,
+      "end_ms": 311020,
+      "gloss_sequence": [
+        "KONTAKT2A",
+        "NOCH4B",
+        "DA1*"
+      ]
+    },
+    {
+      "id": "seg_0099",
+      "german_text": "Klar, wenn wir beide zufällig mal auf einer Party sind, sehen wir uns.",
+      "start_ms": 311020,
+      "end_ms": 313400,
+      "gloss_sequence": [
+        "KLAR1A*",
+        "ZUFALL1*",
+        "STECHEN-AUF-DURCH1A*",
+        "FEIERN1*",
+        "KOMMEN1",
+        "KANN1*",
+        "SEHEN-AUF1*"
+      ]
+    },
+    {
+      "id": "seg_0100",
+      "german_text": "Wir schaffen es aber zeitlich nicht uns gegenseitig zu besuchen, das ist zu schwer.",
+      "start_ms": 313400,
+      "end_ms": 316960,
+      "gloss_sequence": [
+        "BESUCHEN1B",
+        "BESUCHEN1B*",
+        "SCHWER1A",
+        "ZEIT6*",
+        "SCHWER1A*",
+        "$GEST^",
+        "$GEST-ABWINKEN1^*"
+      ]
+    },
+    {
+      "id": "seg_0101",
+      "german_text": "Ja, das stimmt. Er wohnt in der Umgebung von Frankfurt, also nicht direkt in der Nähe, sondern etwas außerhalb.",
+      "start_ms": 316960,
+      "end_ms": 321160,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "RICHTIG1B*",
+        "$INDEX1*",
+        "FRANKFURT1*",
+        "UMGEBUNG1A",
+        "NAHE1A*",
+        "NICHT3A",
+        "AUSSERHALB1*",
+        "FRANKFURT1*",
+        "$GEST-ABWINKEN1^*"
+      ]
+    },
+    {
+      "id": "seg_0102",
+      "german_text": "Schöne Erinnerungen?",
+      "start_ms": 325320,
+      "end_ms": 328180,
+      "gloss_sequence": [
+        "SCHÖN5",
+        "ERINNERUNG2",
+        "ICH1",
+        "SCHÖN1A*",
+        "$INDEX1*"
+      ]
+    },
+    {
+      "id": "seg_0103",
+      "german_text": "Meistens in Essen, dort hatte ich viele schöne Erlebnisse, eben weil wir dort viel zusammen waren.",
+      "start_ms": 328180,
+      "end_ms": 332960,
+      "gloss_sequence": [
+        "ICH1",
+        "MEISTENS1B",
+        "$INDEX1*",
+        "MEISTENS1B",
+        "NUR2B",
+        "ESSEN2*",
+        "MITTE2B*",
+        "MEISTENS1B",
+        "SCHÖN1A*",
+        "ERINNERUNG2*",
+        "GRUND4B",
+        "ZUSAMMEN1A*"
+      ]
+    },
+    {
+      "id": "seg_0104",
+      "german_text": "Im Internat konnten wir locker sein.",
+      "start_ms": 332960,
+      "end_ms": 334720,
+      "gloss_sequence": [
+        "$INDEX1",
+        "INTERNAT1A",
+        "KANN2B",
+        "LOCKER1"
+      ]
+    },
+    {
+      "id": "seg_0105",
+      "german_text": "Im Internat kamen viele Gehörlose zusammen.",
+      "start_ms": 334720,
+      "end_ms": 336800,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "EIGENTLICH1B",
+        "INTERNAT1A",
+        "BEISPIEL1*",
+        "TAUB-GEHÖRLOS1A*",
+        "MASSE-PERSON-AKTIV1^*"
+      ]
+    }
+  ]
+}
