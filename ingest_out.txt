@@ -1,0 +1,124 @@
+[skip] Already ingested: 1413451-11105600-11163240.eaf
+[skip] Already ingested: 1413451-11171532-11201836.eaf
+[skip] Already ingested: 1413485.eaf
+[skip] Already ingested: 1413683.eaf
+[skip] Already ingested: 1413703.eaf
+[all] Found 2 new conversation(s) to ingest
+
+============================================================
+INGESTING: 1414123.eaf
+============================================================
+[parse] Parsing EAF: 1414123.eaf
+[parse] 53 German sentences, 213 gloss tokens
+[parse] Built 53 segments
+[manifest] +53 segments → total 427
+[mp4] 1414123_1a1.mp4  fps=50.0  frames=34237
+  [1/53] seg_0375: frames=83  lhand=1974  rhand=3318
+  [2/53] seg_0376: frames=38  lhand=1596  rhand=1596
+  [3/53] seg_0377: frames=93  lhand=3906  rhand=3822
+  [4/53] seg_0378: frames=86  lhand=3486  rhand=3612
+  [5/53] seg_0379: frames=135  lhand=5292  rhand=5250
+  [6/53] seg_0380: frames=92  lhand=3864  rhand=3864
+  [7/53] seg_0381: frames=157  lhand=6468  rhand=6594
+  [8/53] seg_0382: frames=72  lhand=1974  rhand=3024
+  [9/53] seg_0383: frames=107  lhand=4494  rhand=4368
+  [10/53] seg_0384: frames=157  lhand=6594  rhand=6300
+  [11/53] seg_0385: frames=204  lhand=5418  rhand=2898
+  [12/53] seg_0386: frames=39  lhand=1638  rhand=1638
+  [13/53] seg_0387: frames=156  lhand=6510  rhand=2898
+  [14/53] seg_0388: frames=48  lhand=2016  rhand=1638
+  [15/53] seg_0389: frames=58  lhand=2436  rhand=2142
+  [16/53] seg_0390: frames=52  lhand=2142  rhand=2184
+  [17/53] seg_0391: frames=50  lhand=1890  rhand=2100
+  [18/53] seg_0392: frames=163  lhand=6426  rhand=6369
+  [19/53] seg_0393: frames=34  lhand=1260  rhand=1386
+  [20/53] seg_0394: frames=45  lhand=924  rhand=1890
+  [21/53] seg_0395: frames=70  lhand=2646  rhand=2520
+  [22/53] seg_0396: frames=31  lhand=1302  rhand=1302
+  [23/53] seg_0397: frames=192  lhand=8022  rhand=7686
+  [24/53] seg_0398: frames=66  lhand=2772  rhand=2562
+  [25/53] seg_0399: frames=138  lhand=5586  rhand=5124
+  [26/53] seg_0400: frames=167  lhand=5292  rhand=6552
+  [27/53] seg_0401: frames=69  lhand=2898  rhand=2730
+  [28/53] seg_0402: frames=148  lhand=5922  rhand=5670
+  [29/53] seg_0403: frames=99  lhand=3738  rhand=3948
+  [30/53] seg_0404: frames=74  lhand=3108  rhand=2520
+  [31/53] seg_0405: frames=38  lhand=1596  rhand=1596
+  [32/53] seg_0406: frames=128  lhand=5376  rhand=5376
+  [33/53] seg_0407: frames=120  lhand=4788  rhand=5040
+  [34/53] seg_0408: frames=120  lhand=4368  rhand=5040
+  [35/53] seg_0409: frames=70  lhand=2688  rhand=2688
+  [36/53] seg_0410: frames=172  lhand=6678  rhand=7098
+  [37/53] seg_0411: frames=135  lhand=4452  rhand=5460
+  [38/53] seg_0412: frames=78  lhand=3192  rhand=3234
+  [39/53] seg_0413: frames=158  lhand=6636  rhand=6384
+  [40/53] seg_0414: frames=135  lhand=5670  rhand=5544
+  [41/53] seg_0415: frames=74  lhand=3108  rhand=2982
+  [42/53] seg_0416: frames=148  lhand=5796  rhand=6132
+  [43/53] seg_0417: frames=90  lhand=3612  rhand=3780
+  [44/53] seg_0418: frames=407  lhand=16464  rhand=15960
+  [45/53] seg_0419: frames=74  lhand=3108  rhand=2856
+  [46/53] seg_0420: frames=47  lhand=1974  rhand=1848
+  [47/53] seg_0421: frames=110  lhand=4368  rhand=4368
+  [48/53] seg_0422: frames=172  lhand=7224  rhand=7182
+  [49/53] seg_0423: frames=14  lhand=420  rhand=588
+  [50/53] seg_0424: frames=207  lhand=7812  rhand=8274
+  [51/53] seg_0425: frames=192  lhand=7728  rhand=7854
+  [52/53] seg_0426: frames=82  lhand=2982  rhand=3402
+  [53/53] seg_0427: frames=83  lhand=3486  rhand=3318
+[mp4] Done — 53 segments processed
+[gloss] 213 gloss annotations, 53 local segments
+[gloss] +114 new dictionary entries | 2 annotations skipped
+[gloss] Dictionary now has 548 unique glosses
+
+[done] 1414123.eaf — 53 segments ingested
+
+============================================================
+INGESTING: 1418836-15524810-15550340.eaf
+============================================================
+[parse] Parsing EAF: 1418836-15524810-15550340.eaf
+[parse] 33 German sentences, 171 gloss tokens
+[parse] Built 33 segments
+[manifest] +33 segments → total 460
+[mp4] 1418836-15524810-15550340_1a1.mp4  fps=50.0  frames=6780
+  [1/33] seg_0428: frames=174  lhand=6174  rhand=6300
+  [2/33] seg_0429: frames=193  lhand=6972  rhand=7602
+  [3/33] seg_0430: frames=79  lhand=3276  rhand=3318
+  [4/33] seg_0431: frames=114  lhand=4704  rhand=4746
+  [5/33] seg_0432: frames=356  lhand=13860  rhand=14280
+  [6/33] seg_0433: frames=276  lhand=11046  rhand=10584
+  [7/33] seg_0434: frames=238  lhand=8904  rhand=7014
+  [8/33] seg_0435: frames=246  lhand=9492  rhand=9954
+  [9/33] seg_0436: frames=74  lhand=2772  rhand=2688
+  [10/33] seg_0437: frames=443  lhand=18564  rhand=18606
+  [11/33] seg_0438: frames=52  lhand=1092  rhand=1134
+  [12/33] seg_0439: frames=111  lhand=3654  rhand=3948
+  [13/33] seg_0440: frames=184  lhand=6762  rhand=7728
+  [14/33] seg_0441: frames=221  lhand=8988  rhand=8736
+  [15/33] seg_0442: frames=196  lhand=6300  rhand=8064
+  [16/33] seg_0443: frames=103  lhand=3486  rhand=3696
+  [17/33] seg_0444: frames=98  lhand=4032  rhand=3990
+  [18/33] seg_0445: frames=182  lhand=7476  rhand=7476
+  [19/33] seg_0446: frames=189  lhand=7938  rhand=7896
+  [20/33] seg_0447: frames=269  lhand=11298  rhand=11130
+  [21/33] seg_0448: frames=177  lhand=7308  rhand=7224
+  [22/33] seg_0449: frames=253  lhand=10416  rhand=10416
+  [23/33] seg_0450: frames=189  lhand=7560  rhand=7938
+  [24/33] seg_0451: frames=299  lhand=12474  rhand=11130
+  [25/33] seg_0452: frames=124  lhand=4830  rhand=5166
+  [26/33] seg_0453: frames=150  lhand=6300  rhand=6258
+  [27/33] seg_0454: frames=328  lhand=13314  rhand=13524
+  [28/33] seg_0455: frames=364  lhand=14868  rhand=14280
+  [29/33] seg_0456: frames=230  lhand=8862  rhand=9408
+  [30/33] seg_0457: frames=244  lhand=10122  rhand=10038
+  [31/33] seg_0458: frames=155  lhand=5964  rhand=4872
+  [32/33] seg_0459: frames=144  lhand=5334  rhand=5712
+  [33/33] seg_0460: frames=357  lhand=14196  rhand=14070
+[mp4] Done — 33 segments processed
+[gloss] 171 gloss annotations, 33 local segments
+[gloss] +102 new dictionary entries | 0 annotations skipped
+[gloss] Dictionary now has 650 unique glosses
+
+[done] 1418836-15524810-15550340.eaf — 33 segments ingested
+
+[ingest] Finished.

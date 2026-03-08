@@ -1,10 +1,18 @@
-from pathlib import Path
+from __future__ import annotations
 
-from fastapi import FastAPI, HTTPException
+import base64
+import json
+import io
+from pathlib import Path
+from typing import Optional
+
+import numpy as np
+from fastapi import FastAPI, HTTPException, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from src.text_to_gloss_map import get_mapper
+from src.nlp_pipeline import analyse_text, get_gloss_lm, get_hmm_tagger
 
 
 class TranslateRequest(BaseModel):
@@ -22,6 +30,9 @@ class MotionResponse(BaseModel):
     fps: float
     start_ms: int
     end_ms: int
+    gloss_labels: list[str] = []      # one label per clip (for overlay display)
+    frame_boundaries: list[int] = []  # start frame of each clip (after transitions)
+    missing_glosses: list[str] = []   # glosses not found in the dictionary
 
 
 class ChainedMotionRequest(BaseModel):
@@ -30,6 +41,51 @@ class ChainedMotionRequest(BaseModel):
 
 class GlossByNameRequest(BaseModel):
     glosses: list[str]  # ordered list of gloss labels e.g. ["LEBEN1A*", "ICH1"]
+
+
+class NLPAnalyzeRequest(BaseModel):
+    text: str
+
+
+def _concat_with_transitions(
+    clips: list,          # list of np.ndarray [T_i, 134]
+    hold_frames: int = 3, # repeat last frame of each clip (natural sign hold)
+    lerp_frames: int = 5, # linear interpolation between clips (coarticulation)
+) -> "tuple[np.ndarray, list[int]]":
+    """
+    Concatenate keypoint clips with realistic inter-sign transitions.
+
+    Between every pair of adjacent clips the function inserts:
+      1. hold_frames  — last frame of clip A repeated  (~120 ms at 25 fps)
+      2. lerp_frames  — linear blend from last-A to first-B (~200 ms at 25 fps)
+
+    Returns:
+        (combined_array [T_total, 134], start_frame_of_each_clip)
+    The start_frame list lets the frontend know exactly when each sign begins.
+    """
+    if len(clips) == 1:
+        return clips[0], [0]
+
+    parts = []
+    boundaries = []   # frame index where each clip starts
+    pos = 0
+    for i, clip in enumerate(clips):
+        boundaries.append(pos)
+        parts.append(clip)
+        pos += len(clip)
+        if i < len(clips) - 1:          # not the last clip
+            last  = clip[-1]             # [134]
+            first = clips[i + 1][0]     # [134]
+            # 1. hold
+            hold = np.tile(last, (hold_frames, 1))   # [hold_frames, 134]
+            # 2. lerp
+            alphas = np.linspace(0, 1, lerp_frames + 2)[1:-1]  # exclude endpoints
+            bridge = np.stack([(1 - a) * last + a * first for a in alphas])
+            parts.append(hold)
+            parts.append(bridge)
+            pos += hold_frames + lerp_frames
+
+    return np.concatenate(parts, axis=0), boundaries
 
 
 def create_app() -> FastAPI:
@@ -81,8 +137,6 @@ def create_app() -> FastAPI:
         Each gloss label is looked up in the gloss dictionary.
         Missing glosses are silently skipped (they won't appear in the animation).
         """
-        import numpy as np
-
         all_clips = []
         fps = None
         found: list[str] = []
@@ -112,20 +166,21 @@ def create_app() -> FastAPI:
         if missing:
             print(f"[by_glosses] Missing glosses (no clip): {missing}")
 
-        combined = np.concatenate(all_clips, axis=0)  # [T_total, 134]
+        combined, boundaries = _concat_with_transitions(all_clips)  # [T_total, 134]
         fps = fps or 50.0
         return MotionResponse(
             keypoints=combined.tolist(),
             fps=fps,
             start_ms=0,
             end_ms=int(combined.shape[0] / fps * 1000),
+            gloss_labels=found,
+            frame_boundaries=boundaries,
+            missing_glosses=missing,
         )
 
     @app.post("/api/motion/chained", response_model=MotionResponse)
     async def get_chained_motion(req: ChainedMotionRequest) -> MotionResponse:
         """Concatenate keypoints from multiple segments into a single animation."""
-        import numpy as np
-
         all_keypoints = []
         fps = None
         for seg_id in req.segment_ids:
@@ -143,7 +198,7 @@ def create_app() -> FastAPI:
                 detail="No motion data found for any requested segment",
             )
 
-        combined = np.concatenate(all_keypoints, axis=0)  # [T_total, 134]
+        combined, _ = _concat_with_transitions(all_keypoints)  # [T_total, 134]
         fps = fps or 25.0
         return MotionResponse(
             keypoints=combined.tolist(),
@@ -158,8 +213,6 @@ def create_app() -> FastAPI:
         if not npz_path.exists():
             raise HTTPException(status_code=404, detail=f"Motion file not found for segment_id={segment_id}")
 
-        import numpy as np
-
         data = np.load(npz_path)
         keypoints = data["keypoints"]  # [T, 134]
         fps_arr = data["fps"]
@@ -172,6 +225,208 @@ def create_app() -> FastAPI:
             start_ms=int(start_ms_arr[0]),
             end_ms=int(end_ms_arr[0]),
         )
+
+    # ── NLP Pipeline endpoint (Lab 1 / Feature Eng / Ex3 / Ex4) ─────────────
+    @app.post("/api/nlp/analyze")
+    async def nlp_analyze(req: NLPAnalyzeRequest) -> dict:
+        """
+        Full NLP pipeline analysis of a German text string.
+        Returns tokenization, POS tagging (HMM/Viterbi), feature engineering
+        (BoW, TF-IDF, PMI), and N-gram language model statistics.
+        """
+        return analyse_text(req.text)
+
+    @app.get("/api/nlp/gloss_lm")
+    async def gloss_lm_info() -> dict:
+        """Return N-gram language model statistics over the gloss corpus."""
+        lm = get_gloss_lm()
+        return {
+            "trained_sequences": len(lm.sequences),
+            "unigram_top20": lm.unigram.get_counts_table(20),
+            "bigram_top20": lm.bigram.get_counts_table(20),
+            "trigram_top20": lm.trigram.get_counts_table(20),
+            "bigram_perplexity_train": (
+                round(lm.bigram.perplexity(lm.sequences), 2)
+                if lm.sequences
+                else None
+            ),
+        }
+
+    @app.post("/api/nlp/score_glosses")
+    async def score_glosses(req: GlossByNameRequest) -> dict:
+        """Score a gloss sequence with the N-gram language model."""
+        lm = get_gloss_lm()
+        return lm.score_all(req.glosses)
+
+    @app.get("/api/nlp/pos_tables")
+    async def pos_tables() -> dict:
+        """Return HMM transition and emission probability tables."""
+        tagger = get_hmm_tagger()
+        return {
+            "transition_table": tagger.get_transition_table(),
+            "emission_table": tagger.get_emission_table(top_n=8),
+        }
+
+    # ── WebSocket: Live sign recognition from webcam ─────────────────────────
+    # Loads gloss clip keypoint centroids on first connection for fast matching.
+    _gloss_centroids: Optional[dict] = None
+
+    def _load_gloss_centroids() -> dict:
+        """
+        Build a lookup of gloss_label → mean hand keypoint vector from
+        gloss_clips. Uses right-hand (42 values) + left-hand (42 values)
+        as the 84-D feature vector, averaged over all frames.
+        """
+        nonlocal _gloss_centroids
+        if _gloss_centroids is not None:
+            return _gloss_centroids
+
+        result: dict[str, np.ndarray] = {}
+        if not clips_dir.exists():
+            _gloss_centroids = {}
+            return _gloss_centroids
+
+        # Load gloss dictionary to resolve clip paths
+        gloss_dict: dict[str, str] = {}
+        if gloss_dict_path.exists():
+            gloss_dict = json.loads(gloss_dict_path.read_text(encoding="utf-8"))
+
+        for gloss_label, rel_path in gloss_dict.items():
+            clip_path = backend_root / "data" / rel_path
+            if not clip_path.exists():
+                continue
+            d = np.load(clip_path)
+            kp = d["keypoints"]  # [T, 134]: body25 | lhand21 | rhand21
+            # Indices: body 0-74, lhand 75-116, rhand 117-158 (each 3D = 3 values)
+            # We use lhand (cols 75:117 → 21 joints × 2? Let's use full vector)
+            # Actually stored as [body25*3 | lhand21*3 | rhand21*3] = [75+63+63]=201?
+            # Check actual shape via known manifest info: 134 features
+            # 134 = 25*2 + 21*2 + 21*2 = 50+42+42 (2D keypoints, x+y per joint)
+            hand_vec = kp[:, 50:].mean(axis=0)  # lhand+rhand: 84 values, time-averaged
+            result[gloss_label] = hand_vec
+
+        _gloss_centroids = result
+        print(f"[webcam] Loaded {len(result)} gloss centroids for live recognition")
+        return _gloss_centroids
+
+    @app.websocket("/ws/live_recognition")
+    async def live_recognition(websocket: WebSocket) -> None:
+        """
+        WebSocket endpoint for live sign language recognition from webcam frames.
+
+        Protocol (JSON messages):
+          Client → Server:  {"frame": "<base64-JPEG>"}
+          Server → Client:  {"gloss": "GLOSS_LABEL", "confidence": 0.87,
+                             "top3": [{"gloss": ..., "score": ...}, ...]}
+        """
+        await websocket.accept()
+        centroids = _load_gloss_centroids()
+
+        try:
+            import cv2
+            import mediapipe as mp
+
+            # Lazy-load MediaPipe hand detector (reuse across frames)
+            _hand_model_path = backend_root / "models" / "hand_landmarker.task"
+            if not _hand_model_path.exists():
+                await websocket.send_json(
+                    {"error": "hand_landmarker.task model not found in backend/models/"}
+                )
+                return
+
+            from mediapipe.tasks import python as mp_tasks
+            from mediapipe.tasks.python import vision as mp_vision
+
+            hand_opts = mp_vision.HandLandmarkerOptions(
+                base_options=mp_tasks.BaseOptions(model_asset_path=str(_hand_model_path)),
+                running_mode=mp_vision.RunningMode.IMAGE,
+                num_hands=2,
+            )
+            hand_landmarker = mp_vision.HandLandmarker.create_from_options(hand_opts)
+
+            while True:
+                try:
+                    msg = await websocket.receive_text()
+                    data = json.loads(msg)
+                except (WebSocketDisconnect, json.JSONDecodeError):
+                    break
+
+                if "frame" not in data:
+                    continue
+
+                # Decode base64 JPEG frame
+                try:
+                    img_bytes = base64.b64decode(data["frame"])
+                    img_array = np.frombuffer(img_bytes, dtype=np.uint8)
+                    frame_bgr = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
+                    if frame_bgr is None:
+                        continue
+                    frame_rgb = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB)
+                except Exception:
+                    continue
+
+                # Run MediaPipe hand detection
+                mp_image = mp.Image(
+                    image_format=mp.ImageFormat.SRGB, data=frame_rgb
+                )
+                hand_result = hand_landmarker.detect(mp_image)
+
+                if not hand_result.hand_landmarks:
+                    await websocket.send_json({"gloss": None, "confidence": 0.0, "top3": []})
+                    continue
+
+                # Build 84-D hand feature vector (lhand21*2 + rhand21*2)
+                lhand = np.zeros(42)
+                rhand = np.zeros(42)
+                for i, (lm_list, handedness) in enumerate(
+                    zip(hand_result.hand_landmarks, hand_result.handedness)
+                ):
+                    side = handedness[0].category_name  # "Left" or "Right"
+                    vec = np.array([[lm.x, lm.y] for lm in lm_list]).ravel()  # 42
+                    if side == "Left":
+                        lhand = vec
+                    else:
+                        rhand = vec
+
+                query_vec = np.concatenate([lhand, rhand])  # 84
+
+                # Cosine similarity against gloss centroids
+                if not centroids:
+                    await websocket.send_json({"gloss": None, "confidence": 0.0, "top3": []})
+                    continue
+
+                q_norm = np.linalg.norm(query_vec)
+                if q_norm < 1e-6:
+                    await websocket.send_json({"gloss": None, "confidence": 0.0, "top3": []})
+                    continue
+
+                scores: list[tuple[str, float]] = []
+                for gloss_label, centroid in centroids.items():
+                    c_norm = np.linalg.norm(centroid)
+                    if c_norm < 1e-6:
+                        continue
+                    sim = float(np.dot(query_vec, centroid) / (q_norm * c_norm))
+                    scores.append((gloss_label, sim))
+
+                scores.sort(key=lambda x: x[1], reverse=True)
+                top3 = scores[:3]
+                best_gloss, best_score = top3[0] if top3 else (None, 0.0)
+
+                await websocket.send_json({
+                    "gloss": best_gloss,
+                    "confidence": round(best_score, 4),
+                    "top3": [
+                        {"gloss": g, "score": round(s, 4)} for g, s in top3
+                    ],
+                })
+
+        except WebSocketDisconnect:
+            pass
+        finally:
+            try:
+                hand_landmarker.close()
+            except Exception:
+                pass
 
     return app
 

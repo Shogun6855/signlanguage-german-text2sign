@@ -35,25 +35,48 @@ const HAND_EDGES = [
 function getJoint(frame, idx) {
   const x = frame[idx * 2];
   const y = frame[idx * 2 + 1];
-  // Undetected joints are stored as (0, 0)
-  if (x === 0 && y === 0) return null;
-  // MediaPipe clamps out-of-frame joints to exactly y=1.0 at the bottom boundary
-  // instead of marking them undetected — suppress only the hard-clamped cases
-  if (y >= 0.999) return null;
+  // Undetected joints: MediaPipe stores (0,0) or near-(0,0) for off-screen hands
+  // Use a small epsilon to catch both the exact zero and near-zero artifact cases
+  if (x < 0.01 && y < 0.01) return null;
+  // MediaPipe clamps joints outside frame bounds to 0 or 1 on each axis
+  if (x <= 0 || y <= 0) return null;
+  if (x >= 0.999 || y >= 0.999) return null;
   return { x, y };
 }
 
 function computeBounds(frames) {
-  let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+  // Collect every valid coordinate across all frames
+  const xs = [];
+  const ys = [];
   for (const frame of frames) {
     for (let i = 0; i < frame.length / 2; i++) {
       const j = getJoint(frame, i);
       if (!j) continue;
-      if (j.x < minX) minX = j.x; if (j.x > maxX) maxX = j.x;
-      if (j.y < minY) minY = j.y; if (j.y > maxY) maxY = j.y;
+      xs.push(j.x);
+      ys.push(j.y);
     }
   }
-  return isFinite(minX) ? { minX, maxX, minY, maxY } : null;
+  if (xs.length === 0) return null;
+
+  // Use 5th–95th percentile to ignore outlier frames (e.g. flying-off-screen hands)
+  xs.sort((a, b) => a - b);
+  ys.sort((a, b) => a - b);
+  const lo = (arr) => arr[Math.floor(arr.length * 0.02)];
+  const hi = (arr) => arr[Math.ceil(arr.length * 0.98) - 1];
+
+  const minX = lo(xs), maxX = hi(xs);
+  const minY = lo(ys), maxY = hi(ys);
+
+  // Expand by 5% padding so edge joints aren't clipped
+  const padX = (maxX - minX) * 0.05 || 0.05;
+  const padY = (maxY - minY) * 0.05 || 0.05;
+
+  return {
+    minX: minX - padX,
+    maxX: maxX + padX,
+    minY: minY - padY,
+    maxY: maxY + padY,
+  };
 }
 
 // ── Main draw (called each animation frame) ───────────────────────────────────
@@ -166,16 +189,18 @@ function drawSkeleton(canvas, frame, bounds) {
 }
 
 // ── Component ─────────────────────────────────────────────────────────────────
-export default function SkeletonViewer3D({ motion }) {
+export default function SkeletonViewer3D({ motion, glossLabels = [], frameBoundaries = [] }) {
   const canvasRef  = useRef(null);
   const rafRef     = useRef(null);
   const frameRef   = useRef(0);       // actual frame counter (no re-render lag)
   const playingRef = useRef(true);    // ditto for playing state
+  const speedRef   = useRef(1.0);     // playback speed multiplier
   const framesRef  = useRef(null);
   const boundsRef  = useRef(null);
 
   const [playing,  setPlaying]  = useState(true);
   const [frameIdx, setFrameIdx] = useState(0);
+  const [speed,    setSpeed]    = useState(1.0);
 
   useEffect(() => {
     if (!motion?.keypoints?.length || !canvasRef.current) return;
@@ -192,8 +217,7 @@ export default function SkeletonViewer3D({ motion }) {
     setPlaying(true);
     setFrameIdx(0);
 
-    const canvas     = canvasRef.current;
-    const msPerFrame = 1000 / fps;
+    const canvas = canvasRef.current;
     let last = performance.now();
 
     if (rafRef.current) cancelAnimationFrame(rafRef.current);
@@ -201,6 +225,7 @@ export default function SkeletonViewer3D({ motion }) {
 
     const tick = (now) => {
       rafRef.current = requestAnimationFrame(tick);
+      const msPerFrame = 1000 / (fps * speedRef.current);
       if (playingRef.current && now - last >= msPerFrame) {
         last = now;
         frameRef.current = (frameRef.current + 1) % frames.length;
@@ -217,6 +242,18 @@ export default function SkeletonViewer3D({ motion }) {
     playingRef.current = !playingRef.current;
     setPlaying(playingRef.current);
   }, []);
+
+  const handleSpeedChange = useCallback((e) => {
+    const v = Number(e.target.value);
+    speedRef.current = v;
+    setSpeed(v);
+  }, []);
+
+  // Determine which gloss is currently signing based on frame boundaries
+  const currentGlossIdx = frameBoundaries.length > 0
+    ? frameBoundaries.reduce((acc, b, i) => (b <= frameIdx ? i : acc), 0)
+    : -1;
+  const currentGloss = currentGlossIdx >= 0 ? (glossLabels[currentGlossIdx] ?? "") : "";
 
   const restart = useCallback(() => {
     frameRef.current   = 0;
@@ -241,6 +278,11 @@ export default function SkeletonViewer3D({ motion }) {
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+      {currentGloss && (
+        <div className="gloss-overlay">
+          <span className="gloss-overlay-word">{currentGloss}</span>
+        </div>
+      )}
       <canvas
         ref={canvasRef}
         width={640}
@@ -267,6 +309,14 @@ export default function SkeletonViewer3D({ motion }) {
           onChange={handleScrub}
         />
         <span className="frame-counter">{frameIdx + 1} / {totalFrames}</span>
+        <select className="speed-select" value={speed} onChange={handleSpeedChange} title="Playback speed">
+          <option value={0.25}>0.25×</option>
+          <option value={0.5}>0.5×</option>
+          <option value={0.75}>0.75×</option>
+          <option value={1}>1×</option>
+          <option value={1.5}>1.5×</option>
+          <option value={2}>2×</option>
+        </select>
       </div>
     </div>
   );

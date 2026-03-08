@@ -2,7 +2,7 @@
   "source_eaf": "D:\\College\\Semester 6\\Lab\\NLIP\\Project\\signlanguage-german-text2sign\\dataset\\1413451-11105600-11163240.eaf",
   "german_tier": "Deutsche_Übersetzung_A",
   "gloss_tier": "Lexem_Gebärde_r_A",
-  "num_segments": 105,
+  "num_segments": 460,
   "segments": [
     {
       "id": "seg_0001",
@@ -1584,6 +1584,5213 @@
         "TAUB-GEHÖRLOS1A*",
         "MASSE-PERSON-AKTIV1^*"
       ]
+    },
+    {
+      "id": "seg_0106",
+      "german_text": "Was Trauriges?",
+      "start_ms": 10320,
+      "end_ms": 11780,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "TRAURIG4*",
+        "ICH1",
+        "$GEST-OFF^*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0107",
+      "german_text": "Eigentlich habe ich bisher in meinem Leben nichts allzu Trauriges erlebt.",
+      "start_ms": 11780,
+      "end_ms": 14920,
+      "gloss_sequence": [
+        "BIS-JETZT3A",
+        "EIGENTLICH1B",
+        "BIS-JETZT3B",
+        "NOCH-NIE1*",
+        "TRAURIG4*",
+        "$GEST-OFF^*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0108",
+      "german_text": "Vor kurzem ist was passiert, so ungefähr vor einem Monat, nein, vor zwei, drei Wochen.",
+      "start_ms": 14920,
+      "end_ms": 19940,
+      "gloss_sequence": [
+        "GENAU4",
+        "NUR2B",
+        "VOR-KURZEM1",
+        "PASSIERT3",
+        "MONAT1*",
+        "NEIN1A",
+        "$NUM-WOCHE-VOR-JETZT1:2d*",
+        "$NUM-WOCHE-VOR-JETZT1:3d",
+        "UNGEFÄHR1"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0109",
+      "german_text": "Vor drei Wochen habe ich erfahren, dass mein Opa ins Krankenhaus eingeliefert worden ist.",
+      "start_ms": 19940,
+      "end_ms": 22120,
+      "gloss_sequence": [
+        "$NUM-WOCHE-VOR-JETZT1:3d",
+        "ERFAHREN1A",
+        "$INDEX1*",
+        "$ALPHA1:O",
+        "$ALPHA1:P*",
+        "$ALPHA1:A",
+        "KRANKENHAUS1B"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0110",
+      "german_text": "Anfangs war es nicht schlimm, es war eigentlich harmlos, aber er kam trotzdem um sicherzugehen ins Krankenhaus.",
+      "start_ms": 22120,
+      "end_ms": 26620,
+      "gloss_sequence": [
+        "$ALPHA1:O",
+        "$ALPHA1:P*",
+        "$ALPHA1:A",
+        "$INDEX1",
+        "WEGEN1",
+        "$INDEX1*",
+        "PASSIERT3*",
+        "WAS1B*",
+        "ABER1*",
+        "KRANKENHAUS1B",
+        "SCHLIMM3A*",
+        "BANAL1",
+        "$INDEX1*",
+        "SICHER1",
+        "KÖRPER1"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0111",
+      "german_text": "Aber eine Woche später ist doch was passiert, er lag plötzlich im Koma.",
+      "start_ms": 26620,
+      "end_ms": 31160,
+      "gloss_sequence": [
+        "SPÄTER7*",
+        "WOCHE1A*",
+        "SPÄTER10*",
+        "NOCH4B*",
+        "RICHTIG1B*",
+        "PASSIERT3",
+        "$INDEX1*",
+        "GRUND4B",
+        "$ALPHA1:K-O-M-A",
+        "$ALPHA1:K-O-M-A",
+        "$INDEX1*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0112",
+      "german_text": "Als ich ihn zum ersten Mal im Koma da liegen sah, waren sein Gesicht und seine Beine ganz starr.",
+      "start_ms": 31160,
+      "end_ms": 34640,
+      "gloss_sequence": [
+        "LIEGEN-BEIN1B",
+        "NEIN3B^*",
+        "ICH1",
+        "ERSTES-MAL3B",
+        "SEHEN1",
+        "$ALPHA1:O",
+        "$ALPHA1:P*",
+        "$ALPHA1:A*",
+        "$INDEX1*",
+        "LIEGEN-BEIN1B^*",
+        "$ALPHA1:K-O-M-A",
+        "GESICHT1",
+        "LIEGEN-BEIN1B*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0113",
+      "german_text": "Als ich ihn zum ersten Mal so sah, habe ich mich schlecht gefühlt, das war schon krass.",
+      "start_ms": 34640,
+      "end_ms": 36780,
+      "gloss_sequence": [
+        "ICH1",
+        "ERSTES-MAL1",
+        "ICH1",
+        "SCHLECHT-ÜBEL2",
+        "HART4",
+        "AUF-PERSON1",
+        "FEST1A^*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0114",
+      "german_text": "Mein Opa war schon einundachtzig Jahre alt.",
+      "start_ms": 36780,
+      "end_ms": 39800,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "ETWAS3^",
+        "TREIBEN1A^*",
+        "$INDEX1*",
+        "SCHON1A",
+        "$ALPHA1:O",
+        "$ALPHA1:P*",
+        "$ALPHA1:A*",
+        "$NUM-EINER1A:1d",
+        "$NUM-ZEHNER2A:8d*",
+        "ALT4B*",
+        "$INDEX1*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0115",
+      "german_text": "Der Grund für seine aussichtslose Situation war, dass er Probleme mit dem Herzen hatte und sein Kreislauf erschöpft war und so weiter.",
+      "start_ms": 39800,
+      "end_ms": 44380,
+      "gloss_sequence": [
+        "GRUND4B*",
+        "$INDEX1*",
+        "AUSSICHTSLOS3A",
+        "$INDEX1*",
+        "$GEST-ÜBERLEGEN1^*",
+        "HERZ1C",
+        "PROBLEM1*",
+        "KREISLAUF1A*",
+        "ERSCHÖPFUNG3",
+        "SPÄTER7*",
+        "GRUND4B*",
+        "LASSEN1^"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0116",
+      "german_text": "Er hatte so viele Probleme, aber wir hoffen einfach, dass er bald aufwacht und überlebt.",
+      "start_ms": 44380,
+      "end_ms": 48220,
+      "gloss_sequence": [
+        "VIEL1A*",
+        "PROBLEM1*",
+        "OB1*",
+        "HOFFEN3*",
+        "LEBEN4*",
+        "WACH1*",
+        "KANN2B",
+        "$INDEX1*",
+        "$GEST^"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0117",
+      "german_text": "Sie sagten, dass er zu 50 Prozent sterben und zu 50 Prozent überleben könnte.",
+      "start_ms": 48220,
+      "end_ms": 50940,
+      "gloss_sequence": [
+        "SAGEN2B",
+        "$NUM-ZEHNER2A:5*",
+        "PROZENT4*",
+        "STERBEN2",
+        "ODER4B",
+        "LEBEN4*",
+        "$NUM-ZEHNER2A:5*",
+        "PROZENT4*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0118",
+      "german_text": "Deshalb würde ich sagen, dass dies bis jetzt das Traurigste war.",
+      "start_ms": 50940,
+      "end_ms": 55100,
+      "gloss_sequence": [
+        "DESHALB1",
+        "SAGEN1^",
+        "ERZÄHLEN4*",
+        "HOFFEN2A*",
+        "TRAURIG6",
+        "ENDE1^",
+        "$INDEX1*",
+        "MEISTENS1A*",
+        "$INDEX1*",
+        "SOLL1",
+        "ABLAUF2^",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0119",
+      "german_text": "Und plötzlich/",
+      "start_ms": 55100,
+      "end_ms": 56280,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "GENAU4^"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0120",
+      "german_text": "Ja, ich habe es ja erst vor Kurzem erfahren, dass es passiert ist.",
+      "start_ms": 56280,
+      "end_ms": 59200,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "VOR-KURZEM1*",
+        "PASSIERT3",
+        "HÖREN1A^",
+        "ENDE1^"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0121",
+      "german_text": "Aber was für mich auch noch traurig ist, ist zum Beispiel, dass meine Eltern überhaupt nicht gebärden können.",
+      "start_ms": 59200,
+      "end_ms": 63880,
+      "gloss_sequence": [
+        "ABER1*",
+        "UND2A*",
+        "ICH1",
+        "NUR2A*",
+        "TRAURIG4*",
+        "BEISPIEL1",
+        "$INDEX1*",
+        "MEIN1",
+        "ELTERN7",
+        "$INDEX1*",
+        "NICHT3A",
+        "KANN2B",
+        "GEBÄRDEN1E",
+        "KANN1*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0122",
+      "german_text": "Darüber bin ich traurig.",
+      "start_ms": 63880,
+      "end_ms": 65440,
+      "gloss_sequence": [
+        "ICH1",
+        "DARUM1*",
+        "TRAURIG4*",
+        "DAS-IST-ALLES1*",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0123",
+      "german_text": "Sonst gibt es nichts.",
+      "start_ms": 65440,
+      "end_ms": 68300,
+      "gloss_sequence": [
+        "NICHTS1B"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0124",
+      "german_text": "Ich wünschte, ich wäre schwerhörig.",
+      "start_ms": 68300,
+      "end_ms": 71240,
+      "gloss_sequence": [
+        "AUCH1A*",
+        "ICH1",
+        "WOLLEN1B",
+        "SELBST1A",
+        "AUCH1A",
+        "SCHWERHÖRIG1",
+        "ICH2",
+        "WOLLEN2",
+        "ICH1"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0125",
+      "german_text": "Der Grund dafür ist, dass ich sowohl mit Gehörlosen gebärden und Späße machen, als auch mit den Hörenden sprechen könnte.",
+      "start_ms": 71240,
+      "end_ms": 75840,
+      "gloss_sequence": [
+        "BEISPIEL1*",
+        "GRUND4B*",
+        "ICH1",
+        "UM2A",
+        "GEBÄRDEN1E",
+        "GUT3*",
+        "WITZ1*",
+        "BEREICH1A^*",
+        "ICH1",
+        "UM2A*",
+        "ICH1",
+        "HÖREND1A*",
+        "SPRECHEN5A*",
+        "WOLLEN5",
+        "ICH1"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0126",
+      "german_text": "Da könnte ich zwischen den Sprachen wechseln.",
+      "start_ms": 75840,
+      "end_ms": 77060,
+      "gloss_sequence": [
+        "SPRECHEN5A*",
+        "WECHSELN3A",
+        "GUT3*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0127",
+      "german_text": "Es gibt einige Schwerhörige, die das gut hinbekommen.",
+      "start_ms": 77060,
+      "end_ms": 78600,
+      "gloss_sequence": [
+        "ES-GIBT1",
+        "IRGENDWER1",
+        "SCHWERHÖRIG1*",
+        "GUT3*",
+        "WECHSELN3A"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0128",
+      "german_text": "Für die ist das schön, ich kann das nicht.",
+      "start_ms": 78600,
+      "end_ms": 81060,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "SCHÖN1A",
+        "ICH1",
+        "NICHT1*",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0129",
+      "german_text": "Nein, ich meine damit, dass sie einfach sprechen können.",
+      "start_ms": 83040,
+      "end_ms": 87020,
+      "gloss_sequence": [
+        "NEIN1A*",
+        "ICH1",
+        "MEINUNG1A",
+        "KANN1",
+        "SPRECHEN5A",
+        "KANN1",
+        "ICH1",
+        "SPRECHEN5A",
+        "DESHALB1*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0130",
+      "german_text": "Na ja, ich war zu faul fürs Hören und ich/",
+      "start_ms": 87380,
+      "end_ms": 90040,
+      "gloss_sequence": [
+        "$GEST-NM-KOPFSCHÜTTELN1^",
+        "ICH1",
+        "RICHTIG1B*",
+        "ICH1",
+        "FAUL1*",
+        "WAHRNEHMEN-OHR1^*",
+        "UND2A*",
+        "ICH1"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0131",
+      "german_text": "Aber es gibt einige, die können mit dem CI nichts wahrnehmen.",
+      "start_ms": 90040,
+      "end_ms": 92020,
+      "gloss_sequence": [
+        "ABER1*",
+        "ICH1",
+        "ES-GIBT3",
+        "CI1",
+        "WAHRNEHMEN-OHR1*",
+        "KANN1*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0132",
+      "german_text": "Das ist verschieden: Einige können was hören, ich nicht.",
+      "start_ms": 92020,
+      "end_ms": 94940,
+      "gloss_sequence": [
+        "ES-GIBT3",
+        "VERSCHIEDEN1",
+        "WAHRNEHMEN-OHR1*",
+        "$INDEX1*",
+        "KANN2B",
+        "WAHRNEHMEN-OHR1*",
+        "ICH1*",
+        "NICHT3A*",
+        "WAHRNEHMEN-OHR1*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0133",
+      "german_text": "Da muss man sich entscheiden.",
+      "start_ms": 94940,
+      "end_ms": 97240,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "ENTSCHEIDEN1A",
+        "CI1*",
+        "ENTSCHEIDEN1A"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0134",
+      "german_text": "Man weiß vorher nicht, ob das Implantat was bringt, das ist klar.",
+      "start_ms": 97240,
+      "end_ms": 100220,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "MERKWÜRDIG2",
+        "ERFOLG1",
+        "CI1",
+        "KLAPPT1",
+        "ERFOLG1",
+        "KLAR1A*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0135",
+      "german_text": "Wenn du das CI ausprobierst, meinst du, dass es gelingt? Wohl eher nicht.",
+      "start_ms": 100220,
+      "end_ms": 101860,
+      "gloss_sequence": [
+        "PROBE2*",
+        "CI1",
+        "$INDEX1*",
+        "ERFOLG1",
+        "$GEST-OFF^*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0136",
+      "german_text": "Alltag?",
+      "start_ms": 108640,
+      "end_ms": 110880,
+      "gloss_sequence": [
+        "ALLTAG2B"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0137",
+      "german_text": "Ach so, wie ich so lebe.",
+      "start_ms": 112740,
+      "end_ms": 115160,
+      "gloss_sequence": [
+        "$ORAL^",
+        "LEBEN1C",
+        "ICH1",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0138",
+      "german_text": "Na ja, ich war ein Jahr lang arbeitslos.",
+      "start_ms": 115160,
+      "end_ms": 117600,
+      "gloss_sequence": [
+        "ICH1",
+        "WENN1A",
+        "ICH1*",
+        "GEWESEN1*",
+        "ARBEITEN2*",
+        "$WORTTEIL-LOS3*",
+        "JAHR1B*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0139",
+      "german_text": "Da war das ein bisschen anders.",
+      "start_ms": 117600,
+      "end_ms": 119160,
+      "gloss_sequence": [
+        "ICH1",
+        "BISSCHEN4",
+        "ANDERS1",
+        "ICH1",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0140",
+      "german_text": "Was habe ich da so erlebt?",
+      "start_ms": 119160,
+      "end_ms": 120460,
+      "gloss_sequence": [
+        "WARTEN1A^",
+        "ICH1",
+        "WAS1B*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0141",
+      "german_text": "In Essen war es bei mir so, dass ich zum Beispiel am Wochenende regelmäßig ein Spiel hatte und früh aufstehen musste.",
+      "start_ms": 120460,
+      "end_ms": 124060,
+      "gloss_sequence": [
+        "ICH1",
+        "ESSEN2*",
+        "BEISPIEL1*",
+        "$INDEX1*",
+        "REGELMÄSSIG2*",
+        "ICH1",
+        "WOCHE2*",
+        "ENDE1A",
+        "SPIELEN2*",
+        "FRÜH2*",
+        "AUFSTEHEN1*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0142",
+      "german_text": "Ich verschlief typischerweise und stand erst um 12 Uhr auf.",
+      "start_ms": 124060,
+      "end_ms": 125880,
+      "gloss_sequence": [
+        "ICH1",
+        "TYPISCH1*",
+        "SCHLAFEN3",
+        "$NUM-SCHNIPS1:2",
+        "AUFSTEHEN1*",
+        "$GEST-RUHIG-BLEIBEN1^*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0143",
+      "german_text": "Ich fragte dann, was wir machen sollten und wir sind einfach zum Einkaufen in die Stadt gegangen.",
+      "start_ms": 125880,
+      "end_ms": 128800,
+      "gloss_sequence": [
+        "WAS-MACHEN1*",
+        "ZUSAMMEN1A*",
+        "$GEST-OFF^",
+        "QUATSCH1^",
+        "RICHTUNG3^",
+        "STADT2",
+        "EINKAUFEN1",
+        "BEREICH1A^*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0144",
+      "german_text": "Klamotten einkaufen war wichtig, denn wir brauchten für die Party am Abend was zum anziehen, das musste man vorher planen.",
+      "start_ms": 128800,
+      "end_ms": 133020,
+      "gloss_sequence": [
+        "ANZIEHEN-OBERKÖRPER1A*",
+        "WICHTIG1",
+        "KAUFEN1A",
+        "$INDEX1*",
+        "GRUND4B",
+        "FÜR1*",
+        "ABEND2*",
+        "PARTY1A",
+        "ANZIEHEN-OBERKÖRPER1A",
+        "PLAN2",
+        "ANZIEHEN-OBERKÖRPER1A*",
+        "WICHTIG1*",
+        "ANZIEHEN-OBERKÖRPER1A"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0145",
+      "german_text": "Aus Langeweile gingen wir auch oft ins Casino, wo wir beim Spielen erfolgreich waren und gewannen.",
+      "start_ms": 133020,
+      "end_ms": 138540,
+      "gloss_sequence": [
+        "UND2A*",
+        "AUCH1A*",
+        "RADIO2^*",
+        "LANGEWEILE1*",
+        "SPIELEN2*",
+        "$ALPHA1:C-A-N-I-C-O",
+        "RADIO2^*",
+        "AUCH1A*",
+        "GELD1A",
+        "GEWINN1",
+        "ERFOLG1",
+        "AUFSTEIGEN5*",
+        "ERFOLG1",
+        "$GEST^"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0146",
+      "german_text": "Nach dem Spielen feierten wir die ganze Nacht in der Disco bis in den frühen Morgen, dann gingen wir dann irgendwann schlafen.",
+      "start_ms": 138540,
+      "end_ms": 141680,
+      "gloss_sequence": [
+        "SPIELEN2*",
+        "FERTIG1A",
+        "SCHLUSS1",
+        "ABEND2",
+        "DISCO1",
+        "MORGEN-FRÜH1*",
+        "SCHLAFEN1A"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0147",
+      "german_text": "In Essen lieft das ganz oft so.",
+      "start_ms": 141680,
+      "end_ms": 143240,
+      "gloss_sequence": [
+        "OFT2B",
+        "$INDEX1*",
+        "ESSEN2*",
+        "SO1A*",
+        "GEHÖREN1^*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0148",
+      "german_text": "Aber jetzt ist das nicht mehr so.",
+      "start_ms": 143240,
+      "end_ms": 144140,
+      "gloss_sequence": [
+        "ABER1*",
+        "RICHTIG1B*",
+        "SCHLUSS1"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0149",
+      "german_text": "Ich bin jetzt in #Name1 zu Hause, da ist das anders.",
+      "start_ms": 144140,
+      "end_ms": 147520,
+      "gloss_sequence": [
+        "ICH1",
+        "$INDEX1*",
+        "ZUHAUSE1A",
+        "BEREICH1A*",
+        "ICH1",
+        "$NAME",
+        "ZUHAUSE2",
+        "BEREICH1A*",
+        "ICH1",
+        "ANDERS1",
+        "BEREICH1A*",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0150",
+      "german_text": "Ich treffe mich viel weniger mit Gehörlosen.",
+      "start_ms": 147520,
+      "end_ms": 149680,
+      "gloss_sequence": [
+        "ICH1",
+        "TAUB-GEHÖRLOS1A*",
+        "TREFFEN1",
+        "$INDEX1*",
+        "WENIG7A",
+        "WENIG2*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0151",
+      "german_text": "Die einen arbeiten, einige eher weniger und andere sind arbeitslos, aber mit denen brauche ich mich auch nicht treffen.",
+      "start_ms": 149680,
+      "end_ms": 153640,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "ARBEITEN2*",
+        "$INDEX1*",
+        "WENIG2*",
+        "ARBEITEN2*",
+        "$INDEX1*",
+        "ARBEITEN2*",
+        "$WORTTEIL-LOS1*",
+        "$GEST-OFF^",
+        "SOLL1*",
+        "ICH1",
+        "TREFFEN1",
+        "BRAUCHEN1*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0152",
+      "german_text": "Meistens fahre ich weiter weg, um Freunde zu treffen, zum Beispiel nach Halle, Hannover, nach Hamburg oder Berlin.",
+      "start_ms": 153640,
+      "end_ms": 159980,
+      "gloss_sequence": [
+        "MEISTENS1A",
+        "ICH1",
+        "WEIT1*",
+        "TREFFEN1",
+        "BEISPIEL1",
+        "$INDEX1*",
+        "HALLE-STADT1*",
+        "ODER4B*",
+        "HANNOVER2A",
+        "$GEST^",
+        "HAMBURG2*",
+        "$GEST^",
+        "BERLIN1C*",
+        "DARUM1*",
+        "WEIT1*",
+        "ICH1",
+        "TREFFEN1",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0153",
+      "german_text": "Die Zugfahrten sind dann sehr anstrengend, weil wir uns treffen und uns bis abends unterhalten, aber dann muss ich auch schon wieder zurück, das ist mühsam.",
+      "start_ms": 159980,
+      "end_ms": 163600,
+      "gloss_sequence": [
+        "MÜHE1",
+        "ZUG1C*",
+        "MÜHE1",
+        "ZUG1C*",
+        "TREFFEN1",
+        "GEBÄRDEN1E",
+        "ABEND2",
+        "ZURÜCK1A*",
+        "TSCHÜSS1",
+        "TRENNEN4A",
+        "MÜHE1"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0154",
+      "german_text": "Machmal übernachte ich auch bei denen, das kommt auch vor.",
+      "start_ms": 163600,
+      "end_ms": 166000,
+      "gloss_sequence": [
+        "ES-GIBT3",
+        "BESUCHEN1B",
+        "SCHLAFEN2A*",
+        "ERFOLG1",
+        "ES-GIBT3",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0155",
+      "german_text": "Hm, und sonst?",
+      "start_ms": 166000,
+      "end_ms": 169260,
+      "gloss_sequence": [
+        "$GEST-OFF^",
+        "$INDEX1"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0156",
+      "german_text": "Meistens, wenn ein Fußballspiel läuft, dann bin ich so gebannt, dass es das Einzige ist, was mir in dem Moment wichtig ist.",
+      "start_ms": 169260,
+      "end_ms": 172340,
+      "gloss_sequence": [
+        "HAUPT1A^",
+        "MEISTENS1A*",
+        "ICH1",
+        "$INDEX1*",
+        "FUSSBALL2*",
+        "$INDEX1",
+        "SPIEL1A",
+        "ICH1",
+        "WICHTIG1",
+        "ZUSCHAUEN1*",
+        "NEIN2B*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0157",
+      "german_text": "Bei Fußballspielen zuzuschauen, ist mir sehr wichtig.",
+      "start_ms": 172340,
+      "end_ms": 173940,
+      "gloss_sequence": [
+        "ICH1",
+        "WICHTIG1*",
+        "FUSSBALL2*",
+        "SPIEL1A",
+        "ZUSCHAUEN1*",
+        "RENTE3^"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0158",
+      "german_text": "Ich liebe Fußball, das habe ich im Blut, vor allem bei wichtigen Spielen.",
+      "start_ms": 173940,
+      "end_ms": 176680,
+      "gloss_sequence": [
+        "ICH1",
+        "ETWAS-LIEBEN1",
+        "FAUST1^",
+        "FUSSBALL2*",
+        "IM-BLUT-HABEN1B^*",
+        "WICHTIG1",
+        "SPIELEN2*",
+        "GEGEN3A",
+        "BEISPIEL1*"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0159",
+      "german_text": "Ja, ich spielte auch Fußball.",
+      "start_ms": 177640,
+      "end_ms": 179780,
+      "gloss_sequence": [
+        "ICH1",
+        "JA2",
+        "SPIELEN2*",
+        "FUSSBALL2*",
+        "DRIBBELN1^*",
+        "JA2"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0160",
+      "german_text": "Früher, ja, aber jetzt habe ich aufgehört und spiele nicht mehr.",
+      "start_ms": 179780,
+      "end_ms": 183080,
+      "gloss_sequence": [
+        "ICH1",
+        "FRÜHER1*",
+        "JETZT3*",
+        "AUFHÖREN4*",
+        "NICHT-MEHR1A",
+        "DESHALB1"
+      ],
+      "source_eaf": "dataset\\1413451-11171532-11201836.eaf"
+    },
+    {
+      "id": "seg_0161",
+      "german_text": "Wie interessant.",
+      "start_ms": 25600,
+      "end_ms": 27460,
+      "gloss_sequence": [],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0162",
+      "german_text": "Soll ich jetzt auch was erzählen?",
+      "start_ms": 27460,
+      "end_ms": 29860,
+      "gloss_sequence": [],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0163",
+      "german_text": "Nein, dazu kann ich nichts sagen.",
+      "start_ms": 29860,
+      "end_ms": 30880,
+      "gloss_sequence": [],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0164",
+      "german_text": "Ich weiß nichts über Diana.",
+      "start_ms": 30880,
+      "end_ms": 33000,
+      "gloss_sequence": [
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0165",
+      "german_text": "Aber ich weiß, dass sie Königin von England war.",
+      "start_ms": 33000,
+      "end_ms": 35740,
+      "gloss_sequence": [
+        "ABER1*",
+        "TAUB-GEHÖRLOS1A*",
+        "ERFAHREN1A*",
+        "PERSON1",
+        "KÖNIG1A*",
+        "ENGLAND3",
+        "JA2"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0166",
+      "german_text": "Aber mehr hat es mich halt nicht interessiert.",
+      "start_ms": 35740,
+      "end_ms": 38300,
+      "gloss_sequence": [
+        "ABER1*",
+        "ICH2*",
+        "FAN2",
+        "STARK1A",
+        "ICH2*",
+        "$GEST-OFF^",
+        "$GEST-NM-SCHULTERZUCKEN1^"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0167",
+      "german_text": "Das beschäftigt mich nicht so.",
+      "start_ms": 38300,
+      "end_ms": 39420,
+      "gloss_sequence": [
+        "ICH2*",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0168",
+      "german_text": "Damals war ich noch zu klein, um sie zu kennen.",
+      "start_ms": 46680,
+      "end_ms": 49700,
+      "gloss_sequence": [
+        "GRUND4B",
+        "ICH1",
+        "KLEIN3*",
+        "JUNG1",
+        "ICH2",
+        "KLEIN3",
+        "ICH2",
+        "ERFAHREN1A*",
+        "VORHER4*",
+        "NOCH-NICHT2*"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0169",
+      "german_text": "Als das passiert ist, war ich so etwa #X Jahre alt.",
+      "start_ms": 49700,
+      "end_ms": 51980,
+      "gloss_sequence": [
+        "SPÄTER10",
+        "PASSIERT3*",
+        "$INDEX1",
+        "$NUM",
+        "BEDEUTUNG1*",
+        "ICH1*"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0170",
+      "german_text": "Aber als Erwachsener wusste ich natürlich Bescheid.",
+      "start_ms": 51980,
+      "end_ms": 53940,
+      "gloss_sequence": [
+        "MANGEL1^*",
+        "ER-SIE-ES2",
+        "MEHR8B",
+        "ERWACHSENE1A",
+        "KLAR1B*"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0171",
+      "german_text": "Ich habe es durch Gerüchte erfahren.",
+      "start_ms": 128180,
+      "end_ms": 132980,
+      "gloss_sequence": [
+        "ICH2",
+        "$GEST-ÜBERLEGEN1^",
+        "ERFAHREN1A*",
+        "$INDEX1",
+        "OB1",
+        "MEISTENS2*",
+        "GERÜCHT1"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0172",
+      "german_text": "Es sei entweder ein Mordversuch gewesen.",
+      "start_ms": 132980,
+      "end_ms": 136080,
+      "gloss_sequence": [
+        "UND5",
+        "SELBST1A*",
+        "MORD2",
+        "VERSUCHEN2",
+        "MORD2",
+        "VERSUCHEN2",
+        "MORD2"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0173",
+      "german_text": "Oder es war doch nur ein Unfall.",
+      "start_ms": 136080,
+      "end_ms": 138320,
+      "gloss_sequence": [
+        "ODER4B",
+        "ECHT1",
+        "SELBST1A*",
+        "UNFALL8",
+        "LÜGEN2*"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0174",
+      "german_text": "Mehr weiß ich nicht.",
+      "start_ms": 138320,
+      "end_ms": 139100,
+      "gloss_sequence": [
+        "ICH2*",
+        "NICHT1"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0175",
+      "german_text": "Ich hab mich nicht näher damit beschäftigt.",
+      "start_ms": 139100,
+      "end_ms": 142360,
+      "gloss_sequence": [
+        "ICH2",
+        "$GEST-OFF^",
+        "ICH2",
+        "KEINE-AHNUNG1*",
+        "NICHTS1B",
+        "$ORAL^",
+        "FORSCHUNG1A^",
+        "ICH2*",
+        "$GEST-OFF^",
+        "NICHTS1B"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0176",
+      "german_text": "So hab ich es halt erfahren.",
+      "start_ms": 142360,
+      "end_ms": 145540,
+      "gloss_sequence": [
+        "NUR2A*",
+        "ERFAHREN1A*",
+        "FERTIG1A",
+        "BESCHEID1A*",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0177",
+      "german_text": "Bist du zur Trauerfeier gegangen?",
+      "start_ms": 182280,
+      "end_ms": 183520,
+      "gloss_sequence": [
+        "FEIERN1",
+        "DORTHIN-GEHEN1*"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0178",
+      "german_text": "Nein, ich meinte, ob er bei einer Gedenkfeier dort dabei war, aber war er ja nicht.",
+      "start_ms": 187000,
+      "end_ms": 192500,
+      "gloss_sequence": [
+        "MEINUNG1B",
+        "DU1",
+        "FEIERN1*",
+        "ERINNERUNG2",
+        "FEIERN1",
+        "DORTHIN-GEHEN1*",
+        "ZUHAUSE1A*",
+        "ZURÜCK1A*",
+        "$GEST^",
+        "$INDEX1",
+        "DABEI1A*",
+        "DU1"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0179",
+      "german_text": "Aber wenn Diana nicht gestorben wäre, wäre die Welt durch sie dann viel besser geworden? Stellst du dir das so vor?",
+      "start_ms": 240000,
+      "end_ms": 245960,
+      "gloss_sequence": [
+        "$GEST^",
+        "VORSTELLUNG1B*",
+        "$INDEX1",
+        "$ALPHA1:D-I-A-N-A",
+        "NICHT3B*",
+        "STERBEN2*",
+        "LEBEN4*",
+        "WEITER1A",
+        "VORSTELLUNG1B*",
+        "DU1*",
+        "BESSER1*",
+        "WELT1",
+        "ENTWEDER3",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0180",
+      "german_text": "Es könnte aber Afrika besser gehen.",
+      "start_ms": 256660,
+      "end_ms": 257900,
+      "gloss_sequence": [
+        "VIELLEICHT3*",
+        "AFRIKA1",
+        "BESSER1*"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0181",
+      "german_text": "Die haben ja Probleme mit der Nahrungsversorgung.",
+      "start_ms": 257900,
+      "end_ms": 261040,
+      "gloss_sequence": [
+        "$INDEX1",
+        "FÜTTERN1^*",
+        "ESSEN1",
+        "JETZT3*",
+        "PROBLEM1*",
+        "MIT1A",
+        "ESSEN1",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0182",
+      "german_text": "Ja, das stimmt.",
+      "start_ms": 267440,
+      "end_ms": 268100,
+      "gloss_sequence": [
+        "STIMMT1A"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0183",
+      "german_text": "Ich habe mal erfahren, dass sie ein bisschen gebärden konnte.",
+      "start_ms": 268100,
+      "end_ms": 270760,
+      "gloss_sequence": [
+        "ICH2",
+        "ERFAHREN1A*",
+        "$INDEX1",
+        "KANN2B",
+        "$ALPHA1:D",
+        "BISSCHEN2A",
+        "GEBÄRDEN1A"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0184",
+      "german_text": "Diana hat Unterricht genommen und das gelernt, das hab ich mal erfahren.",
+      "start_ms": 270760,
+      "end_ms": 273600,
+      "gloss_sequence": [
+        "LERNEN3*",
+        "UNTERRICHTEN1*",
+        "JA2",
+        "GEWESEN1",
+        "ERFAHREN1A*",
+        "$ALPHA1:D-I-A-N-A"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0185",
+      "german_text": "Aber woher das kam und warum, das weiß ich nicht.",
+      "start_ms": 273600,
+      "end_ms": 277160,
+      "gloss_sequence": [
+        "$INDEX1",
+        "WOHER1",
+        "$GEST-OFF^",
+        "$INDEX1",
+        "GRUND4B",
+        "WOHER1",
+        "ICH2",
+        "NICHT1*",
+        "$INDEX1"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0186",
+      "german_text": "Ich habe sie mal in einem Video gebärden sehen.",
+      "start_ms": 277160,
+      "end_ms": 278900,
+      "gloss_sequence": [
+        "GEWESEN1",
+        "SEHEN1",
+        "VIDEO1*",
+        "GEBÄRDEN1A*",
+        "KANN1*",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0187",
+      "german_text": "Klar, zwei Kinder.",
+      "start_ms": 288440,
+      "end_ms": 291320,
+      "gloss_sequence": [
+        "$NUM-EINER1A:2",
+        "KIND2",
+        "KLAR1B*"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0188",
+      "german_text": "Keine Ahnung.",
+      "start_ms": 304000,
+      "end_ms": 304800,
+      "gloss_sequence": [
+        "$GEST^"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0189",
+      "german_text": "Ich bin ja eh nicht so gut darin, alles über sie zu wissen.",
+      "start_ms": 316560,
+      "end_ms": 318520,
+      "gloss_sequence": [
+        "ICH2",
+        "SCHLAU3",
+        "NICHT2",
+        "ICH2",
+        "ZUSAMMEN2B^"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0190",
+      "german_text": "Prinz Williams.",
+      "start_ms": 321100,
+      "end_ms": 323340,
+      "gloss_sequence": [
+        "$ALPHA1:P-R-I-N-C*",
+        "$ALPHA1:W-I-L-L-I-A-M-S"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0191",
+      "german_text": "Oder William, weiß nicht genau.",
+      "start_ms": 323340,
+      "end_ms": 327280,
+      "gloss_sequence": [
+        "OB4*",
+        "$ALPHA1:W",
+        "$ALPHA1:P-I-N",
+        "$ALPHA1:W-I-L-L-M",
+        "ICH2"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0192",
+      "german_text": "Ah ja, das stimmt.",
+      "start_ms": 333580,
+      "end_ms": 334160,
+      "gloss_sequence": [
+        "$GEST-SICH-AN-DIE-STIRN-TIPPEN1^"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0193",
+      "german_text": "Prinz Charles William, habe ich recht?",
+      "start_ms": 334160,
+      "end_ms": 336280,
+      "gloss_sequence": [
+        "$ALPHA1:K-I-N",
+        "$INIT-GERADE1^*",
+        "$INIT-GERADE1^*",
+        "STIMMT1A",
+        "ICH2"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0194",
+      "german_text": "Der Name ist auffällig.",
+      "start_ms": 336280,
+      "end_ms": 337660,
+      "gloss_sequence": [
+        "AUFFALLEN1A^"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0195",
+      "german_text": "In London.",
+      "start_ms": 339680,
+      "end_ms": 341320,
+      "gloss_sequence": [
+        "LONDON1",
+        "BEREICH1A^",
+        "LONDON1"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0196",
+      "german_text": "Mittendrin ist die Königin.",
+      "start_ms": 341320,
+      "end_ms": 342860,
+      "gloss_sequence": [
+        "$GEST-OFF^",
+        "MITTEL2B",
+        "KÖNIG1A*",
+        "$INDEX1"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0197",
+      "german_text": "Bekannte Personen wie Queen Elisabeth kenne ich.",
+      "start_ms": 357280,
+      "end_ms": 363020,
+      "gloss_sequence": [
+        "ICH1",
+        "MEISTENS1B",
+        "PERSON1*",
+        "NUR2A",
+        "ICH1",
+        "$ALPHA1:Q",
+        "$ALPHA1:Q-U-E-E-N",
+        "$ALPHA1:E-L-I",
+        "NAME1A*",
+        "KENNEN1A"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0198",
+      "german_text": "Und diese Brüder, den jüngeren und den älteren.",
+      "start_ms": 363020,
+      "end_ms": 365340,
+      "gloss_sequence": [
+        "$GEST-ÜBERLEGEN1^",
+        "UND2A",
+        "$INDEX1",
+        "BRUDER1A",
+        "JUNG1*",
+        "UND2A*",
+        "ALT4A*"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0199",
+      "german_text": "Die waren ja so präsent in den Medien.",
+      "start_ms": 365340,
+      "end_ms": 367160,
+      "gloss_sequence": [
+        "MEHR1*",
+        "HAUPTSÄCHLICH1",
+        "$INDEX1",
+        "MEHR1",
+        "ZEIGEN1A*"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0200",
+      "german_text": "Aber dieser Charles William nicht.",
+      "start_ms": 367160,
+      "end_ms": 371360,
+      "gloss_sequence": [
+        "ABER1*",
+        "PERSON1",
+        "$ALPHA1:C-A-L-S",
+        "$ALPHA1:W",
+        "ICH2",
+        "ZEIGEN1A*",
+        "WENIG4*",
+        "WIE-SIEHT-AUS1",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0201",
+      "german_text": "Er lebt sozusagen zurückgezogen.",
+      "start_ms": 371360,
+      "end_ms": 374800,
+      "gloss_sequence": [
+        "$GEST-KEINE-AHNUNG1^",
+        "VERSCHLIESSEN1A^",
+        "WIE6",
+        "VERSCHLIESSEN1A^",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0202",
+      "german_text": "Ja, doch, es gibt auch andere Länder mit Königen.",
+      "start_ms": 380320,
+      "end_ms": 383380,
+      "gloss_sequence": [
+        "NEIN1A",
+        "ANDERS2",
+        "LAND1A",
+        "HABEN-EXISTIEREN1",
+        "$PROD*",
+        "KÖNIG1A*"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0203",
+      "german_text": "Aber hier in Deutschland haben wir keinen König.",
+      "start_ms": 383380,
+      "end_ms": 384360,
+      "gloss_sequence": [
+        "HIER1",
+        "DEUTSCH1",
+        "LEER1^"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0204",
+      "german_text": "Früher schon, aber jetzt nicht mehr.",
+      "start_ms": 384360,
+      "end_ms": 386640,
+      "gloss_sequence": [
+        "FRÜHER1",
+        "JA1A",
+        "ABER1*",
+        "JETZT3*",
+        "VERSCHWUNDEN1A",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0205",
+      "german_text": "Aber es gibt im Süden auch Könige wie z.B. in Spanien oder Monaco.",
+      "start_ms": 394060,
+      "end_ms": 400760,
+      "gloss_sequence": [
+        "ABER1",
+        "AUCH1A",
+        "SÜDEN1B",
+        "BESITZEN1",
+        "KLAR1B",
+        "SPANIEN2*",
+        "$LIST1:2of2d",
+        "$ALPHA1:M-O-N-C-O",
+        "$GEST-OFF^",
+        "$LIST1:3of3d",
+        "$GEST-OFF^",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0206",
+      "german_text": "Gibt es noch mehr?",
+      "start_ms": 400760,
+      "end_ms": 401200,
+      "gloss_sequence": [
+        "MEHR1*",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0207",
+      "german_text": "Vor allem in Europa eben.",
+      "start_ms": 401200,
+      "end_ms": 403600,
+      "gloss_sequence": [
+        "HAUPTSÄCHLICH1*",
+        "EUROPA1A",
+        "HAUPTSÄCHLICH1*",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413485.eaf"
+    },
+    {
+      "id": "seg_0208",
+      "german_text": "Dank deiner Eltern bist du hierher gekommen, damals warst du noch naiv.",
+      "start_ms": 207980,
+      "end_ms": 213400,
+      "gloss_sequence": [
+        "DANKE2*",
+        "DURCH2A",
+        "DEIN1",
+        "ELTERN9A",
+        "MITNEHMEN1",
+        "DU1",
+        "BISSCHEN4*",
+        "LUFT3A*",
+        "$INDEX2"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0209",
+      "german_text": "Du hattest Glück bei deinem Lebensweg.",
+      "start_ms": 213400,
+      "end_ms": 216620,
+      "gloss_sequence": [
+        "GLÜCK1*",
+        "DEIN1",
+        "ABLAUF1^",
+        "WEG2A",
+        "HEBEN1^",
+        "GUT1"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0210",
+      "german_text": "Wann seid ihr denn hierher gezogen?",
+      "start_ms": 219860,
+      "end_ms": 222000,
+      "gloss_sequence": [
+        "WANN2*",
+        "$INDEX1*",
+        "UMZIEHEN2",
+        "WANN2",
+        "$INDEX1"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0211",
+      "german_text": "Ah, ##X8X.",
+      "start_ms": 222000,
+      "end_ms": 222860,
+      "gloss_sequence": [
+        "$NUM-EINER1A:2",
+        "$NUM-ZEHNER2A:8d*"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0212",
+      "german_text": "#X81 haben wir die Meisterschaft gewonnen.",
+      "start_ms": 270680,
+      "end_ms": 273140,
+      "gloss_sequence": [
+        "$NUM-EINER1A:1",
+        "$NUM-ZEHNER2A:8d*",
+        "ENDE1^*",
+        "$NUM-EINER1A:1",
+        "$NUM-ZEHNER2A:8d*",
+        "ICH1*",
+        "MEISTER2A"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0213",
+      "german_text": "##X8X war dann Schluss damit. In meinem Leben war ich dreimal Deutscher Meister.",
+      "start_ms": 273140,
+      "end_ms": 277180,
+      "gloss_sequence": [
+        "$NUM-EINER1A:2",
+        "$NUM-ZEHNER2A:8d*",
+        "ICH1",
+        "ZUSAMMEN2C*",
+        "MEIN1",
+        "LEBEN1A*",
+        "MAL3*",
+        "ICH1*",
+        "MEISTER2A*"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0214",
+      "german_text": "Und einmal Vizemeister.",
+      "start_ms": 277180,
+      "end_ms": 279080,
+      "gloss_sequence": [
+        "$ORAL^",
+        "MAL3*",
+        "$ALPHA1:V",
+        "MEISTER2A"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0215",
+      "german_text": "Aber die gab es damals nur alle zwei Jahre.",
+      "start_ms": 279080,
+      "end_ms": 282660,
+      "gloss_sequence": [
+        "$ORAL^",
+        "UNTER1A^",
+        "ALLE1A*",
+        "JAHR1B*"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0216",
+      "german_text": "Heutzutage gibt es ja jährliche Meisterschaften, da geht das schnell.",
+      "start_ms": 282660,
+      "end_ms": 284620,
+      "gloss_sequence": [
+        "HEUTE1*",
+        "JAHR1B*",
+        "SCHNELL3A"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0217",
+      "german_text": "Wenn wir damals auch jährliche Meisterschaften gehabt hätten, dann hätten wir sicherlich viel mehr gewonnen, bestimmt 7 bis 8 Mal.",
+      "start_ms": 284620,
+      "end_ms": 290880,
+      "gloss_sequence": [
+        "WENN1A",
+        "ALLE1A*",
+        "JAHR1B*",
+        "KANN2B*",
+        "ICH1",
+        "MEHR1*",
+        "ICH1",
+        "MEISTER2A",
+        "BESTIMMT2",
+        "$NUM-EINER1D:7d",
+        "$NUM-EINER1D:8d",
+        "MAL3",
+        "BESTIMMT2"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0218",
+      "german_text": "Da es nur alle 2 Jahre statt fand, dauerte das.",
+      "start_ms": 290880,
+      "end_ms": 293680,
+      "gloss_sequence": [
+        "JAHR1B*",
+        "PHASE1A^*"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0219",
+      "german_text": "Also innerhalb von 10 Jahren müsste es idealerweise 5 Meistertitel geben.",
+      "start_ms": 293680,
+      "end_ms": 297360,
+      "gloss_sequence": [
+        "AUGE1^*",
+        "JAHR1B*",
+        "MUSS1",
+        "ICH1",
+        "MAL3*",
+        "ICH1",
+        "MEISTER2A^*"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0220",
+      "german_text": "Wenn man es einmal nicht geschafft hat, dann war der Titel für längere Zeit weg.",
+      "start_ms": 297360,
+      "end_ms": 302460,
+      "gloss_sequence": [
+        "$NUM-EINER1A:1",
+        "DURCH1A*",
+        "ZWISCHEN1B",
+        "BRECHEN1^",
+        "AB1A^*",
+        "PHASE1A^",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0221",
+      "german_text": "Jetzt gibt es in Düsseldorf oder in Stuttgart jährliche Meisterschaften, dann wären 7 oder 8 Meistertitel kein Wunder.",
+      "start_ms": 302460,
+      "end_ms": 309600,
+      "gloss_sequence": [
+        "HEUTE1",
+        "ZEIT7C*",
+        "$INDEX1*",
+        "DÜSSELDORF2*",
+        "STUTTGART1",
+        "BEREICH1A*",
+        "JAHR1B*",
+        "MÜHE1*",
+        "$INDEX1*",
+        "MAL3*",
+        "MAL3*",
+        "WUNDER1*",
+        "$INDEX2"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0222",
+      "german_text": "Das wäre doch nichts gewesen.",
+      "start_ms": 358480,
+      "end_ms": 359880,
+      "gloss_sequence": [
+        "$GEST^"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0223",
+      "german_text": "Die würde dann eine fremde Sprache sprechen, das würde auch nicht passen.",
+      "start_ms": 359880,
+      "end_ms": 361700,
+      "gloss_sequence": [
+        "AB1C^",
+        "GESCHICHTE2^*",
+        "GLEICH8^*",
+        "ICH1"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0224",
+      "german_text": "Ich als geborener Deutscher muss also eine deutsche Frau finden.",
+      "start_ms": 361700,
+      "end_ms": 366140,
+      "gloss_sequence": [
+        "ICH1",
+        "GEBURT1A",
+        "DEUTSCH1",
+        "MUSS1",
+        "$NUM-EINER1A:1",
+        "DEUTSCH1",
+        "FRAU1A*",
+        "FINDEN1A"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0225",
+      "german_text": "Aber durch so einen Mauerfall gab es auch immer mehr Probleme, z.B. mit der Finanzierung.",
+      "start_ms": 384060,
+      "end_ms": 390540,
+      "gloss_sequence": [
+        "WENN1A",
+        "$NUM-EINER1A:1",
+        "MAUERFALL2",
+        "ES-LÄUFT1*",
+        "AUCH3A*",
+        "DAZU1*",
+        "WERT1B^",
+        "PROBLEM1",
+        "AUFZÄHLEN1A^*",
+        "VERSCHIEDENES1^"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0226",
+      "german_text": "Es gab immer mehr Gehörlose, die arbeitslos wurden.",
+      "start_ms": 390540,
+      "end_ms": 393980,
+      "gloss_sequence": [
+        "ARBEITEN1^*",
+        "VIEL1A",
+        "TAUB-GEHÖRLOS1A",
+        "ARBEITEN1*",
+        "$WORTTEIL-LOS3",
+        "MASS-HORIZONTAL4B^*",
+        "MEHR3*",
+        "BEREICH1A*"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0227",
+      "german_text": "Vor dem Mauerfall hatten noch fast 80% aller Gehörlosen Arbeit und 20% keine.",
+      "start_ms": 393980,
+      "end_ms": 399200,
+      "gloss_sequence": [
+        "VOR2",
+        "MAUER3*",
+        "FAST3",
+        "$NUM-ZEHNER2A:8d*",
+        "PROZENT1",
+        "ARBEITEN1*",
+        "DA1*",
+        "$NUM-ZEHNER2A:2*",
+        "PROZENT1*",
+        "ARBEITEN1*",
+        "$WORTTEIL-LOS2"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0228",
+      "german_text": "Und heute ist es umgekehrt, also nur die 20% haben Arbeit und die anderen 80% sind nun arbeitslos.",
+      "start_ms": 399200,
+      "end_ms": 403980,
+      "gloss_sequence": [
+        "JETZT1",
+        "UMGEKEHRT1*",
+        "$NUM-ZEHNER2A:2*",
+        "PROZENT1*",
+        "ARBEITEN1",
+        "$NUM-ZEHNER2A:8d*",
+        "PROZENT1*",
+        "ARBEITEN1*",
+        "$WORTTEIL-LOS2*"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0229",
+      "german_text": "Durch den Mauerfall sind viele aus dem Osten auf einmal arbeitslos geworden, weil sie die neue Technik nicht kannten.",
+      "start_ms": 403980,
+      "end_ms": 410960,
+      "gloss_sequence": [
+        "WEIL1",
+        "MAUERFALL2",
+        "VIEL1A*",
+        "FAST3*",
+        "ALLE1A*",
+        "OSTEN1B",
+        "ARBEITEN1*",
+        "$WORTTEIL-LOS2*",
+        "DURCH2A",
+        "NEU1A",
+        "MASCHINE1A*",
+        "KENNEN1B*",
+        "BEREICH1A*"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0230",
+      "german_text": "Sie arbeiteten ja sonst mit der DDR-Technik. Nach der Umstellung kannten sie den Aufbau der westdeutschen Maschinen nicht.",
+      "start_ms": 410960,
+      "end_ms": 417240,
+      "gloss_sequence": [
+        "FRÜHER1*",
+        "DDR2",
+        "ZEIT7C*",
+        "SEIN-IHR1*",
+        "SO1A*",
+        "UM1A^",
+        "DEUTSCH1",
+        "WESTEN1B*",
+        "ARBEITEN1*",
+        "$INDEX1",
+        "EINFACH1*",
+        "MASCHINE1A*",
+        "KENNEN1A",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0231",
+      "german_text": "Das war so ein Problem, viele Stellen wurden abgeschafft.",
+      "start_ms": 417240,
+      "end_ms": 420160,
+      "gloss_sequence": [
+        "PROBLEM1*",
+        "$GEST-OFF^",
+        "VIEL1A*",
+        "AB5*",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0232",
+      "german_text": "Ja, das sind halt zwei verschiedene Meinungen.",
+      "start_ms": 448020,
+      "end_ms": 451780,
+      "gloss_sequence": [
+        "$GEST-NM-KOPFNICKEN1^",
+        "SO1A*",
+        "SO1A*",
+        "$NUM-EINER1A:2",
+        "BESTIMMEN2*",
+        "$INDEX2",
+        "SO1A*",
+        "SO1A*",
+        "SO1A*",
+        "SO1A*"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0233",
+      "german_text": "So ist das Leben hier in Berlin, man ist flexibel und kann wählen, ob man Sport macht oder Kulturelles erlebt.",
+      "start_ms": 512660,
+      "end_ms": 517160,
+      "gloss_sequence": [
+        "SO1A",
+        "LEBEN1C*",
+        "IN1",
+        "BERLIN1B*",
+        "WIE3B*",
+        "NEUTRAL1B^",
+        "PARALLEL1A^*",
+        "PARALLEL1A^*",
+        "KULTUR1B",
+        "SO1A*"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0234",
+      "german_text": "Man hat eine Auswahlmöglichkeit.",
+      "start_ms": 517160,
+      "end_ms": 519680,
+      "gloss_sequence": [
+        "SCHWANKEN2^*",
+        "SO1A*"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0235",
+      "german_text": "Man kann ja nicht immer nur Sport machen, da braucht man halt eine Abwechslung.",
+      "start_ms": 519680,
+      "end_ms": 522660,
+      "gloss_sequence": [
+        "IMMER4A*",
+        "PARALLEL1A^*",
+        "IMMER4A*",
+        "GUT1*",
+        "SCHWANKEN2^*"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0236",
+      "german_text": "Ja, das ist doch bescheuert, dann hauen sie ab.",
+      "start_ms": 535600,
+      "end_ms": 538400,
+      "gloss_sequence": [
+        "BESCHEUERT1^*",
+        "ABHAUEN1A*",
+        "ABHAUEN2*",
+        "ABHAUEN1A*"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0237",
+      "german_text": "Ja, die Familien sind damals hierher ausgewandert, nun sind deren Kinder groß geworden.",
+      "start_ms": 556340,
+      "end_ms": 560840,
+      "gloss_sequence": [
+        "WEIL1",
+        "FAMILIE3",
+        "FRÜHER1*",
+        "WANDERN1*",
+        "UMZIEHEN2^",
+        "DURCH2A",
+        "KIND1",
+        "AUFWACHSEN1B"
+      ],
+      "source_eaf": "dataset\\1413683.eaf"
+    },
+    {
+      "id": "seg_0238",
+      "german_text": "Wir gebärden hier schon lange, ich könnte auch mal eine Pause gebrauchen.",
+      "start_ms": 240,
+      "end_ms": 3500,
+      "gloss_sequence": [
+        "ZEIT5A*",
+        "LANG-ZEIT4A*",
+        "PLAUDERN1B",
+        "PAUSE1",
+        "$GEST-OFF^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0239",
+      "german_text": "Ja, er ist weg.",
+      "start_ms": 10360,
+      "end_ms": 12340,
+      "gloss_sequence": [
+        "GRÜBCHEN1^*",
+        "AB1A",
+        "$GEST-OFF^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0240",
+      "german_text": "Man war gegen ihn, was ich schade finde.",
+      "start_ms": 12340,
+      "end_ms": 14200,
+      "gloss_sequence": [
+        "GEGEN1*",
+        "ICH1",
+        "SCHADE1*",
+        "FÜR1*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0241",
+      "german_text": "Siegfried Heins war der beste.",
+      "start_ms": 14200,
+      "end_ms": 16000,
+      "gloss_sequence": [
+        "DICKKOPF1^*",
+        "WAR1",
+        "BESSER2*",
+        "$ORAL^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0242",
+      "german_text": "Ihn als Menschen finde ich nicht so toll, aber er wusste viel über Fußball-Strategie.",
+      "start_ms": 16000,
+      "end_ms": 19900,
+      "gloss_sequence": [
+        "ZUSAMMEN2C^*",
+        "WISSEN2B*",
+        "WIE-FRAGE1*",
+        "FUSSBALL2*",
+        "WISSEN2B",
+        "VIEL1A",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0243",
+      "german_text": "Die Anderen waren immer gegen ihn als Technikleiter.",
+      "start_ms": 19900,
+      "end_ms": 23560,
+      "gloss_sequence": [
+        "ALS4",
+        "TECHNIK1",
+        "LEITEN1B",
+        "IMMER4A*",
+        "IHR-PLURAL1A",
+        "GEGEN1*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0244",
+      "german_text": "Was soll ich da machen?",
+      "start_ms": 23560,
+      "end_ms": 25180,
+      "gloss_sequence": [
+        "ICH2*",
+        "WAS1A*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0245",
+      "german_text": "Er war gut darin, Jugendliche zum Verein zu holen und diese zu fördern.",
+      "start_ms": 25180,
+      "end_ms": 29620,
+      "gloss_sequence": [
+        "$INDEX1",
+        "GUT1",
+        "AUFBAUEN2*",
+        "FÜR1",
+        "JUNG2",
+        "HOLEN1A*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0246",
+      "german_text": "Und er war überall in Deutschland gut vernetzt.",
+      "start_ms": 29620,
+      "end_ms": 34360,
+      "gloss_sequence": [
+        "DAZU1^",
+        "WISSEN2A",
+        "WIE-FRAGE1*",
+        "BEREICH1A*",
+        "KENNEN1A",
+        "GUT1",
+        "$GEST^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0247",
+      "german_text": "Nun ist er weg und wer kommt dann nach ihm?",
+      "start_ms": 34360,
+      "end_ms": 36080,
+      "gloss_sequence": [
+        "$INDEX1",
+        "NICHT3B*",
+        "WER5*",
+        "IHR-PLURAL1A*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0248",
+      "german_text": "Hörende Trainer sind auch nicht besser.",
+      "start_ms": 36080,
+      "end_ms": 38020,
+      "gloss_sequence": [
+        "UND3*",
+        "HÖREND1A",
+        "TRAINER1",
+        "AUCH1A*",
+        "BESSER1*",
+        "$GEST-ABWINKEN1^*",
+        "$GEST^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0249",
+      "german_text": "Die kennen sich nicht gut genug mit den Gehörlosen aus.",
+      "start_ms": 38020,
+      "end_ms": 40720,
+      "gloss_sequence": [
+        "KENNEN2",
+        "FÜR1",
+        "TAUB-GEHÖRLOS1A",
+        "TIEF1*",
+        "NICHT1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0250",
+      "german_text": "Ach, was soll ich da denn machen?",
+      "start_ms": 40720,
+      "end_ms": 41960,
+      "gloss_sequence": [
+        "$GEST-NM-SCHULTERZUCKEN1^",
+        "ICH2*",
+        "WAS1A"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0251",
+      "german_text": "Kühn.",
+      "start_ms": 89640,
+      "end_ms": 90940,
+      "gloss_sequence": [
+        "SCHNABEL3",
+        "$INDEX1",
+        "SCHNABEL3"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0252",
+      "german_text": "Ja, genauso war es in den Untervereinen, zum Beispiel in Düsseldorf mit dem Bräcker als Trainer.",
+      "start_ms": 108000,
+      "end_ms": 114020,
+      "gloss_sequence": [
+        "STIMMT1A*",
+        "STIMMT1A*",
+        "UNTER1B",
+        "VEREIN2A",
+        "BEISPIEL1*",
+        "DÜSSELDORF2*",
+        "$INDEX1",
+        "TRAINER1",
+        "KNETEN1A^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0253",
+      "german_text": "Er hatte Erfolge und ging mit den Gehörlosen gut um.",
+      "start_ms": 114020,
+      "end_ms": 117940,
+      "gloss_sequence": [
+        "ERBLICKEN2",
+        "$INDEX1",
+        "ERFOLG1",
+        "BESCHEID1A*",
+        "WERBUNG1",
+        "PASSEN1",
+        "TAUB-GEHÖRLOS1A",
+        "$INDEX1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0254",
+      "german_text": "Es reicht aus, wenn er viel über Fußball weiß und das den Gehörlosen erklären kann.",
+      "start_ms": 117940,
+      "end_ms": 122540,
+      "gloss_sequence": [
+        "WEISS1A",
+        "VIEL1B",
+        "FUSSBALL2*",
+        "WICHTIG1",
+        "FÜR1",
+        "TAUB-GEHÖRLOS1A",
+        "TRAINER1",
+        "GENUG1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0255",
+      "german_text": "Das muss kein Hörender sein.",
+      "start_ms": 122540,
+      "end_ms": 123620,
+      "gloss_sequence": [
+        "MUSS1",
+        "HÖREND1A",
+        "MUSS1*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0256",
+      "german_text": "Die deutschen hörenden Fachleute sollen auch an von Geburt an tauben Menschen interessiert sein.",
+      "start_ms": 123620,
+      "end_ms": 131000,
+      "gloss_sequence": [
+        "$ORAL^",
+        "DEUTSCH1*",
+        "HÖREND1A",
+        "GESCHICKT3^",
+        "FÜR1",
+        "GEBURT1A",
+        "TAUB-GEHÖRLOS1A",
+        "INTERESSE1B"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0257",
+      "german_text": "Komplett fremde Leute zu nehmen find ich gar nicht gut.",
+      "start_ms": 131000,
+      "end_ms": 135740,
+      "gloss_sequence": [
+        "FREMD1",
+        "LEUTE2",
+        "KOMMEN3*",
+        "ICH1",
+        "$GEST^",
+        "$GEST^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0258",
+      "german_text": "Früher war man ein Teil einer Mannschaft, heute geht es mehr um die einzelnen Personen.",
+      "start_ms": 169220,
+      "end_ms": 175560,
+      "gloss_sequence": [
+        "NEIN1B",
+        "FRÜHER1",
+        "MANNSCHAFT1",
+        "HEUTE1",
+        "EINZEL1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0259",
+      "german_text": "Früher war die Manschaft eine feste Gruppe, heute fehlt der Zusammenhalt der einzelnen Personen.",
+      "start_ms": 175560,
+      "end_ms": 182260,
+      "gloss_sequence": [
+        "FRÜHER1",
+        "FUSSBALL1B",
+        "MANNSCHAFT1",
+        "SOLIDARISCH1A^*",
+        "ZUSAMMEN7*",
+        "HEUTE1",
+        "EINZEL1",
+        "$GEST^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0260",
+      "german_text": "In Berlin gibt es gute Spieler, die 90 Minuten durchhalten könnten.",
+      "start_ms": 182260,
+      "end_ms": 186040,
+      "gloss_sequence": [
+        "AUCH3A*",
+        "BERLIN1A*",
+        "EINIGE1",
+        "GUT1",
+        "SPIELEN1*",
+        "KANN2A",
+        "$NUM-ZEHNER2A:9*",
+        "MINUTE1*",
+        "VOLL2A"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0261",
+      "german_text": "Aber er hatte sich ja dort noch nicht mal richtig umgeschaut, nur in Bayern oder in Nordrhein-Westfalen.",
+      "start_ms": 186040,
+      "end_ms": 190580,
+      "gloss_sequence": [
+        "$INDEX1",
+        "ERBLICKEN1^*",
+        "NICHT5*",
+        "MEHR1",
+        "BAYERN3",
+        "NORD1B^",
+        "WESTEN1B",
+        "BEREICH1A^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0262",
+      "german_text": "Aber auch vom Norden kommen nicht viele.",
+      "start_ms": 190580,
+      "end_ms": 193620,
+      "gloss_sequence": [
+        "NORD1A",
+        "BEREICH1A*",
+        "VIEL1A",
+        "$GEST^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0263",
+      "german_text": "Er ist mehr mit denen aus Stuttgart und näherer Umgebung verbunden. Was soll man da machen.",
+      "start_ms": 193620,
+      "end_ms": 196820,
+      "gloss_sequence": [
+        "SOLIDARISCH1A^*",
+        "STUTTGART1",
+        "$INDEX1*",
+        "$GEST^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0264",
+      "german_text": "Ja, auch weil der gehörlose Assistenzfußballtrainer, Werner von der Ruhren, in Düsseldorf wohnt.",
+      "start_ms": 196820,
+      "end_ms": 202480,
+      "gloss_sequence": [
+        "WEIL1*",
+        "FUSSBALL2*",
+        "TRAINER1",
+        "ASSISTENZ1",
+        "TAUB-GEHÖRLOS1A",
+        "VON3",
+        "FRIEDEN1^",
+        "WOHNUNG1B",
+        "DÜSSELDORF2*",
+        "$INDEX1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0265",
+      "german_text": "Da ist es ja kein Wunder, dass die nur Spieler aus den beiden Regionen auswählen.",
+      "start_ms": 202480,
+      "end_ms": 204800,
+      "gloss_sequence": [
+        "WUNDER1*",
+        "$INDEX1*",
+        "AUSWAHL1C*",
+        "$INDEX1*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0266",
+      "german_text": "In Berlin waren die nicht einmal und haben geschaut.",
+      "start_ms": 204800,
+      "end_ms": 206660,
+      "gloss_sequence": [
+        "DORT1*",
+        "$NUM-EINER1A:1d*",
+        "SEHEN1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0267",
+      "german_text": "Die gucken einen nur einmal an, wer nicht in Form ist, wird einfach aussortiert.",
+      "start_ms": 206660,
+      "end_ms": 212460,
+      "gloss_sequence": [
+        "MAL3*",
+        "SCHAUEN1*",
+        "$GEST-NM-SCHULTERZUCKEN1^*",
+        "FORM-KÖRPERLICH1",
+        "SCHWACH1",
+        "$GEST^",
+        "PECH2",
+        "PECH2"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0268",
+      "german_text": "Beim nächsten Spiel ist er dann wieder in guter Form.",
+      "start_ms": 212460,
+      "end_ms": 214000,
+      "gloss_sequence": [
+        "IMMER4A*",
+        "SEHR6*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0269",
+      "german_text": "Aber das sieht sich dann keiner mehr an.",
+      "start_ms": 214000,
+      "end_ms": 216100,
+      "gloss_sequence": [
+        "ERBLICKEN1*",
+        "NICHT6*",
+        "$INDEX1*",
+        "$GEST-OFF^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0270",
+      "german_text": "Heute oder in Zukunft wird es Gruppen mit Schwerhörigen geben.",
+      "start_ms": 269380,
+      "end_ms": 273820,
+      "gloss_sequence": [
+        "HEUTE1",
+        "IN1*",
+        "ZUKUNFT2",
+        "MITBRINGEN1^",
+        "SCHWERHÖRIG1*",
+        "HÖREN2",
+        "MANNSCHAFT1^*",
+        "ZUSAMMEN7",
+        "$GEST^",
+        "GRUPPE1A^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0271",
+      "german_text": "Wie es dann mit allem weitergegangen ist, weiß ich nicht.",
+      "start_ms": 273820,
+      "end_ms": 276580,
+      "gloss_sequence": [
+        "WIE-FRAGE1*",
+        "ES-LÄUFT1",
+        "WEITER1A*",
+        "ICH1*",
+        "$GEST^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0272",
+      "german_text": "Ja, ob das dann gut läuft?",
+      "start_ms": 279400,
+      "end_ms": 281040,
+      "gloss_sequence": [
+        "ES-LÄUFT1",
+        "GUT3"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0273",
+      "german_text": "Nein, ich glaube das nicht.",
+      "start_ms": 281040,
+      "end_ms": 282620,
+      "gloss_sequence": [
+        "ICH1",
+        "GLAUBEN2A",
+        "UNGEFÄHR1^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0274",
+      "german_text": "Der Vorstand muss genau darauf achten und dabei aufpassen.",
+      "start_ms": 282620,
+      "end_ms": 286500,
+      "gloss_sequence": [
+        "MUSS2*",
+        "JETZT1",
+        "ALARM1",
+        "VORSTAND2*",
+        "$INDEX1*",
+        "VORSICHTIG1",
+        "SCHUTZ2A^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0275",
+      "german_text": "Denn dann kann es sein, dass immer mehr Schwerhörige eintreten, die Gehörlosen vertreiben und letztendlich Comet kaputtmachen.",
+      "start_ms": 286500,
+      "end_ms": 291720,
+      "gloss_sequence": [
+        "WENN1A*",
+        "SCHWERHÖRIG1*",
+        "EINSTELLEN-ARBEIT1B",
+        "$PROD*",
+        "BIS1",
+        "$INDEX1",
+        "TAG1A*",
+        "$NAME-COMET1",
+        "KAPUTT4*",
+        "TAUB-GEHÖRLOS1A",
+        "UNTERDRÜCKEN1A"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0276",
+      "german_text": "Da besteht eine Gefahr.",
+      "start_ms": 291720,
+      "end_ms": 293780,
+      "gloss_sequence": [
+        "AUCH1A*",
+        "BESTEHEN1",
+        "GEFÄHRLICH1C",
+        "$GEST^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0277",
+      "german_text": "Mein Sohn sagte mir, dass wir vorsichtig sein sollten. Ein paar Schwerhörige seien genug, aber auf einmal kamen zu viele Schwerhörige.",
+      "start_ms": 293780,
+      "end_ms": 300940,
+      "gloss_sequence": [
+        "DISKUSSION1A*",
+        "MEIN1",
+        "SOHN1",
+        "BESCHEID1A*",
+        "ALARM1",
+        "VORSICHTIG1*",
+        "$GEST^",
+        "EINIGE1*",
+        "ENDE1^*",
+        "AUF-EINMAL1C*",
+        "VOLL1*",
+        "MASSE-PERSON-AKTIV2*",
+        "ZITTERN2C^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0278",
+      "german_text": "Es wäre besser, aus beiden Gruppen einige auszuwählen und diese zusammenzuführen.",
+      "start_ms": 314360,
+      "end_ms": 316540,
+      "gloss_sequence": [
+        "PAAR-ANZAHL1*",
+        "NEHMEN1A^*",
+        "FUNKTION3A"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0279",
+      "german_text": "Statt immer mehr Schwerhörige in die Mannschaft zu holen, bis sie die übernehmen, dann haben die Tauben verloren und sind weg vom Fenster.",
+      "start_ms": 316540,
+      "end_ms": 319400,
+      "gloss_sequence": [
+        "WERFEN1^*",
+        "UNTERDRÜCKEN1C^*",
+        "TAUB-GEHÖRLOS1A",
+        "VERLIEREN1*",
+        "WEG-ENTFERNEN1A",
+        "$GEST^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0280",
+      "german_text": "Bei mir war es im Jahr 1969.",
+      "start_ms": 323620,
+      "end_ms": 327620,
+      "gloss_sequence": [
+        "ICH1",
+        "$NUM-EINER1D:9",
+        "$NUM-ZEHNER1:6d*",
+        "ICH1",
+        "$NUM-EINER1D:9",
+        "$NUM-ZEHNER1:6d*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0281",
+      "german_text": "In Jugoslawien.",
+      "start_ms": 329840,
+      "end_ms": 332000,
+      "gloss_sequence": [
+        "JUGOSLAWIEN1*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0282",
+      "german_text": "Dann 1973 in Malmö, ich sollte auch mitfahren, aber leider war ich verletzt.",
+      "start_ms": 332000,
+      "end_ms": 337280,
+      "gloss_sequence": [
+        "DANN7",
+        "NÄCHSTE1",
+        "$NUM-EINER1D:8d",
+        "$NUM-ZEHNER2A:7d*",
+        "DORTHIN-GEHEN1^*",
+        "SOLL1",
+        "EIGENTLICH1C",
+        "VERLETZUNG2"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0283",
+      "german_text": "Ach so, ich/",
+      "start_ms": 337280,
+      "end_ms": 340820,
+      "gloss_sequence": [
+        "$GEST^",
+        "ICH2"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0284",
+      "german_text": "Vielleicht 1988?",
+      "start_ms": 343380,
+      "end_ms": 348260,
+      "gloss_sequence": [
+        "VERGANGENHEIT1^*",
+        "$NUM-DOPPEL1A:8d*",
+        "$$EXTRA-LING-MAN^",
+        "$GEST-OFF^",
+        "LANG-ZEIT5",
+        "$NUM-DOPPEL1A:8d*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0285",
+      "german_text": "Das war in Rom, in Rom, ich war da aber nicht.",
+      "start_ms": 351580,
+      "end_ms": 354520,
+      "gloss_sequence": [
+        "$GEST-NM-KOPFNICKEN1^",
+        "$GEST-NM-KOPFSCHÜTTELN1^*",
+        "ICH2",
+        "$GEST^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0286",
+      "german_text": "Es war in Kopenhagen, da war ich aber auch nicht.",
+      "start_ms": 354520,
+      "end_ms": 358700,
+      "gloss_sequence": [
+        "ICH2^",
+        "KOPENHAGEN1*",
+        "$INDEX1",
+        "$INDEX1",
+        "$GEST^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0287",
+      "german_text": "In Köln waren die Weltspiele, da war ich das letzte Mal dabei.",
+      "start_ms": 360260,
+      "end_ms": 363220,
+      "gloss_sequence": [
+        "LETZTE1B*",
+        "KÖLN3*",
+        "$INDEX1",
+        "WELT1*",
+        "SPIELEN2*",
+        "KÖLN3*",
+        "$INDEX1",
+        "KÖLN3*",
+        "$INDEX1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0288",
+      "german_text": "1985, bei denen in Los Angeles war ich dann nicht.",
+      "start_ms": 363220,
+      "end_ms": 369040,
+      "gloss_sequence": [
+        "DANN1A*",
+        "$NUM-EINER1A:5*",
+        "$NUM-ZEHNER1:8d*",
+        "$INDEX1",
+        "$INDEX1*",
+        "SCHLAGEN1^*",
+        "NEIN2B*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0289",
+      "german_text": "1989 in Neuseeland war ich auch nicht.",
+      "start_ms": 369040,
+      "end_ms": 371180,
+      "gloss_sequence": [
+        "$NUM-EINER1D:9*",
+        "$NUM-ZEHNER1:8d*",
+        "$INDEX2*",
+        "$INDEX1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0290",
+      "german_text": "Ja, bei den beiden war ich nicht dabei.",
+      "start_ms": 371180,
+      "end_ms": 374260,
+      "gloss_sequence": [
+        "$INDEX1",
+        "BEIDE2A*",
+        "$GEST-OFF^*",
+        "FERTIG1B*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0291",
+      "german_text": "Beim Hören sind das Dezibel.",
+      "start_ms": 389540,
+      "end_ms": 392700,
+      "gloss_sequence": [
+        "HÖREN2",
+        "ZICKZACK-VERLAUF1B^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0292",
+      "german_text": "Das ist doch Betrug, war das denn rechtens so?",
+      "start_ms": 393780,
+      "end_ms": 396580,
+      "gloss_sequence": [
+        "$INDEX1",
+        "BETRÜGEN1*",
+        "$INDEX1",
+        "BETRÜGEN1*",
+        "$INDEX2*",
+        "$INDEX1",
+        "OFFIZIELL3"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0293",
+      "german_text": "War das wirklich offiziell?",
+      "start_ms": 396580,
+      "end_ms": 397540,
+      "gloss_sequence": [
+        "OFFIZIELL2",
+        "MISSTRAUISCH1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0294",
+      "german_text": "Immer nur Schwerhörige.",
+      "start_ms": 430940,
+      "end_ms": 432220,
+      "gloss_sequence": [
+        "SCHWERHÖRIG1*",
+        "$GEST-OFF^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0295",
+      "german_text": "Richtig wäre es, wenn die Gehörlosen bevorzugt würden.",
+      "start_ms": 432220,
+      "end_ms": 435620,
+      "gloss_sequence": [
+        "RICHTIG1B",
+        "VOR6A",
+        "TAUB-GEHÖRLOS1A"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0296",
+      "german_text": "Die Grenze ab 55 [gemeint ist Dezibel] zu machen.",
+      "start_ms": 435620,
+      "end_ms": 437180,
+      "gloss_sequence": [
+        "GRENZE1B*",
+        "AB2",
+        "$NUM-DOPPEL2:5"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0297",
+      "german_text": "Sie konnten dabei auch telefonieren.",
+      "start_ms": 450340,
+      "end_ms": 455340,
+      "gloss_sequence": [
+        "AUCH3A",
+        "AUCH3A",
+        "EINIGE2",
+        "TELEFON1*",
+        "EINIGE2",
+        "TELEFON1*",
+        "$GEST-AUFMERKSAMKEIT1^*",
+        "TELEFON1*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0298",
+      "german_text": "Solche Leute sollten nicht als gehörlos anerkannt werden.",
+      "start_ms": 455340,
+      "end_ms": 457960,
+      "gloss_sequence": [
+        "ANERKENNEN1",
+        "FÜR1",
+        "TAUB-GEHÖRLOS1A",
+        "NEIN2A"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0299",
+      "german_text": "Wer nicht telefonieren kann, kann gerne mitmachen.",
+      "start_ms": 457960,
+      "end_ms": 460900,
+      "gloss_sequence": [
+        "TELEFON1*",
+        "KANN1*",
+        "$GEST-NM-KOPFNICKEN1^",
+        "KOMMEN-AUFFORDERN1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0300",
+      "german_text": "Wer unterwegs einfach so telefonieren kann, soll zu den Hörenden gehen und für die Gehörlosenmeisterschaft nicht zugelassen werden.",
+      "start_ms": 460900,
+      "end_ms": 466660,
+      "gloss_sequence": [
+        "KANN1",
+        "AUFNEHMEN-TELEFON1*",
+        "STIMMT1^",
+        "TELEFON1*",
+        "$INDEX1*",
+        "GEHÖREN1^",
+        "HÖREND1A*",
+        "GEHÖREN1",
+        "FÜR1",
+        "TAUB-GEHÖRLOS1A",
+        "MEISTERSCHAFT1*",
+        "NICHT3A"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0301",
+      "german_text": "Das ist doch enttäuschend.",
+      "start_ms": 485540,
+      "end_ms": 487180,
+      "gloss_sequence": [
+        "ENTTÄUSCHT5*",
+        "GEBÄRDEN1D*",
+        "ENTTÄUSCHT5*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0302",
+      "german_text": "Es sollte eigentlich ganz locker und offen gebärdet und nicht einfach so drauf los gesprochen werden.",
+      "start_ms": 487180,
+      "end_ms": 490900,
+      "gloss_sequence": [
+        "GEBÄRDEN1D",
+        "LOCKER1*",
+        "TOLERANT1*",
+        "TAUB-GEHÖRLOS1A",
+        "GLEICH2*",
+        "GEBÄRDEN1D*",
+        "SCHWERHÖRIG1*",
+        "SPRECHEN6*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0303",
+      "german_text": "Später wird es verstärkt vorkommen, dass die olympischen Spiele komplett ausfallen werden.",
+      "start_ms": 499420,
+      "end_ms": 502340,
+      "gloss_sequence": [
+        "SPÄTER3*",
+        "JETZT1",
+        "MEHR3",
+        "DANN7",
+        "OLYMPIA1",
+        "$INDEX1",
+        "AUSFALLEN1*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0304",
+      "german_text": "Wie kürzlich auch die ausgefallenen Winterspiele, vom C-I-S-S, mal sehen was bei den nächsten passiert.",
+      "start_ms": 502340,
+      "end_ms": 506580,
+      "gloss_sequence": [
+        "DURCH2A",
+        "VOR-KURZEM1*",
+        "SKI1",
+        "SAGEN2A*",
+        "AUSFALLEN1*",
+        "$ALPHA1:C-I*",
+        "AUSFALLEN1*",
+        "KOMMEN1*",
+        "DANN1A*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0305",
+      "german_text": "Und die in Athen, in Griechenland, werden wegen der Korruption wohl auch nicht stattfinden.",
+      "start_ms": 506580,
+      "end_ms": 515520,
+      "gloss_sequence": [
+        "$INDEX1",
+        "OLYMPIA1",
+        "$INDEX1",
+        "SITZEN1A^*",
+        "GRIECHENLAND5",
+        "$INDEX1",
+        "GELD1A*",
+        "$INDEX1",
+        "GELD1A",
+        "$GEST-OFF^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0306",
+      "german_text": "Kanada wäre gut. Ob die Organisation dort gut läuft?",
+      "start_ms": 534900,
+      "end_ms": 540380,
+      "gloss_sequence": [
+        "$INDEX1",
+        "NICHT3B*",
+        "IN1",
+        "KANADA2*",
+        "$GEST-OFF^*",
+        "KANADA2*",
+        "$GEST-OFF^*",
+        "ORGANISIEREN2A",
+        "ABLAUF1A",
+        "GUT1",
+        "$GEST-OFF^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0307",
+      "german_text": "Am 15. September müssen alle Mitgliedsverbände jeweils dafür stimmen.",
+      "start_ms": 548580,
+      "end_ms": 553280,
+      "gloss_sequence": [
+        "$NUM-TEEN1:5",
+        "SEPTEMBER3*",
+        "ENTSCHEIDEN1B*",
+        "MUSS1",
+        "SELBST2^*",
+        "$GEST-NM-SCHULTERZUCKEN1^",
+        "$GEST-NM-KOPFNICKEN1^",
+        "VERBAND1B"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0308",
+      "german_text": "Der C-I-S-S kommt zusammen.",
+      "start_ms": 553280,
+      "end_ms": 554780,
+      "gloss_sequence": [
+        "$ALPHA1:C-I-#",
+        "MASSE-PERSON-AKTIV1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0309",
+      "german_text": "Mal sehen.",
+      "start_ms": 554780,
+      "end_ms": 555280,
+      "gloss_sequence": [
+        "$GEST-OFF^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0310",
+      "german_text": "Die waren sehr raffiniert.",
+      "start_ms": 568260,
+      "end_ms": 570040,
+      "gloss_sequence": [
+        "GESCHICKT1*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0311",
+      "german_text": "Die haben das abgezwackt.",
+      "start_ms": 573940,
+      "end_ms": 575280,
+      "gloss_sequence": [
+        "FÜHREN4^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0312",
+      "german_text": "Die von der Mafia waren ja geschickt, sie ließen sich im Voraus viel bezahlen und verschwanden einfach damit.",
+      "start_ms": 587580,
+      "end_ms": 594340,
+      "gloss_sequence": [
+        "JETZT1",
+        "MOMENT1",
+        "HOCH4A",
+        "GEFÄHRLICH1A",
+        "GESCHICKT1*",
+        "$GEST-KOMM-HER-HER-DAMIT1B^",
+        "VORAUS1A*",
+        "$INDEX1",
+        "GELD1A",
+        "SAMMELN1",
+        "VORAUS1A",
+        "SAMMELN3*",
+        "$INDEX1",
+        "WEG-VERSCHWINDEN1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0313",
+      "german_text": "Es stellte sich raus, dass viele Gelder schon ausgezahlt wurden, ohne dass Reservierungen oder Buchungen wirklich vorgenommen worden waren.",
+      "start_ms": 594340,
+      "end_ms": 599280,
+      "gloss_sequence": [
+        "ERGEBNIS2*",
+        "SCHON1A",
+        "BEZAHLEN1",
+        "KEIN8*",
+        "BUCHEN1*",
+        "NEIN3B^*",
+        "WEG-VERSCHWINDEN1",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0314",
+      "german_text": "Die Schuldigen waren andere.",
+      "start_ms": 606940,
+      "end_ms": 608460,
+      "gloss_sequence": [
+        "UNSCHULDIG1*",
+        "$INDEX1",
+        "$INDEX1",
+        "$INDEX2"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0315",
+      "german_text": "Das hat ja nichts damit zu tun, ob eine Person aus der Slowakei kommt.",
+      "start_ms": 609240,
+      "end_ms": 615120,
+      "gloss_sequence": [
+        "$GEST-OFF^*",
+        "DURCH2A",
+        "PERSON1*",
+        "$ORAL^",
+        "ZU-TUN-HABEN-MIT1*",
+        "$GEST-OFF^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0316",
+      "german_text": "Wann ist es denn endlich vorbei. Ich könnt mal eine Pause brauchen, ich hab ganz schön Hunger. So lange kann ich auch nicht sitzen.",
+      "start_ms": 615120,
+      "end_ms": 619100,
+      "gloss_sequence": [
+        "ENDE1^*",
+        "PAUSE1",
+        "HUNGER3*",
+        "PAUSE1",
+        "ICH1",
+        "LANG-ZEIT1A",
+        "SITZEN1A*",
+        "KANN1*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0317",
+      "german_text": "Ich?",
+      "start_ms": 630340,
+      "end_ms": 631020,
+      "gloss_sequence": [
+        "ICH1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0318",
+      "german_text": "Ja, nach Tunesien.",
+      "start_ms": 631020,
+      "end_ms": 631940,
+      "gloss_sequence": [
+        "TUNESIEN-$KANDIDAT-BER19^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0319",
+      "german_text": "Beim letzten Mal war ich in Griechenland.",
+      "start_ms": 633240,
+      "end_ms": 636080,
+      "gloss_sequence": [
+        "LETZTE5",
+        "GRIECHENLAND5*",
+        "LETZTE5",
+        "GRIECHENLAND5"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0320",
+      "german_text": "Dann auf Amrum und danach nach Tunesien.",
+      "start_ms": 636080,
+      "end_ms": 639060,
+      "gloss_sequence": [
+        "WOHIN1^*",
+        "BALD2^",
+        "TUNESIEN-$KANDIDAT-BER19^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0321",
+      "german_text": "In Tunesien ist nichts.",
+      "start_ms": 639440,
+      "end_ms": 640480,
+      "gloss_sequence": [
+        "TUNESIEN-$KANDIDAT-BER19^",
+        "$GEST-OFF^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0322",
+      "german_text": "In Syrien schon.",
+      "start_ms": 640480,
+      "end_ms": 642320,
+      "gloss_sequence": [
+        "$ALPHA-SK:S*",
+        "$INDEX1",
+        "$INDEX-BEREICH1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0323",
+      "german_text": "In den Reisewarnungen war Tunesien nicht dabei, also fahre ich dahin.",
+      "start_ms": 642320,
+      "end_ms": 647320,
+      "gloss_sequence": [
+        "TUNESIEN-$KANDIDAT-BER19^*",
+        "WER2",
+        "REISE1B*",
+        "WARNUNG1",
+        "LISTE1A*",
+        "$INDEX1",
+        "KEIN5B",
+        "ICH2",
+        "RICHTUNG1^",
+        "FERTIG2",
+        "$GEST-OFF^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0324",
+      "german_text": "Es ist immer das Gleiche in Europa. Ich wollte erst in Asien und Amerika Urlaub machen.",
+      "start_ms": 647320,
+      "end_ms": 651820,
+      "gloss_sequence": [
+        "$INDEX1",
+        "GEFÜHL2^",
+        "$INDEX-BEREICH1",
+        "$INDEX1",
+        "DASSELBE5*",
+        "WOLLEN2*",
+        "$GEST-OFF^*",
+        "AMERIKA4",
+        "UND2A*",
+        "ASIEN1",
+        "RICHTUNG3^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0325",
+      "german_text": "Für dieses Jahr ist mir das zu viel, aber das werde ich nächstes Jahr machen, 2012.",
+      "start_ms": 651820,
+      "end_ms": 655700,
+      "gloss_sequence": [
+        "ABER1",
+        "$GEST-NM^",
+        "VIEL1A",
+        "NÄCHSTE1",
+        "JAHR1A",
+        "$NUM-TAUSENDER1:2",
+        "$NUM-TIPPEN1:2"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0326",
+      "german_text": "Das ist auch okay so.",
+      "start_ms": 655700,
+      "end_ms": 656600,
+      "gloss_sequence": [
+        "OKAY1A*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0327",
+      "german_text": "Nein, davon weiß ich nichts.",
+      "start_ms": 665960,
+      "end_ms": 666880,
+      "gloss_sequence": [
+        "ICH2",
+        "NICHT1*",
+        "KEIN2^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0328",
+      "german_text": "Nach Sousse, südlich davon liegt (()).",
+      "start_ms": 667780,
+      "end_ms": 670180,
+      "gloss_sequence": [
+        "ICH1",
+        "$INDEX1",
+        "$ALPHA-SK:S",
+        "UNTEN5*",
+        "$ALPHA-SK:S"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0329",
+      "german_text": "Am Strand? Nein, da an der Straße auf der rechten Seite.",
+      "start_ms": 678820,
+      "end_ms": 685980,
+      "gloss_sequence": [
+        "NAHE1^*",
+        "FLUSS1^",
+        "NEIN1A",
+        "STRASSE3*",
+        "GESCHÄFT-ORT1*",
+        "RECHTS1*",
+        "RUND13B^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0330",
+      "german_text": "Auf der rechten Seite ist das Geschäft von dem Gehörlosen.",
+      "start_ms": 690680,
+      "end_ms": 693620,
+      "gloss_sequence": [
+        "RECHTS1*",
+        "TAUB-GEHÖRLOS1A",
+        "FIRMA1A"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0331",
+      "german_text": "Wann warst du da?",
+      "start_ms": 703780,
+      "end_ms": 706060,
+      "gloss_sequence": [
+        "WANN3*",
+        "DU1",
+        "WANN3*",
+        "DU1",
+        "WANN3*",
+        "DU1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0332",
+      "german_text": "Das ist schon recht lange her.",
+      "start_ms": 709040,
+      "end_ms": 709720,
+      "gloss_sequence": [
+        "LANG-ZEIT5"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0333",
+      "german_text": "Ob es dieses Geschäft noch gibt oder nicht?",
+      "start_ms": 709720,
+      "end_ms": 710780,
+      "gloss_sequence": [
+        "HEUTE1",
+        "NOCH4A*",
+        "NICHT3B*",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0334",
+      "german_text": "Haben die auch ein Gehörlosenzentrum?",
+      "start_ms": 711760,
+      "end_ms": 713680,
+      "gloss_sequence": [
+        "UND3*",
+        "TAUB-GEHÖRLOS1A",
+        "ZENTRUM1A",
+        "DA1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0335",
+      "german_text": "Hattest du da Kontakt zum Gehörlosenzentrum?",
+      "start_ms": 722360,
+      "end_ms": 726100,
+      "gloss_sequence": [
+        "$INDEX1",
+        "TAUB-GEHÖRLOS1A",
+        "ZENTRUM1A*",
+        "VORBEIGEHEN-AN-ETWAS1*",
+        "ZUSAMMENHANG3",
+        "NICHT6*",
+        "ZUSAMMENHANG3",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0336",
+      "german_text": "Dann wohl im Internet.",
+      "start_ms": 726120,
+      "end_ms": 728780,
+      "gloss_sequence": [
+        "ICH2*",
+        "$GEST-OFF^*",
+        "INTERNET1A*",
+        "KOMMEN2^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0337",
+      "german_text": "Die Qualität ist bestimmt nicht so gut.",
+      "start_ms": 737060,
+      "end_ms": 740320,
+      "gloss_sequence": [
+        "$GEST-NM-KOPFSCHÜTTELN1^",
+        "NICHT3A*",
+        "QUALITÄT1B*",
+        "KLEIDUNG1A",
+        "NICHT3B*",
+        "QUALITÄT1B",
+        "KLEIDUNG1A",
+        "NICHT4*",
+        "QUALITÄT1B*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0338",
+      "german_text": "Nächsten Sonntag werde ich losfliegen.",
+      "start_ms": 744240,
+      "end_ms": 746600,
+      "gloss_sequence": [
+        "NÄCHSTE1",
+        "SONNTAG1A",
+        "LOS-FAHRT1*",
+        "NÄCHSTE1",
+        "SONNTAG1A",
+        "LOS-FAHRT1*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0339",
+      "german_text": "Ich esse nur im Hotel, ich habe dort all inclusive. Ich weiß, wie es außerhalb abläuft.",
+      "start_ms": 750100,
+      "end_ms": 755160,
+      "gloss_sequence": [
+        "HOTEL9*",
+        "INKLUSIV1*",
+        "INKLUSIV1*",
+        "HOTEL9",
+        "NICHT3B*",
+        "$INDEX1",
+        "WISSEN2A*",
+        "$INDEX1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0340",
+      "german_text": "Ich weiß, ich kenne das, ich war damals ja in Ägypten, da habe ich auch nur im Hotel gegessen.",
+      "start_ms": 755160,
+      "end_ms": 757860,
+      "gloss_sequence": [
+        "WISSEN2A*",
+        "KENNEN2",
+        "FRÜHER1*",
+        "GEHÖREN1^*",
+        "GEWESEN1",
+        "GEHÖREN1^*",
+        "$INDEX1",
+        "HOTEL9"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0341",
+      "german_text": "Draußen kann man nichts essen.",
+      "start_ms": 757860,
+      "end_ms": 759440,
+      "gloss_sequence": [
+        "$PROD*",
+        "ICH1",
+        "KANN1*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0342",
+      "german_text": "So war es auch in Mexiko, draußen ging es richtig schmutzig zu.",
+      "start_ms": 759440,
+      "end_ms": 761800,
+      "gloss_sequence": [
+        "AUCH1A",
+        "MEXIKO3*",
+        "VERKOMMEN2*",
+        "$PROD*",
+        "SEHR6"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0343",
+      "german_text": "Da habe ich nur im Hotel gegessen, dort war es sicher und sauber.",
+      "start_ms": 761800,
+      "end_ms": 766800,
+      "gloss_sequence": [
+        "HOTEL9",
+        "NEIN3B^*",
+        "SICHER1",
+        "NEIN3B^",
+        "SAUBER1",
+        "$INDEX1",
+        "SAUBER1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0344",
+      "german_text": "Ach, da war ich schon sechsmal, in Venedig.",
+      "start_ms": 771960,
+      "end_ms": 776860,
+      "gloss_sequence": [
+        "$ORAL^",
+        "ICH1",
+        "MAL3*",
+        "RUDERN1^*",
+        "MAL3*",
+        "MAL3*",
+        "$GEST-ABWINKEN1^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0345",
+      "german_text": "Ich bin mit Auto oder mit dem Zug dorthin gefahren.",
+      "start_ms": 779140,
+      "end_ms": 781580,
+      "gloss_sequence": [
+        "AUTO-FAHREN2*",
+        "AUCH1A",
+        "GEWESEN1",
+        "ICH1",
+        "ZUG1D"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0346",
+      "german_text": "Kaum dass ich im Bahnhof war, sah ich vorne schon das Wasser. Da war ich erstaunt.",
+      "start_ms": 781580,
+      "end_ms": 785680,
+      "gloss_sequence": [
+        "$PROD*",
+        "BAHNHOF6*",
+        "GEHEN4*",
+        "WASSER2A*",
+        "FLÜSSIG2^*",
+        "VERWIRRT-SEIN3",
+        "$GEST-OFF^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0347",
+      "german_text": "Ich war dort unterwegs, es war richtig schön da.",
+      "start_ms": 785680,
+      "end_ms": 788300,
+      "gloss_sequence": [
+        "ICH2",
+        "GEWESEN1*",
+        "ORIENTIERUNG1A^*",
+        "GUT1*",
+        "$GEST-NM-KOPFNICKEN1^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0348",
+      "german_text": "Wie lange wirst du dort sein?",
+      "start_ms": 788480,
+      "end_ms": 790560,
+      "gloss_sequence": [
+        "LANG-ZEIT2*",
+        "BLEIBEN1",
+        "DU1*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0349",
+      "german_text": "Gut, wirst du im Hotel übernachten?",
+      "start_ms": 790560,
+      "end_ms": 796500,
+      "gloss_sequence": [
+        "GUT1",
+        "$$EXTRA-LING-MAN^",
+        "SCHLAFEN1A",
+        "HOTEL9*",
+        "SCHLAFEN1A*",
+        "$INDEX1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0350",
+      "german_text": "Und wie teuer ist das?",
+      "start_ms": 797220,
+      "end_ms": 798440,
+      "gloss_sequence": [
+        "TEUER2*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0351",
+      "german_text": "Also für jeden 300 Euro.",
+      "start_ms": 801480,
+      "end_ms": 803340,
+      "gloss_sequence": [
+        "$NUM-HUNDERTER1:3d",
+        "$NUM-HUNDERTER1:3d*",
+        "$NUM-HUNDERTER1:3d",
+        "$NUM-HUNDERTER1:3d*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0352",
+      "german_text": "Von hier in Berlin bis nach Venedig?",
+      "start_ms": 805740,
+      "end_ms": 809180,
+      "gloss_sequence": [
+        "VON4",
+        "HIER1*",
+        "BIS1*",
+        "$GEST-NM-KOPFNICKEN1^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0353",
+      "german_text": "Für einen Preis von je 300 Euro ist es ein guter Preis.",
+      "start_ms": 809660,
+      "end_ms": 811860,
+      "gloss_sequence": [
+        "$NUM-HUNDERTER1:6d*",
+        "$NUM-HUNDERTER1:3d",
+        "$NUM-HUNDERTER1:3d*",
+        "$NUM-HUNDERTER1:3d",
+        "NORMAL1*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0354",
+      "german_text": "Für 5 Tage, nur mit Frühstück?",
+      "start_ms": 811860,
+      "end_ms": 815360,
+      "gloss_sequence": [
+        "$NUM-EINER1A:5*",
+        "NUR2B",
+        "FRÜHSTÜCK1*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0355",
+      "german_text": "Es wird dort nur gefrühstückt und die restlichen Mahlzeiten unterwegs eingenommen.",
+      "start_ms": 815360,
+      "end_ms": 817300,
+      "gloss_sequence": [
+        "FRÜHSTÜCK1*",
+        "ENDE1^*",
+        "FRÜHSTÜCK1*",
+        "REST1C*",
+        "UNTERWEGS1*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0356",
+      "german_text": "Drei Sterne.",
+      "start_ms": 818280,
+      "end_ms": 819200,
+      "gloss_sequence": [
+        "JA1B",
+        "$NUM-EINER1A:3d",
+        "STERN1*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0357",
+      "german_text": "Ich habe auch Rom gesehen.",
+      "start_ms": 819200,
+      "end_ms": 820400,
+      "gloss_sequence": [
+        "AUCH1A",
+        "ICH1",
+        "ERBLICKEN1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0358",
+      "german_text": "Vor Kurzem war ich im Flughafen Schönefeld.",
+      "start_ms": 820400,
+      "end_ms": 822780,
+      "gloss_sequence": [
+        "VOR-KURZEM1*",
+        "ICH1",
+        "FLUGHAFEN2",
+        "SCHÖN3",
+        "BUMMELN1*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0359",
+      "german_text": "Dort habe ich ein Angebot gesehen, eine einwöchige Reise nach Rom mit direktem Hin- und Rückflug und Übernachtung in einem Hotel mit drei Sternen und Frühstück.",
+      "start_ms": 822780,
+      "end_ms": 831460,
+      "gloss_sequence": [
+        "LANGEWEILE1*",
+        "BUMMELN1*",
+        "LISTE1B*",
+        "GUT1",
+        "WOCHE1A*",
+        "$PMS*",
+        "DORTHIN-GEHEN1*",
+        "FLUGZEUG1",
+        "FLUGZEUG2C*",
+        "HOTEL9",
+        "FRÜHSTÜCK1",
+        "$NUM-EINER1A:3d",
+        "$PROD*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0360",
+      "german_text": "Das Ganze kostete nur 246 Euro.",
+      "start_ms": 831460,
+      "end_ms": 833120,
+      "gloss_sequence": [
+        "$NUM-HUNDERTER1:2*",
+        "$NUM-EINER1D:6d",
+        "$NUM-ZEHNER1:4"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0361",
+      "german_text": "Total billig!",
+      "start_ms": 833120,
+      "end_ms": 835940,
+      "gloss_sequence": [
+        "BILLIG1",
+        "$GEST-OFF^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0362",
+      "german_text": "Mir reichen drei Sterne inklusive Frühstück aus.",
+      "start_ms": 835940,
+      "end_ms": 837960,
+      "gloss_sequence": [
+        "ESSEN1",
+        "FRÜH2^",
+        "$NUM-EINER1A:3d",
+        "STERN1*",
+        "$GEST-ABWINKEN1^*",
+        "ICH2"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0363",
+      "german_text": "Ich würde eh nicht da im Hotel bleiben, sondern den ganzen Tag immer unterwegs und auf Ausflügen sein.",
+      "start_ms": 837960,
+      "end_ms": 840520,
+      "gloss_sequence": [
+        "SITZEN1A*",
+        "SCHLAFEN2B",
+        "FORT1*",
+        "AUSFLUG3*",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0364",
+      "german_text": "Von diesem Angebot war ich recht begeistert, aber die festen Reisezeiten passten mir nicht.",
+      "start_ms": 840520,
+      "end_ms": 846020,
+      "gloss_sequence": [
+        "SEHR6",
+        "GENAU1*",
+        "MUSS1",
+        "TERMIN1A*",
+        "FEST1",
+        "STEHEN1",
+        "ZEITRAUM1A*",
+        "ICH2",
+        "SCHAFFEN1A*",
+        "NICHT5*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0365",
+      "german_text": "Aber für später werde ich mir die Angebote dort nochmals angucken.",
+      "start_ms": 846020,
+      "end_ms": 847740,
+      "gloss_sequence": [
+        "SOWIESO1*",
+        "ICH2",
+        "SPÄTER10*",
+        "NOCHMAL2C",
+        "ICH2",
+        "VON-BIS2^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0366",
+      "german_text": "Wenn ich was günstiges finde, dann geh ich damit dahin.",
+      "start_ms": 847740,
+      "end_ms": 849640,
+      "gloss_sequence": [
+        "GÜNSTIG1",
+        "ICH1",
+        "DORTHIN-GEHEN2*",
+        "ICH1"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0367",
+      "german_text": "Vorher hatte ich nur Strandurlaube, jetzt möchte ich mal eine Stadtreise machen.",
+      "start_ms": 849640,
+      "end_ms": 852720,
+      "gloss_sequence": [
+        "MEER1A*",
+        "$INDEX1",
+        "UM1A",
+        "$NUM-EINER1A:1*",
+        "STADT2*",
+        "REISE1B*",
+        "NEIN3B^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0368",
+      "german_text": "Ja.",
+      "start_ms": 854540,
+      "end_ms": 855140,
+      "gloss_sequence": [
+        "$GEST-NM-KOPFNICKEN1^"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0369",
+      "german_text": "Natürlich mache ich das.",
+      "start_ms": 860180,
+      "end_ms": 861960,
+      "gloss_sequence": [
+        "KLAR1B*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0370",
+      "german_text": "Ich reise meistens im Mai und im September oder Oktober.",
+      "start_ms": 861960,
+      "end_ms": 865380,
+      "gloss_sequence": [
+        "ICH1",
+        "IMMER5",
+        "ICH1",
+        "MAI5A*",
+        "SEPTEMBER3*",
+        "OKTOBER16"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0371",
+      "german_text": "In diesem Jahr ausnahmsweise auch einmal im August.",
+      "start_ms": 865380,
+      "end_ms": 868140,
+      "gloss_sequence": [
+        "$INDEX1",
+        "$NUM-EINER1A:1",
+        "AUGUST6*",
+        "ICH2",
+        "AUSNAHME1A*",
+        "$NUM-EINER1A:1",
+        "AUSNAHME1A*",
+        "FERTIG1A*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0372",
+      "german_text": "Aber für später werde ich in den Monaten Juli und August lieber zu Hause bleiben.",
+      "start_ms": 868140,
+      "end_ms": 871580,
+      "gloss_sequence": [
+        "SPÄTER9A*",
+        "ICH1",
+        "ZURÜCK1A^*",
+        "BLEIBEN2*",
+        "$GEST-OFF^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0373",
+      "german_text": "Da reise ich im September, Oktober oder im Winter, ganz egal, aber ich nehme hauptsächlich die Last Minute Reisen.",
+      "start_ms": 871580,
+      "end_ms": 878960,
+      "gloss_sequence": [
+        "SEPTEMBER3*",
+        "OKTOBER16",
+        "WINTER1*",
+        "PHASE1A^*",
+        "EGAL3*",
+        "NUR2A",
+        "ENDE1^",
+        "MINUTE1*",
+        "MELDUNG1*",
+        "FERTIG2*",
+        "$GEST-OFF^*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0374",
+      "german_text": "Du hättest lieber gleich zugreifen sollen.",
+      "start_ms": 898300,
+      "end_ms": 900900,
+      "gloss_sequence": [
+        "LIEBER1*",
+        "SOFORT6",
+        "SCHNAPPEN1",
+        "LIEBER1*",
+        "SOFORT6",
+        "SCHNAPPEN1*"
+      ],
+      "source_eaf": "dataset\\1413703.eaf"
+    },
+    {
+      "id": "seg_0375",
+      "german_text": "Ja, in Bulgarien, ach nein Bukarest.",
+      "start_ms": 326040,
+      "end_ms": 327680,
+      "gloss_sequence": [
+        "BULGARIEN1",
+        "$ALPHA1:B"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0376",
+      "german_text": "Ja, hm.",
+      "start_ms": 410440,
+      "end_ms": 411180,
+      "gloss_sequence": [],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0377",
+      "german_text": "Damals war ich beim Fußball-Verein Comet.",
+      "start_ms": 417460,
+      "end_ms": 419300,
+      "gloss_sequence": [
+        "FRÜHER1*",
+        "$NAME-COMET1",
+        "FUSSBALL2",
+        "ICH1"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0378",
+      "german_text": "Jetzt nicht mehr. Ich hatte ein Jahr lang Kniebeschwerden.",
+      "start_ms": 419300,
+      "end_ms": 421000,
+      "gloss_sequence": [
+        "NICHT-MEHR1A",
+        "JAHR1A*",
+        "KRANK1",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0379",
+      "german_text": "Dann habe ich aufgehört. Ich habe auch keine Zeit gehabt.",
+      "start_ms": 421000,
+      "end_ms": 423680,
+      "gloss_sequence": [
+        "NICHT-MEHR1A",
+        "KEINE-ZEIT1",
+        "PARALLEL1A^*",
+        "PARALLEL1A^*",
+        "$GEST-ABWINKEN1^"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0380",
+      "german_text": "Puh – da muss ich überlegen. Das ist eine gute Frage.",
+      "start_ms": 424520,
+      "end_ms": 426340,
+      "gloss_sequence": [
+        "MASS5A^*",
+        "ICH1",
+        "FRAGE1*",
+        "GUT1",
+        "FRAGE1"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0381",
+      "german_text": "Von 2000 bis 2003.",
+      "start_ms": 426380,
+      "end_ms": 429500,
+      "gloss_sequence": [
+        "$NUM-TAUSENDER1:2",
+        "BIS1",
+        "$NUM-TAUSENDER1:2",
+        "$NUM-EINER1A:3d"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0382",
+      "german_text": "Dann bin ich ausgestiegen.",
+      "start_ms": 429520,
+      "end_ms": 430940,
+      "gloss_sequence": [
+        "SCHLUSS1",
+        "AUSTRETEN2"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0383",
+      "german_text": "Oh, das ist lange her!",
+      "start_ms": 433940,
+      "end_ms": 436060,
+      "gloss_sequence": [
+        "$GEST^",
+        "RUND-UM-DIE-UHR5^",
+        "$GEST^"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0384",
+      "german_text": "#Name3 war auch der Vorsitzende, bis er gestorben ist, stimmt.",
+      "start_ms": 436360,
+      "end_ms": 439480,
+      "gloss_sequence": [
+        "$NAME",
+        "$INDEX1",
+        "AUCH3A",
+        "VORSTAND1*",
+        "TOD2*",
+        "STIMMT1A"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0385",
+      "german_text": "#Name2 war dabei und #Name1.",
+      "start_ms": 443140,
+      "end_ms": 447200,
+      "gloss_sequence": [
+        "$NAME",
+        "DA1",
+        "$LIST1:2of2d",
+        "DU1*",
+        "$NAME"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0386",
+      "german_text": "Diese Gruppe von Leuten.",
+      "start_ms": 447220,
+      "end_ms": 447980,
+      "gloss_sequence": [
+        "ALLE3*"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0387",
+      "german_text": "Genau, er war auch groß, richtig? Das waren die Leute, die damals dabei waren.",
+      "start_ms": 448020,
+      "end_ms": 451120,
+      "gloss_sequence": [
+        "$NAME",
+        "$NAME",
+        "$NAME",
+        "AUFZÄHLEN1A*"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0388",
+      "german_text": "Ja, stimmt.",
+      "start_ms": 453000,
+      "end_ms": 453940,
+      "gloss_sequence": [
+        "$INDEX1*",
+        "STIMMT1B"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0389",
+      "german_text": "So sah es aus.",
+      "start_ms": 454640,
+      "end_ms": 455780,
+      "gloss_sequence": [
+        "ALLE1B"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0390",
+      "german_text": "Läuft es noch?",
+      "start_ms": 456040,
+      "end_ms": 457060,
+      "gloss_sequence": [
+        "LAUFEN-MASCHINE1*",
+        "$INDEX1"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0391",
+      "german_text": "Heute ist alles ja anders.",
+      "start_ms": 483600,
+      "end_ms": 484580,
+      "gloss_sequence": [
+        "$GEST^",
+        "ANDERS3*"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0392",
+      "german_text": "Sie sind viel unterwegs z.B. in Discos usw.",
+      "start_ms": 484580,
+      "end_ms": 487820,
+      "gloss_sequence": [
+        "AUF-OFFEN1",
+        "DISCO2",
+        "ODER1*",
+        "AB1C^*",
+        "FERN1^*"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0393",
+      "german_text": "Die Zeit damals war anders.",
+      "start_ms": 487820,
+      "end_ms": 488480,
+      "gloss_sequence": [
+        "FRÜHER1*",
+        "ZEIT7C*",
+        "$GEST-OFF^*"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0394",
+      "german_text": "Der Fokus lag auf dem Sport.",
+      "start_ms": 488480,
+      "end_ms": 489360,
+      "gloss_sequence": [
+        "KONZENTRIEREN1*"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0395",
+      "german_text": "Heute hat man keine Zeit mehr dafür.",
+      "start_ms": 489360,
+      "end_ms": 490740,
+      "gloss_sequence": [
+        "NICHT1",
+        "ZEIT1*",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0396",
+      "german_text": "Na ja, das ist komisch.",
+      "start_ms": 491000,
+      "end_ms": 491600,
+      "gloss_sequence": [
+        "MERKWÜRDIG3*"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0397",
+      "german_text": "Empor aus dem Osten und der Verein Comet wurden verbunden.",
+      "start_ms": 502220,
+      "end_ms": 506040,
+      "gloss_sequence": [
+        "QUELLE1A^*",
+        "OSTEN1A",
+        "ZUSAMMEN4"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0398",
+      "german_text": "Später fand die Trennung statt.",
+      "start_ms": 506040,
+      "end_ms": 507340,
+      "gloss_sequence": [
+        "SPÄTER10",
+        "TRENNEN1A"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0399",
+      "german_text": "Ach nein, zusammen mit dem B-G-S-V.",
+      "start_ms": 507340,
+      "end_ms": 510080,
+      "gloss_sequence": [
+        "$ALPHA1:B-G-S-V",
+        "ZUSAMMEN4",
+        "UND-DANN2"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0400",
+      "german_text": "Comet blieb schon immer eigenständig und ist heute noch getrennt von anderen Vereinen.",
+      "start_ms": 510080,
+      "end_ms": 513400,
+      "gloss_sequence": [
+        "$NAME-COMET1",
+        "NOCH4B*",
+        "BLEIBEN3*",
+        "REIHE1^*",
+        "TRENNEN1A*",
+        "$GEST-NM-KOPFNICKEN1^"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0401",
+      "german_text": "Stimmt.",
+      "start_ms": 514400,
+      "end_ms": 515760,
+      "gloss_sequence": [
+        "STIMMT1B"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0402",
+      "german_text": "Ich denke, dass der Nachwuchs heute nicht mehr das Niveau erreicht wie „die Alten“ früher.",
+      "start_ms": 528380,
+      "end_ms": 531320,
+      "gloss_sequence": [
+        "NEU1A",
+        "NACHWUCHS1*",
+        "DENKEN1B",
+        "$GEST-OFF^",
+        "UNTERSCHIED5^",
+        "ALT8B*",
+        "UNTERSCHIED5^"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0403",
+      "german_text": "Jung und Alt sind auch nur noch selten zusammen.",
+      "start_ms": 531320,
+      "end_ms": 533300,
+      "gloss_sequence": [
+        "$INDEX1",
+        "SCHLIMM3A*",
+        "ALLE1B",
+        "$GEST-OFF^",
+        "LASSEN1^"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0404",
+      "german_text": "Ja, Marco kenne ich auch.",
+      "start_ms": 546160,
+      "end_ms": 547620,
+      "gloss_sequence": [
+        "KLEIN5^",
+        "KENNEN1A",
+        "$INDEX1"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0405",
+      "german_text": "Das warst du, ach.",
+      "start_ms": 550980,
+      "end_ms": 551720,
+      "gloss_sequence": [
+        "DU1*"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0406",
+      "german_text": "Er wollte mich auch für das Wasserballtraining holen.",
+      "start_ms": 555560,
+      "end_ms": 558080,
+      "gloss_sequence": [
+        "EIGEN1B*",
+        "EINLADEN2*",
+        "WASSERBALL1*",
+        "$INDEX1*",
+        "WOLLEN3",
+        "KOMMEN-AUFFORDERN1*"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0407",
+      "german_text": "Ich hatte aber keine Zeit. Ich hatte eine eigene Familie. Das hat er auch verstanden.",
+      "start_ms": 558080,
+      "end_ms": 560460,
+      "gloss_sequence": [
+        "ICH1*",
+        "$GEST-OFF^",
+        "ICH1*",
+        "ZEIT1",
+        "FAMILIE4*",
+        "VERSTEHEN1*",
+        "AUF-PERSON1*",
+        "$GEST-OFF^"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0408",
+      "german_text": "Als Single hätte ich mitgemacht und die Einladung angenommen.",
+      "start_ms": 560460,
+      "end_ms": 562840,
+      "gloss_sequence": [
+        "WIE8",
+        "WENN1A",
+        "SOLO2*",
+        "ICH1",
+        "DORTHIN-GEHEN2*"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0409",
+      "german_text": "Jemand meint auch, dass Wasserball gut für meine Figur wäre.",
+      "start_ms": 562840,
+      "end_ms": 564220,
+      "gloss_sequence": [
+        "DU1*",
+        "GUT1*",
+        "ABNEHMEN2*",
+        "SAGEN1",
+        "GUT1*"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0410",
+      "german_text": "Am Anfang habe ich nur beim Training mitgemacht, ohne an Wettkämpfen teilzunehmen.",
+      "start_ms": 564220,
+      "end_ms": 567640,
+      "gloss_sequence": [
+        "ANFANG1A",
+        "ÜBEN1*",
+        "$GEST^",
+        "$GEST^",
+        "RICHTIG1B*",
+        "KAMPF1A",
+        "NEIN2B*",
+        "TRAINING1*"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0411",
+      "german_text": "Irgendwann war ich dann reif für die Mannschaft.",
+      "start_ms": 567640,
+      "end_ms": 570320,
+      "gloss_sequence": [
+        "$ALPHA1:R",
+        "$GEST-OFF^",
+        "ZUSAMMEN1A",
+        "$GEST^",
+        "$GEST-ICH-WEISS-NICHT1^*"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0412",
+      "german_text": "Jedoch habe ich es nicht geschafft, hinzukommen.",
+      "start_ms": 570320,
+      "end_ms": 571860,
+      "gloss_sequence": [
+        "ICH2",
+        "VERSCHIEBEN4*"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0413",
+      "german_text": "Eigentlich sollte ich im letzten Jahr dabei sein aber ich hatte keine Zeit.",
+      "start_ms": 572020,
+      "end_ms": 575160,
+      "gloss_sequence": [
+        "SOLL1",
+        "EBEN-ZEIT1^*",
+        "$NUM-JAHR-VOR-JETZT1:1",
+        "ICH1",
+        "AUSSEN2^",
+        "EIGEN1A",
+        "NICHT1",
+        "ZEIT1*",
+        "NICHT1"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0414",
+      "german_text": "Fußballvereine gibt es noch ein paar mehr.",
+      "start_ms": 591700,
+      "end_ms": 594380,
+      "gloss_sequence": [
+        "FUSSBALL2",
+        "NOCH4B",
+        "BLEIBEN2*",
+        "$INDEX1*"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0415",
+      "german_text": "Ja, da gibt es viele Vereine überall in Deutschland verteilt.",
+      "start_ms": 595320,
+      "end_ms": 596800,
+      "gloss_sequence": [
+        "SEHR7^*",
+        "VIEL1A*",
+        "VIEL10"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0416",
+      "german_text": "Für mich sind Gesundheit und Sport wichtige Bereiche. Besser als keinen Sport zu treiben.",
+      "start_ms": 607940,
+      "end_ms": 610880,
+      "gloss_sequence": [
+        "FÜR1*",
+        "WICHTIG1",
+        "GESUND1A",
+        "$GEST^",
+        "SPORT1*",
+        "$GEST-OFF^",
+        "ALS1*",
+        "NICHT1*"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0417",
+      "german_text": "Ja, bei mir ist das auch so.",
+      "start_ms": 617620,
+      "end_ms": 619400,
+      "gloss_sequence": [
+        "ICH1",
+        "DASSELBE2A"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0418",
+      "german_text": "Ich bin viel mit meinen Kindern unterwegs. Wir besuchen unterschiedliche Verwandte. Wir wechseln uns untereinander immer ab.",
+      "start_ms": 619400,
+      "end_ms": 627520,
+      "gloss_sequence": [
+        "KIND2*",
+        "ZUSAMMEN1A*",
+        "BESUCHEN1B*",
+        "EINMAL1A",
+        "MAL2",
+        "VERWANDT1*",
+        "$GEST^",
+        "AUSSEN1A^*",
+        "DASSELBE5",
+        "ANDERS6*",
+        "NÄCHSTE1",
+        "WAS1B*",
+        "UM2C^*",
+        "UNTEREINANDER3*"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0419",
+      "german_text": "Früher?",
+      "start_ms": 636040,
+      "end_ms": 637500,
+      "gloss_sequence": [
+        "FRÜHER1"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0420",
+      "german_text": "Oh, wow.",
+      "start_ms": 638820,
+      "end_ms": 639740,
+      "gloss_sequence": [
+        "SEHR7"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0421",
+      "german_text": "Wenn man nicht zufrieden ist, ist man oft krank geschrieben.",
+      "start_ms": 666800,
+      "end_ms": 668980,
+      "gloss_sequence": [
+        "WENN1A",
+        "$INDEX1",
+        "NICHT6*",
+        "ZUFRIEDEN4*",
+        "KRANKSCHREIBEN1B*"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0422",
+      "german_text": "Bei einem Konflikt oder Streit meldet man sich dann krank.",
+      "start_ms": 668980,
+      "end_ms": 672400,
+      "gloss_sequence": [
+        "DAZU1",
+        "MEISTENS1B",
+        "GEGEN3A^*",
+        "MEINUNG1A",
+        "GEGEN3A^*",
+        "ICH1",
+        "KRANKSCHREIBEN1B"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0423",
+      "german_text": "Das machen die meisten so.",
+      "start_ms": 672400,
+      "end_ms": 672660,
+      "gloss_sequence": [
+        "MEISTENS1A"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0424",
+      "german_text": "Wenn man sich wohl fühlt, tut man es nicht.",
+      "start_ms": 672660,
+      "end_ms": 676780,
+      "gloss_sequence": [
+        "WENN1A",
+        "RICHTIG1B*",
+        "WOHL1*",
+        "$GEST-OFF^",
+        "RICHTIG1B*",
+        "$GEST^",
+        "WARTEN1B^*",
+        "NICHT3B",
+        "ABWEICHUNG1^*"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0425",
+      "german_text": "Wichtig ist, dass man auf sich selbst achtet. Was die anderen sagen, sollte einem egal sein.",
+      "start_ms": 677220,
+      "end_ms": 681040,
+      "gloss_sequence": [
+        "WICHTIG1*",
+        "MEIN1*",
+        "EINSICHT1A*",
+        "NECKEN1^*",
+        "ICH1",
+        "WARTEN1B^",
+        "$GEST-OFF^*",
+        "ABLEHNEN2*"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0426",
+      "german_text": "Seinen eigenen Weg finden und gehen – darauf sollte man sich konzentrieren.",
+      "start_ms": 681040,
+      "end_ms": 682660,
+      "gloss_sequence": [
+        "MEIN1*",
+        "WEG2A"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0427",
+      "german_text": "Sich nicht immer ducken und alles hinnehmen/",
+      "start_ms": 683080,
+      "end_ms": 684740,
+      "gloss_sequence": [
+        "ALLE2A^",
+        "WARTEN1B^*",
+        "GEHEIM2C*",
+        "WAS1A"
+      ],
+      "source_eaf": "dataset\\1414123.eaf"
+    },
+    {
+      "id": "seg_0428",
+      "german_text": "Es geht darum, wie man Marmelade macht.",
+      "start_ms": 0,
+      "end_ms": 3460,
+      "gloss_sequence": [
+        "THEMA1*",
+        "MARMELADE1",
+        "WIE-FRAGE-VERGLEICH1"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0429",
+      "german_text": "Versuch bitte, es genau so nachzumachen.",
+      "start_ms": 3460,
+      "end_ms": 7300,
+      "gloss_sequence": [
+        "ABER1^",
+        "BITTE2",
+        "VERSUCHEN1",
+        "$NUM-VERHÄLTNIS3B*",
+        "MACHEN2"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0430",
+      "german_text": "Zuerst mache ich/",
+      "start_ms": 7300,
+      "end_ms": 8860,
+      "gloss_sequence": [
+        "ICH1*",
+        "ZUERST1D*"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0431",
+      "german_text": "Ich habe letztens erst welche gemacht.",
+      "start_ms": 8860,
+      "end_ms": 11120,
+      "gloss_sequence": [
+        "DIESE-ZEIT1",
+        "VOR-KURZEM1",
+        "HABEN1",
+        "MACHEN2",
+        "ICH1"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0432",
+      "german_text": "Ich habe einen ganzen Eimer voll schwarzer Brombeeren gepflückt.",
+      "start_ms": 11120,
+      "end_ms": 18240,
+      "gloss_sequence": [
+        "$ALPHA1:B-O-M-B-EE-R-E",
+        "SCHWARZ3*",
+        "ICH1*",
+        "PFLÜCKEN3*",
+        "EIMER1*",
+        "MENGE1A^",
+        "VOLL2A"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0433",
+      "german_text": "Meine Hände sind vom wilden Pflücken ganz rot und lila geworden.",
+      "start_ms": 18240,
+      "end_ms": 23720,
+      "gloss_sequence": [
+        "HONIG2^*",
+        "$PROD*",
+        "$INIT-GERADE1^*",
+        "$PROD*",
+        "GEFÜHL3^",
+        "PFLÜCKEN3^",
+        "FERTIG1A"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0434",
+      "german_text": "Zu Hause spüle ich die Beeren im Eimer ein bisschen durch.",
+      "start_ms": 23720,
+      "end_ms": 28460,
+      "gloss_sequence": [
+        "DANN7",
+        "BISSCHEN2A",
+        "ZUHAUSE3*",
+        "SPÜLEN2*",
+        "BISSCHEN2A",
+        "SPÜLEN2*"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0435",
+      "german_text": "Dann kocht man die Beeren in einem Topf.",
+      "start_ms": 28460,
+      "end_ms": 33360,
+      "gloss_sequence": [
+        "DANN6",
+        "TOPF3*",
+        "TOPF1B",
+        "$ALPHA1:T_3-O",
+        "RÜHREN1*",
+        "KOCHEN2C"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0436",
+      "german_text": "Anschließend nimmt man ein Sieb.",
+      "start_ms": 33360,
+      "end_ms": 34820,
+      "gloss_sequence": [
+        "DANN1A*",
+        "SIEB2*",
+        "$ALPHA1:S-I-B*",
+        "SIEB2"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0437",
+      "german_text": "Ich möchte nicht diese kleinen Kerne der Brombeeren in der Marmelade haben, das mag ich nicht.",
+      "start_ms": 34820,
+      "end_ms": 43660,
+      "gloss_sequence": [
+        "ICH1*",
+        "WOLLEN1B*",
+        "NEIN2B",
+        "MUND2*",
+        "SCHMECKEN3^",
+        "KERN3",
+        "$INDEX1*",
+        "$ALPHA1:B-O-M-R-E-E",
+        "SCHWARZ3",
+        "KERN3*",
+        "$PROD*",
+        "SCHMECKEN3^",
+        "PUNKT1B*",
+        "PUNKT2*",
+        "SCHWARZ3",
+        "PUNKT2",
+        "WOLLEN1B*",
+        "NICHT3B*",
+        "HABEN-BESITZEN1"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0438",
+      "german_text": "Ich möchte kernfreie Marmelade.",
+      "start_ms": 43660,
+      "end_ms": 44680,
+      "gloss_sequence": [
+        "$ORAL^",
+        "SAUBER1*"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0439",
+      "german_text": "Darum muss alles durch das Sieb durch.",
+      "start_ms": 44680,
+      "end_ms": 46880,
+      "gloss_sequence": [
+        "ICH1",
+        "MUSS1",
+        "SIEB2*",
+        "$ALPHA1:S-I-B*",
+        "SIEB2"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0440",
+      "german_text": "Ich schütte die Beeren in das Sieb und drücke sie kräftig durch.",
+      "start_ms": 46880,
+      "end_ms": 50540,
+      "gloss_sequence": [
+        "DANN1C*",
+        "RÜHREN2A^*"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0441",
+      "german_text": "Der dickflüssige Saft tropft dann unten heraus.",
+      "start_ms": 50540,
+      "end_ms": 54940,
+      "gloss_sequence": [
+        "DICK9*",
+        "$ALPHA1:S-A-F-T_3",
+        "UNTEN1*",
+        "TROPFEN1*"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0442",
+      "german_text": "Ich drehe alles durch das Sieb, bis der Eimer leer ist.",
+      "start_ms": 54940,
+      "end_ms": 58840,
+      "gloss_sequence": [
+        "RÜHREN2A^*",
+        "BIS1",
+        "EIMER1",
+        "LEER3*"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0443",
+      "german_text": "Wenn es fertig gekocht ist, wird es durch das Sieb gedrückt.",
+      "start_ms": 58840,
+      "end_ms": 60880,
+      "gloss_sequence": [
+        "KOCHEN2C*",
+        "FERTIG1B*",
+        "$PROD*"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0444",
+      "german_text": "So geht das immer weiter.",
+      "start_ms": 60880,
+      "end_ms": 62820,
+      "gloss_sequence": [
+        "ABLAUF1A*",
+        "RÜHREN2A^*"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0445",
+      "german_text": "Der Topf wird immer voller mit der dickflüssigen Masse.",
+      "start_ms": 62820,
+      "end_ms": 66440,
+      "gloss_sequence": [
+        "TOPF4",
+        "$INDEX1",
+        "DICK7",
+        "VOLL7*"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0446",
+      "german_text": "Dann nimmt man den so genannten Gelierzucker.",
+      "start_ms": 66440,
+      "end_ms": 70200,
+      "gloss_sequence": [
+        "DANN7",
+        "NAME1B*",
+        "$ALPHA1:G_2-E-L-I-R",
+        "ZUCKER1A",
+        "RÜHREN6^*"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0447",
+      "german_text": "Man nimmt ein Kilo Zucker und ein Kilo von dem dicken Fruchtsaft.",
+      "start_ms": 70200,
+      "end_ms": 75560,
+      "gloss_sequence": [
+        "KILO1*",
+        "$NUM-EINER1A:1",
+        "KILO1*",
+        "$INDEX1*",
+        "STARK2B*",
+        "DICK7*",
+        "$ALPHA1:S-T_3"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0448",
+      "german_text": "Darum sagt man auch 1 zu 1.",
+      "start_ms": 75560,
+      "end_ms": 79100,
+      "gloss_sequence": [
+        "$INDEX-ORAL1",
+        "DARUM1",
+        "NAME1B*",
+        "PUNKT3^*",
+        "$NUM-EINER1A:1"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0449",
+      "german_text": "Es gibt auch 2 zu 1 oder 3 zu 1.",
+      "start_ms": 79100,
+      "end_ms": 84120,
+      "gloss_sequence": [
+        "ES-GIBT3*",
+        "AUCH3A*",
+        "$NUM-EINER1A:2*",
+        "PUNKT3^*",
+        "$NUM-EINER1A:1*",
+        "$NUM-EINER1A:3d*",
+        "PUNKT2^*",
+        "$NUM-EINER1A:1*"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0450",
+      "german_text": "Je weniger Zucker man nimmt, desto dünner und geschmackloser wird die Marmelade.",
+      "start_ms": 84120,
+      "end_ms": 87880,
+      "gloss_sequence": [
+        "$ORAL^",
+        "$PROD*",
+        "SCHMECKEN3",
+        "$GEST-OFF^*"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0451",
+      "german_text": "Bei 1 zu 1 schmeckt man die Frucht noch am besten heraus.",
+      "start_ms": 87880,
+      "end_ms": 93840,
+      "gloss_sequence": [
+        "PUNKT3^*",
+        "$NUM-EINER1A:1d",
+        "ORIGINAL2*",
+        "KUGEL2A^*",
+        "WIE7B*",
+        "WIE7B*",
+        "$ALPHA1:F-#-T_3",
+        "DA1",
+        "STARK1A",
+        "$ALPHA1:F-#-T_3"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0452",
+      "german_text": "Ich verrühre Früchte und Zucker also im Verhältnis 1 zu 1.",
+      "start_ms": 93840,
+      "end_ms": 96300,
+      "gloss_sequence": [
+        "DANN1C*",
+        "PUNKT3^*",
+        "$NUM-EINER1A:1d",
+        "RÜHREN1*"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0453",
+      "german_text": "Dann koche ich alles, bis es anfängt zu blubbern.",
+      "start_ms": 96300,
+      "end_ms": 99280,
+      "gloss_sequence": [
+        "BIS1",
+        "KOCHEN2C*",
+        "QUELLE1A^*"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0454",
+      "german_text": "Zuerst kippt man den Zucker hinein und verrührt alles gut, dann lässt man es aufkochen.",
+      "start_ms": 99280,
+      "end_ms": 105820,
+      "gloss_sequence": [
+        "ZUERST1B",
+        "$PROD*",
+        "DANN1C",
+        "ZUCKER1A",
+        "$PROD*",
+        "RÜHREN1^*",
+        "UND2B*",
+        "QUELLE1A^*"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0455",
+      "german_text": "Dann nimmt man den Topf vom Herd und befüllt die Marmeladengläser.",
+      "start_ms": 105820,
+      "end_ms": 113080,
+      "gloss_sequence": [
+        "$GEST-ABWINKEN1^*",
+        "$PROD*",
+        "GLAS1A*",
+        "KELLE1*"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0456",
+      "german_text": "Flecken auf dem Glas und dem Rand muss man abwischen.",
+      "start_ms": 113080,
+      "end_ms": 117660,
+      "gloss_sequence": [
+        "WENN1A",
+        "KLEIN12*",
+        "FLECK2A*",
+        "$PROD*",
+        "$PROD*"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0457",
+      "german_text": "Man muss die Gläser ein bisschen schütteln, damit die Marmelade nach unten sackt und viel reingeht.",
+      "start_ms": 117660,
+      "end_ms": 122520,
+      "gloss_sequence": [
+        "WENIGER-WERDEN4^*",
+        "VIEL5*",
+        "DA1^*"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0458",
+      "german_text": "Dann dreht man den Deckel fest auf das Glas.",
+      "start_ms": 122520,
+      "end_ms": 125600,
+      "gloss_sequence": [
+        "$GEST-ABWINKEN1^*",
+        "ZUDREHEN-DECKEL1",
+        "$PROD*"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0459",
+      "german_text": "Das muss natürlich noch warm sein.",
+      "start_ms": 125600,
+      "end_ms": 128480,
+      "gloss_sequence": [
+        "WARM2A*",
+        "ACHTUNG1*",
+        "HEISS1*",
+        "ACHTUNG1*",
+        "ZUDREHEN-DECKEL1",
+        "BLEIBEN2*",
+        "FERTIG1A"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
+    },
+    {
+      "id": "seg_0460",
+      "german_text": "Wenn man ein bisschen gewartet hat, dreht man das Glas um, fertig.",
+      "start_ms": 128480,
+      "end_ms": 135600,
+      "gloss_sequence": [
+        "BISSCHEN2A",
+        "WARTEN1B",
+        "FERTIG4",
+        "UMDREHEN1",
+        "FERTIG1A"
+      ],
+      "source_eaf": "dataset\\1418836-15524810-15550340.eaf"
     }
+  ],
+  "sources": [
+    "dataset\\1413451-11171532-11201836.eaf",
+    "dataset\\1413485.eaf",
+    "dataset\\1413683.eaf",
+    "dataset\\1413703.eaf",
+    "dataset\\1414123.eaf",
+    "dataset\\1418836-15524810-15550340.eaf"
   ]
 }
