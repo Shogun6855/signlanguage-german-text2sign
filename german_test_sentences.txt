@@ -1,0 +1,188 @@
+German Test Sentences for DGS Translation
+=========================================
+Multi-Segment Word Coverage - Each sentence uses words from different segments in the DGS corpus
+
+1. BASIC SENTENCES
+------------------
+• Ich bin gehörlos.
+  (Segments: seg_0002, seg_0020)
+  Glosses: ICH1 + TAUB-GEHÖRLOS1A
+
+• Mein Leben ist schön.
+  (Segments: seg_0003, seg_0001, seg_0012)
+  Glosses: MEIN1* + LEBEN1A* + SCHÖN1A
+
+• Ich habe gute Erinnerungen.
+  (Segments: seg_0003, seg_0004, seg_0012)
+  Glosses: ICH1 + GUT1* + ERINNERUNG2*
+
+
+2. PAST TENSE SENTENCES
+-----------------------
+• Früher war ich im Kindergarten.
+  (Segments: seg_0007, seg_0002, seg_0009)
+  Glosses: FRÜHER1 + ICH1 + KINDERGARTEN1A
+
+• Damals hatte ich keinen Kontakt.
+  (Segments: seg_0008, seg_0002, seg_0018)
+  Glosses: DAMALS1* + ICH1 + KONTAKT2B
+
+• Als Kind spielte ich zusammen.
+  (Segments: seg_0002, seg_0011, seg_0004)
+  Glosses: ICH1 + SPIELEN2* + ZUSAMMEN1A
+
+
+3. COMPLEX SENTENCES
+--------------------
+• Ich treffe Eltern und Personen.
+  (Segments: seg_0002, seg_0004, seg_0018, seg_0013)
+  Glosses: ICH1 + TREFFEN1* + ELTERN1A + UND2A + PERSON1
+
+• Im Unterricht war ich meistens gut.
+  (Segments: seg_0015, seg_0002, seg_0016)
+  Glosses: UNTERRICHTEN1* + ICH1 + MEISTENS1B* + GUT3*
+
+• Die Schule war interessant und schön.
+  (Segments: seg_0014, seg_0010, seg_0013, seg_0012)
+  Glosses: SCHULE1A* + INTERESSE1A + UND2A + SCHÖN1A
+
+
+4. TIME-RELATED SENTENCES
+-------------------------
+• Jetzt ist mein Leben anders.
+  (Segments: seg_0017, seg_0003, seg_0001, seg_0019)
+  Glosses: JETZT1 + MEIN1* + LEBEN1A* + ANDERS2
+
+• Später kam ich in die Stadt.
+  (Segments: seg_0009, seg_0002)
+  Glosses: SPÄTER7* + ICH1 + STADT2
+
+• Bis jetzt war alles klar.
+  (Segments: seg_0017, seg_0005)
+  Glosses: BIS1 + JETZT1 + KLAR1A*
+
+
+5. COMMUNICATION SENTENCES
+--------------------------
+• Gebärden sind faszinierend.
+  (Segments: seg_0010)
+  Glosses: GEBÄRDEN1A* + FASZINIEREND2*
+
+• Kommunikation ist wichtig für Hörende.
+  (Segments: seg_0021, seg_0020, seg_0008)
+  Glosses: KOMMUNIKATION1A* + FÜR1 + HÖREND1A*
+
+• Ich kann nichts hören.
+  (Segments: seg_0002, seg_0021, seg_0008)
+  Glosses: ICH1 + KANN2A + NICHTS1B
+
+
+6. EMOTION & OPINION SENTENCES
+-------------------------------
+• Das Gefühl war schlimm.
+  (Segments: seg_0003, seg_0006)
+  Glosses: GEFÜHL3 + SCHLIMM3C*
+
+• Alleinsein ist nicht schlimm.
+  (Segments: seg_0006)
+  Glosses: ALLEIN1C + SCHLIMM3C*
+
+• Meine Vorstellung war verschieden.
+  (Segments: seg_0003, seg_0013)
+  Glosses: MEIN1* + VORSTELLUNG1A + VERSCHIEDEN1*
+
+
+7. ACTIVITIES & ACTIONS
+-----------------------
+• Wir haben Quatsch gemacht.
+  (Segments: seg_0013)
+  Glosses: QUATSCH1*
+
+• Die Zeit verging schnell.
+  (Segments: seg_0014)
+  Glosses: SCHNELL3A
+
+• Ich muss rechnen und Deutsch lernen.
+  (Segments: seg_0002, seg_0015, seg_0013)
+  Glosses: ICH1 + MUSS1* + RECHNEN1* + UND2A + DEUTSCH1
+
+
+8. DESCRIPTION SENTENCES
+------------------------
+• Gehörlose haben Nachteile.
+  (Segments: seg_0002, seg_0020)
+  Glosses: TAUB-GEHÖRLOS1A + NACHTEIL3
+
+• Die Welt ist interessant.
+  (Segments: seg_0021, seg_0010)
+  Glosses: WELT1 + INTERESSE1A
+
+• Mein Sohn ist gehörlos.
+  (Segments: seg_0003, seg_0018, seg_0020)
+  Glosses: MEIN1* + SOHN1 + TAUB-GEHÖRLOS1A
+
+
+9. SOCIAL SENTENCES
+-------------------
+• Ich treffe hörende Personen meistens nicht.
+  (Segments: seg_0002, seg_0004, seg_0008, seg_0018, seg_0016, seg_0021)
+  Glosses: ICH1 + TREFFEN1* + HÖREND1A* + PERSON1 + MEISTENS1B* + NICHT3A*
+
+• Ich habe Interesse an Gebärden.
+  (Segments: seg_0003, seg_0010)
+  Glosses: ICH1 + INTERESSE1A + GEBÄRDEN1A*
+
+
+10. PRIMARY TEST SENTENCES FOR SYSTEM VALIDATION
+-------------------------------------------------
+1. Wie mein Leben aussieht?
+2. Ich bin gehörlos und spiele im Kindergarten.
+3. Früher hatte ich schöne Erinnerungen.
+4. Mein Leben ist jetzt anders.
+5. Ich treffe meistens hörende Personen.
+6. Die Schule ist interessant und gut.
+7. Kommunikation mit Hörenden ist wichtig.
+8. Gehörlose haben Nachteile in der Welt.
+9. Ich musste Deutsch und Mathe lernen.
+10. Das Gefühl war nicht schlimm.
+11. Gebärden sind faszinierend und schön.
+12. Später kam ich in die Stadt.
+13. Im Kindergarten spielte ich zusammen.
+14. Die Zeit verging schnell.
+15. Jetzt ist alles klar.
+
+
+ADDITIONAL DIVERSE SENTENCES
+------------------------------
+• Ich sehe mein Leben.
+• Die Eltern sind zusammen.
+• Mein Sohn spielt im Kindergarten.
+• Früher war alles anders.
+• Ich habe Interesse an der Schule.
+• Die Person ist gehörlos.
+• Kontakt mit Hörenden ist wichtig.
+• Ich kann gut rechnen.
+• Die Gebärden sind schön.
+• Das war interessant und faszinierend.
+• Meistens treffe ich Personen.
+• Die Welt ist verschieden.
+• Ich hatte schöne Erinnerungen an früher.
+• Später war ich in der Stadt.
+• Jetzt lebe ich anders.
+• Die Kommunikation ist klar.
+• Das Gefühl ist gut.
+• Ich kann Deutsch und Mathe.
+• Die Schule war nicht schlimm.
+• Alleinsein ist verschieden.
+
+
+NOTES:
+------
+- All sentences use proper German grammar and syntax
+- Words are drawn from different segments to test multi-segment chaining
+- Glosses represent the DGS (German Sign Language) translations
+- These sentences test the system's ability to:
+  * Map German words to glosses
+  * Chain multiple segments together
+  * Create coherent sign language sequences
+  * Handle different sentence structures and tenses

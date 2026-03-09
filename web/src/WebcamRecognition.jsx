@@ -1,10 +1,15 @@
 /**
  * WebcamRecognition.jsx
  *
- * Live sign language recognition via webcam.
- * Captures video frames and sends them over WebSocket to the backend,
- * which runs MediaPipe hand detection and matches against gloss dictionary.
- * Displays the recognized gloss sequence in real-time.
+ * Live sign language recognition.
+ * Two modes:
+ *   • Live Camera  — captures webcam frames via getUserMedia
+ *   • Video File   — plays a locally-uploaded video and feeds its frames to
+ *                    the same WebSocket backend (useful for testing with
+ *                    recorded sign-language clips)
+ *
+ * Frames are sent as base64-JPEG over WebSocket to the backend, which runs
+ * MediaPipe hand detection and matches against the gloss dictionary.
  */
 
 import React, {
@@ -12,33 +17,33 @@ import React, {
   useEffect,
   useState,
   useCallback,
-  useImperativeHandle,
-  forwardRef,
 } from "react";
 
 const WS_URL = "ws://127.0.0.1:8000/ws/live_recognition";
-const FRAME_INTERVAL_MS = 120; // ~8 fps — balances latency vs. CPU
+const FRAME_INTERVAL_MS = 120; // ~8 fps
 
 export default function WebcamRecognition() {
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
   const wsRef = useRef(null);
   const timerRef = useRef(null);
-  const streamRef = useRef(null);
+  const streamRef = useRef(null);   // camera MediaStream
+  const videoUrlRef = useRef(null); // object URL for uploaded video file
+
+  const [mode, setMode] = useState("camera"); // "camera" | "video"
+  const [videoFile, setVideoFile] = useState(null);
 
   const [isRunning, setIsRunning] = useState(false);
   const [status, setStatus] = useState("idle"); // idle | connecting | running | error | stopped
   const [currentGloss, setCurrentGloss] = useState(null);
   const [confidence, setConfidence] = useState(0);
   const [top3, setTop3] = useState([]);
-  const [glossHistory, setGlossHistory] = useState([]); // growing sentence of recognized glosses
+  const [glossHistory, setGlossHistory] = useState([]);
   const [lastAdded, setLastAdded] = useState(null);
   const [errorMsg, setErrorMsg] = useState("");
   const [frameCount, setFrameCount] = useState(0);
 
-  // -------------------------------------------------------------------
-  // Webcam access
-  // -------------------------------------------------------------------
+  // ── Camera helpers ────────────────────────────────────────────────────────
   const startCamera = useCallback(async () => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({
@@ -48,6 +53,7 @@ export default function WebcamRecognition() {
       streamRef.current = stream;
       if (videoRef.current) {
         videoRef.current.srcObject = stream;
+        videoRef.current.src = "";
         await videoRef.current.play();
       }
       return true;
@@ -68,9 +74,41 @@ export default function WebcamRecognition() {
     }
   }, []);
 
-  // -------------------------------------------------------------------
-  // WebSocket lifecycle
-  // -------------------------------------------------------------------
+  // ── Video-file helpers ────────────────────────────────────────────────────
+  const startVideoFile = useCallback(async () => {
+    if (!videoFile) {
+      setErrorMsg("Please select a video file first.");
+      setStatus("error");
+      return false;
+    }
+    try {
+      const url = URL.createObjectURL(videoFile);
+      videoUrlRef.current = url;
+      if (videoRef.current) {
+        videoRef.current.srcObject = null;
+        videoRef.current.src = url;
+        await videoRef.current.play();
+      }
+      return true;
+    } catch (err) {
+      setErrorMsg(`Video error: ${err.message}`);
+      setStatus("error");
+      return false;
+    }
+  }, [videoFile]);
+
+  const stopVideoFile = useCallback(() => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.src = "";
+    }
+    if (videoUrlRef.current) {
+      URL.revokeObjectURL(videoUrlRef.current);
+      videoUrlRef.current = null;
+    }
+  }, []);
+
+  // ── WebSocket lifecycle ───────────────────────────────────────────────────
   const connectWS = useCallback(() => {
     const ws = new WebSocket(WS_URL);
     wsRef.current = ws;
@@ -95,7 +133,6 @@ export default function WebcamRecognition() {
         setConfidence(conf);
         setTop3(msg.top3 ?? []);
 
-        // Auto-append to history when confidence is high and it differs from last
         if (gloss && conf > 0.6) {
           setGlossHistory((prev) => {
             if (prev.length === 0 || prev[prev.length - 1] !== gloss) {
@@ -114,11 +151,11 @@ export default function WebcamRecognition() {
     };
 
     ws.onclose = () => {
-      if (status === "running") setStatus("stopped");
+      setStatus((s) => (s === "running" ? "stopped" : s));
     };
 
     return ws;
-  }, [status]);
+  }, []);
 
   const disconnectWS = useCallback(() => {
     if (wsRef.current) {
@@ -127,15 +164,13 @@ export default function WebcamRecognition() {
     }
   }, []);
 
-  // -------------------------------------------------------------------
-  // Frame capture loop
-  // -------------------------------------------------------------------
+  // ── Frame capture loop ────────────────────────────────────────────────────
   const captureAndSend = useCallback(() => {
     const video = videoRef.current;
     const canvas = canvasRef.current;
     const ws = wsRef.current;
     if (!video || !canvas || !ws || ws.readyState !== WebSocket.OPEN) return;
-    if (video.readyState < 2) return; // not ready yet
+    if (video.readyState < 2) return;
 
     const ctx = canvas.getContext("2d");
     canvas.width = 320;
@@ -147,7 +182,7 @@ export default function WebcamRecognition() {
         if (!blob) return;
         const reader = new FileReader();
         reader.onloadend = () => {
-          const b64 = reader.result.split(",")[1]; // strip data:image/jpeg;base64,
+          const b64 = reader.result.split(",")[1];
           if (wsRef.current?.readyState === WebSocket.OPEN) {
             wsRef.current.send(JSON.stringify({ frame: b64 }));
             setFrameCount((n) => n + 1);
@@ -160,9 +195,17 @@ export default function WebcamRecognition() {
     );
   }, []);
 
-  // -------------------------------------------------------------------
-  // Start / Stop
-  // -------------------------------------------------------------------
+  // ── Start / Stop ──────────────────────────────────────────────────────────
+  const handleStop = useCallback(() => {
+    clearInterval(timerRef.current);
+    disconnectWS();
+    if (mode === "camera") stopCamera();
+    else stopVideoFile();
+    setIsRunning(false);
+    setStatus("stopped");
+    setCurrentGloss(null);
+  }, [disconnectWS, stopCamera, stopVideoFile, mode]);
+
   const handleStart = useCallback(async () => {
     setGlossHistory([]);
     setFrameCount(0);
@@ -171,22 +214,15 @@ export default function WebcamRecognition() {
     setTop3([]);
     setErrorMsg("");
 
-    const camOk = await startCamera();
-    if (!camOk) return;
+    const ok =
+      mode === "camera" ? await startCamera() : await startVideoFile();
+    if (!ok) return;
+
     connectWS();
     setIsRunning(true);
-  }, [startCamera, connectWS]);
+  }, [mode, startCamera, startVideoFile, connectWS]);
 
-  const handleStop = useCallback(() => {
-    clearInterval(timerRef.current);
-    disconnectWS();
-    stopCamera();
-    setIsRunning(false);
-    setStatus("stopped");
-    setCurrentGloss(null);
-  }, [disconnectWS, stopCamera]);
-
-  // Capture loop — starts once status = "running"
+  // Capture loop starts when WebSocket is open
   useEffect(() => {
     if (status === "running") {
       timerRef.current = setInterval(captureAndSend, FRAME_INTERVAL_MS);
@@ -196,36 +232,105 @@ export default function WebcamRecognition() {
     return () => clearInterval(timerRef.current);
   }, [status, captureAndSend]);
 
+  // Auto-stop when video file finishes playing
+  const handleVideoEnded = useCallback(() => {
+    if (mode === "video" && isRunning) handleStop();
+  }, [mode, isRunning, handleStop]);
+
   // Cleanup on unmount
   useEffect(() => {
     return () => {
-      handleStop();
+      clearInterval(timerRef.current);
+      disconnectWS();
+      stopCamera();
+      stopVideoFile();
     };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // -------------------------------------------------------------------
-  // Render
-  // -------------------------------------------------------------------
+  // Switch mode → reset everything
+  const handleModeSwitch = useCallback(
+    (newMode) => {
+      if (isRunning) handleStop();
+      setMode(newMode);
+      setVideoFile(null);
+      setErrorMsg("");
+      setStatus("idle");
+      setGlossHistory([]);
+      setCurrentGloss(null);
+      setConfidence(0);
+      setTop3([]);
+      setFrameCount(0);
+    },
+    [isRunning, handleStop]
+  );
+
+  // ── Render ────────────────────────────────────────────────────────────────
   const confPct = Math.round(confidence * 100);
   const confColor =
     confidence > 0.7 ? "#4ade80" : confidence > 0.4 ? "#facc15" : "#f87171";
 
   return (
     <div className="webcam-panel">
-      <h2>3. Live-Gebärdenerkennung (Webcam)</h2>
+      <h2>3. Live Sign Recognition</h2>
       <p className="muted" style={{ marginBottom: "0.75rem" }}>
-        Halte eine Gebärde vor die Kamera. Das System gleicht Handpositionen
-        mit dem Gloss-Wörterbuch ab (MediaPipe + Kosinus-Ähnlichkeit).
+        Hold a sign in front of the camera or upload a video file. The
+        system matches hand positions against the gloss dictionary (MediaPipe +
+        cosine similarity).
       </p>
 
+      {/* Mode toggle */}
+      <div className="mode-toggle">
+        <button
+          className={`mode-btn ${mode === "camera" ? "active" : ""}`}
+          onClick={() => handleModeSwitch("camera")}
+          disabled={isRunning}
+        >
+          Live Camera
+        </button>
+        <button
+          className={`mode-btn ${mode === "video" ? "active" : ""}`}
+          onClick={() => handleModeSwitch("video")}
+          disabled={isRunning}
+        >
+          Video File
+        </button>
+      </div>
+
+      {/* File picker — only in video mode, only when not running */}
+      {mode === "video" && !isRunning && (
+        <div className="file-input-row">
+          <label className="file-label">
+            {videoFile ? videoFile.name : "Select video file…"}
+            <input
+              type="file"
+              accept="video/*"
+              style={{ display: "none" }}
+              onChange={(e) => {
+                const f = e.target.files?.[0] ?? null;
+                setVideoFile(f);
+                setErrorMsg("");
+                setStatus("idle");
+              }}
+            />
+          </label>
+        </div>
+      )}
+
+      {/* Start / Stop controls */}
       <div className="webcam-controls">
         {!isRunning ? (
-          <button className="btn-start" onClick={handleStart}>
-            ▶ Kamera starten &amp; Erkennung beginnen
+          <button
+            className="btn-start"
+            onClick={handleStart}
+            disabled={mode === "video" && !videoFile}
+          >
+            {mode === "camera"
+              ? "▶ Start Camera & Begin Recognition"
+              : "▶ Play Video & Begin Recognition"}
           </button>
         ) : (
           <button className="btn-stop" onClick={handleStop}>
-            ■ Stopp
+            ■ Stop
           </button>
         )}
         {glossHistory.length > 0 && (
@@ -234,7 +339,7 @@ export default function WebcamRecognition() {
             onClick={() => setGlossHistory([])}
             style={{ marginLeft: "0.5rem" }}
           >
-            Verlauf löschen
+            Clear History
           </button>
         )}
       </div>
@@ -252,19 +357,21 @@ export default function WebcamRecognition() {
             ref={videoRef}
             muted
             playsInline
+            onEnded={handleVideoEnded}
             className={isRunning ? "" : "hidden"}
             style={{ width: "100%", borderRadius: "8px", background: "#111" }}
           />
           {!isRunning && (
             <div className="video-placeholder">
-              <span>Kamera inaktiv</span>
+              <span>
+                {mode === "camera" ? "Camera inactive" : "Video inactive"}
+              </span>
             </div>
           )}
-          {/* Hidden canvas for frame capture */}
           <canvas ref={canvasRef} style={{ display: "none" }} />
           {isRunning && (
             <div className="video-overlay-badge">
-              {status === "connecting" ? "Verbinde…" : `Frame ${frameCount}`}
+              {status === "connecting" ? "Connecting…" : `Frame ${frameCount}`}
             </div>
           )}
         </div>
@@ -272,7 +379,7 @@ export default function WebcamRecognition() {
         {/* Recognition results */}
         <div className="recognition-results">
           <div className="current-gloss-card">
-            <span className="current-gloss-label">Erkannte Geste</span>
+            <span className="current-gloss-label">Detected Sign</span>
             <span
               className="current-gloss-value"
               style={{ color: currentGloss ? confColor : "#666" }}
@@ -283,10 +390,7 @@ export default function WebcamRecognition() {
               <div className="confidence-bar-wrap">
                 <div
                   className="confidence-bar"
-                  style={{
-                    width: `${confPct}%`,
-                    background: confColor,
-                  }}
+                  style={{ width: `${confPct}%`, background: confColor }}
                 />
                 <span className="confidence-label">{confPct}%</span>
               </div>
@@ -295,7 +399,7 @@ export default function WebcamRecognition() {
 
           {top3.length > 0 && (
             <div className="top3-list">
-              <span className="top3-heading">Top-3 Kandidaten</span>
+              <span className="top3-heading">Top-3 Candidates</span>
               {top3.map(({ gloss, score }, i) => (
                 <div key={i} className="top3-row">
                   <span className="top3-rank">#{i + 1}</span>
@@ -311,19 +415,23 @@ export default function WebcamRecognition() {
       {/* Recognized gloss sentence */}
       <div className="gloss-history-panel">
         <div className="gloss-history-heading">
-          Erkannte Glossenfolge
+          Detected Gloss Sequence
           <span className="gloss-history-count">
-            {glossHistory.length} Glose{glossHistory.length !== 1 ? "n" : ""}
+            {glossHistory.length} Gloss{glossHistory.length !== 1 ? "es" : ""}
           </span>
         </div>
         <div className="gloss-history-words">
           {glossHistory.length === 0 ? (
-            <span className="muted">Noch keine Gesten erkannt…</span>
+            <span className="muted">No signs detected yet…</span>
           ) : (
             glossHistory.map((g, i) => (
               <span
                 key={i}
-                className={`gloss-chip ${g === lastAdded && i === glossHistory.length - 1 ? "gloss-chip-new" : ""}`}
+                className={`gloss-chip ${
+                  g === lastAdded && i === glossHistory.length - 1
+                    ? "gloss-chip-new"
+                    : ""
+                }`}
               >
                 {g}
               </span>
@@ -333,8 +441,9 @@ export default function WebcamRecognition() {
       </div>
 
       <p className="muted" style={{ fontSize: "0.78rem", marginTop: "0.5rem" }}>
-        Erkennungsrate ~8 fps · Konfidenz-Schwelle 60% für Auto-Append ·
-        Kein Training nötig (zero-shot via Skelett-Matching)
+        Recognition rate ~8 fps · Confidence threshold 60% for auto-append ·
+        No training needed (zero-shot via skeleton matching)
+        {mode === "video" && " · Video mode: File is analyzed frame-by-frame"}
       </p>
     </div>
   );

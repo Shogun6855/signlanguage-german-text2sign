@@ -82,19 +82,19 @@ function App() {
             className={`main-tab ${activeTab === "translate" ? "active" : ""}`}
             onClick={() => setActiveTab("translate")}
           >
-            ✍️ Text &rarr; Gebärde
+            ✍️ Text &rarr; Sign
           </button>
           <button
             className={`main-tab ${activeTab === "webcam" ? "active" : ""}`}
             onClick={() => setActiveTab("webcam")}
           >
-            📷 Live-Erkennung
+            📷 Live Recognition
           </button>
           <button
             className={`main-tab ${activeTab === "nlp" ? "active" : ""}`}
             onClick={() => setActiveTab("nlp")}
           >
-            🔬 NLP-Pipeline
+            🔬 NLP Pipeline
           </button>
         </nav>
       </header>
@@ -104,34 +104,34 @@ function App() {
         {activeTab === "translate" && (
           <>
             <section className="panel input-panel">
-              <h2>1. Eingabetext</h2>
+              <h2>1. Input Text</h2>
               <form onSubmit={handleTranslate}>
                 <textarea
                   value={text}
                   onChange={(e) => setText(e.target.value)}
                   rows={3}
-                  placeholder="Deutschen Satz eingeben..."
+                  placeholder="Enter German sentence..."
                 />
                 <button type="submit" disabled={loading || !text.trim()}>
-                  {loading ? "Übersetze..." : "In Gebärdensprache übersetzen"}
+                  {loading ? "Translating..." : "Translate to Sign Language"}
                 </button>
               </form>
-              {error && <p className="error">Fehler: {error}</p>}
+              {error && <p className="error">Error: {error}</p>}
               <div className="panel-section">
-                <h3>Erkannte Segmente &amp; Glossen</h3>
+                <h3>Detected Segments &amp; Glosses</h3>
                 {segments.length === 0 ? (
-                  <p className="muted">Noch keine Zuordnung gefunden.</p>
+                  <p className="muted">No mapping found yet.</p>
                 ) : (
                   <>
                     <p>
-                      <strong>Segment{segments.length > 1 ? "e" : "-ID"}:</strong>{" "}
+                      <strong>Segment{segments.length > 1 ? "s" : " ID"}:</strong>{" "}
                       {segments.join(", ")}
                       {segments.length > 1 && (
-                        <span className="chain-badge">{segments.length} verkettet</span>
+                        <span className="chain-badge">{segments.length} chained</span>
                       )}
                     </p>
                     <p>
-                      <strong>Glossenfolge:</strong>{" "}
+                      <strong>Gloss sequence:</strong>{" "}
                       {gloss.length ? gloss.join(" · ") : "—"}
                     </p>
                   </>
@@ -142,15 +142,15 @@ function App() {
                   <p className="muted" style={{ marginTop: "0.5rem" }}>
                     Frames: {motion.keypoints.length} &middot; FPS: {motion.fps}
                     {motionMode === "gloss" && (
-                      <span className="mode-badge mode-gloss">Gloss-Ebene</span>
+                      <span className="mode-badge mode-gloss">Gloss-level</span>
                     )}
                     {motionMode === "segment" && (
-                      <span className="mode-badge mode-segment">Segment-Ebene</span>
+                      <span className="mode-badge mode-segment">Segment-level</span>
                     )}
                   </p>
                   {motion.missing_glosses?.length > 0 && (
                     <p className="missing-warning">
-                      ⚠️ Kein Clip für:{" "}
+                      ⚠️ No clip for:{" "}
                       <span className="missing-glosses-list">
                         {motion.missing_glosses.join(", ")}
                       </span>
@@ -161,7 +161,7 @@ function App() {
             </section>
 
             <section className="panel animation-panel">
-              <h2>2. Gebärden-Animation (Skelett)</h2>
+              <h2>2. Sign Animation (Skeleton)</h2>
               {motion ? (
                 <>
                   <SkeletonViewer3D
@@ -170,16 +170,16 @@ function App() {
                     frameBoundaries={motion?.frame_boundaries ?? []}
                   />
                   <p className="muted" style={{ marginTop: "0.5rem" }}>
-                    Körper (weiß) · Finger farbig je Finger
+                    Body (white) · Fingers colored by type
                   </p>
                 </>
               ) : (
                 <div className="placeholder-box">
                   <p className="muted">
-                    Nach der Übersetzung wird hier die Gebärdenbewegung als interaktives 3D-Skelett angezeigt.
+                    After translation, the sign movement will be displayed here as an interactive 3D skeleton.
                     <br />
                     <span style={{ fontSize: "0.85em" }}>
-                      Körper (weiß) · Finger je nach Fingertyp farblich markiert
+                      Body (white) · Fingers colored by type
                     </span>
                   </p>
                 </div>

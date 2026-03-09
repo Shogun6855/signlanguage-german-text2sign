@@ -61,7 +61,7 @@ function TokenRow({ label, tokens, color }) {
           </span>
         ))}
         {tokens.length > 30 && (
-          <span className="tok-chip muted">+{tokens.length - 30} mehr</span>
+          <span className="tok-chip muted">+{tokens.length - 30} more</span>
         )}
       </td>
       <td className="tok-count">{tokens.length}</td>
@@ -78,7 +78,7 @@ function NgramTable({ title, rows }) {
         <thead>
           <tr>
             <th>N-Gram</th>
-            <th>Häufigkeit</th>
+            <th>Frequency</th>
           </tr>
         </thead>
         <tbody>
@@ -127,10 +127,10 @@ export default function NLPAnalysisPanel({ initialText }) {
 
   return (
     <div className="nlp-panel">
-      <h2>4. NLP-Pipeline-Analyse</h2>
+      <h2>4. NLP Pipeline Analysis</h2>
       <p className="muted">
-        Vollständige Analyse: Tokenisierung (Lab 1) · Feature-Engineering ·
-        N-Gram-Sprachmodell (Übung 3) · HMM POS-Tagging mit Viterbi (Übung 4)
+        Complete analysis: Tokenization (Lab 1) · Feature Engineering ·
+        N-Gram Language Model (Exercise 3) · HMM POS Tagging with Viterbi (Exercise 4)
       </p>
 
       <div className="nlp-input-row">
@@ -138,7 +138,7 @@ export default function NLPAnalysisPanel({ initialText }) {
           type="text"
           value={text}
           onChange={(e) => setText(e.target.value)}
-          placeholder="Deutschen Text eingeben…"
+          placeholder="Enter German text…"
           className="nlp-text-input"
         />
         <button
@@ -146,20 +146,20 @@ export default function NLPAnalysisPanel({ initialText }) {
           disabled={loading || !text.trim()}
           className="nlp-analyze-btn"
         >
-          {loading ? "Analysiere…" : "Analysieren"}
+          {loading ? "Analyzing…" : "Analyze"}
         </button>
       </div>
-      {error && <p className="error">Fehler: {error}</p>}
+      {error && <p className="error">Error: {error}</p>}
 
       {data && (
         <>
           {/* Tab bar */}
           <div className="nlp-tabs">
             {[
-              ["tokenization", "Tokenisierung (Lab 1)"],
-              ["pos", "POS-Tagging / Viterbi (Üb. 4)"],
-              ["features", "Feature-Engineering"],
-              ["lm", "N-Gram-Sprachmodell (Üb. 3)"],
+              ["tokenization", "Tokenization (Lab 1)"],
+              ["pos", "POS Tagging / Viterbi (Ex. 4)"],
+              ["features", "Feature Engineering"],
+              ["lm", "N-Gram Language Model (Ex. 3)"],
             ].map(([id, label]) => (
               <button
                 key={id}
@@ -175,34 +175,34 @@ export default function NLPAnalysisPanel({ initialText }) {
           {activeTab === "tokenization" && tok && (
             <div className="nlp-tab-content">
               <div className="tok-stats-row">
-                <span>Wörter: <strong>{tok.stats.word_count}</strong></span>
-                <span>Sätze: <strong>{tok.stats.sentence_count}</strong></span>
-                <span>Zeichen: <strong>{tok.stats.char_count}</strong></span>
+                <span>Words: <strong>{tok.stats.word_count}</strong></span>
+                <span>Sentences: <strong>{tok.stats.sentence_count}</strong></span>
+                <span>Characters: <strong>{tok.stats.char_count}</strong></span>
                 <span>Subwords (BPE): <strong>{tok.stats.subword_count}</strong></span>
-                <span>Unique Wörter: <strong>{tok.stats.unique_words}</strong></span>
+                <span>Unique Words: <strong>{tok.stats.unique_words}</strong></span>
               </div>
 
               <table className="tok-table">
                 <thead>
                   <tr>
-                    <th>Stufe</th>
-                    <th>Token (erste 30)</th>
+                    <th>Stage</th>
+                    <th>Tokens (first 30)</th>
                     <th>#</th>
                   </tr>
                 </thead>
                 <tbody>
                   <TokenRow
-                    label="Wort-Tokenisierung"
+                    label="Word Tokenization"
                     tokens={tok.word_tokens}
                     color="#1e3a5f"
                   />
                   <TokenRow
-                    label="Satz-Tokenisierung"
+                    label="Sentence Tokenization"
                     tokens={tok.sentence_tokens}
                     color="#1e3a2f"
                   />
                   <TokenRow
-                    label="Zeichen-Tokenisierung"
+                    label="Character Tokenization"
                     tokens={tok.char_tokens}
                     color="#2d1b4e"
                   />
@@ -212,7 +212,7 @@ export default function NLPAnalysisPanel({ initialText }) {
                     color="#3b2a0a"
                   />
                   <TokenRow
-                    label="Nach Stoppwort-Entf."
+                    label="After Stopword Removal"
                     tokens={tok.after_stopword_removal}
                     color="#1c3030"
                   />
@@ -222,7 +222,7 @@ export default function NLPAnalysisPanel({ initialText }) {
                     color="#3b1c2a"
                   />
                   <TokenRow
-                    label="Lemmatisierung"
+                    label="Lemmatization"
                     tokens={tok.lemmatized_tokens}
                     color="#1a2a1a"
                   />
@@ -230,34 +230,34 @@ export default function NLPAnalysisPanel({ initialText }) {
               </table>
 
               <div className="comparison-note">
-                <h4>Vergleich der Tokenisierungsverfahren</h4>
+                <h4>Comparison of Tokenization Methods</h4>
                 <table className="comparison-table">
                   <thead>
                     <tr>
-                      <th>Verfahren</th>
-                      <th>Token-Anzahl</th>
-                      <th>Stärken</th>
-                      <th>Schwächen</th>
+                      <th>Method</th>
+                      <th>Token Count</th>
+                      <th>Strengths</th>
+                      <th>Weaknesses</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Wort</td>
+                      <td>Word</td>
                       <td>{tok.word_tokens.length}</td>
-                      <td>Einfach, schnell</td>
-                      <td>Unbekannte Wörter</td>
+                      <td>Simple, fast</td>
+                      <td>Unknown words</td>
                     </tr>
                     <tr>
-                      <td>Zeichen</td>
+                      <td>Character</td>
                       <td>{tok.char_tokens.length}</td>
-                      <td>Keine OOV-Probleme</td>
-                      <td>Sehr lange Sequenzen</td>
+                      <td>No OOV problems</td>
+                      <td>Very long sequences</td>
                     </tr>
                     <tr>
-                      <td>BPE-Subword</td>
+                      <td>BPE Subword</td>
                       <td>{tok.subword_tokens_bpe.length}</td>
-                      <td>Balance Wort/Zeichen</td>
-                      <td>Weniger interpretierbar</td>
+                      <td>Balance word/char</td>
+                      <td>Less interpretable</td>
                     </tr>
                   </tbody>
                 </table>
@@ -268,7 +268,7 @@ export default function NLPAnalysisPanel({ initialText }) {
           {/* ─── Tab: POS Tagging / Viterbi (Exercise 4) ────────────────── */}
           {activeTab === "pos" && pos && (
             <div className="nlp-tab-content">
-              <h3>HMM POS-Tagging mit Viterbi-Dekodierung</h3>
+              <h3>HMM POS Tagging with Viterbi Decoding</h3>
               <div className="pos-tagged-sentence">
                 {pos.tagged_pairs.map(({ word, tag }, i) => (
                   <TagChip key={i} word={word} tag={tag} />
@@ -289,7 +289,7 @@ export default function NLPAnalysisPanel({ initialText }) {
 
               {pos.viterbi_matrix?.tagged_pairs?.length > 0 && (
                 <div style={{ marginTop: "1rem" }}>
-                  <h4>Viterbi-Matrix (Log-Wahrscheinlichkeiten)</h4>
+                  <h4>Viterbi Matrix (Log Probabilities)</h4>
                   <div style={{ overflowX: "auto" }}>
                     <table className="viterbi-table">
                       <thead>
@@ -329,18 +329,18 @@ export default function NLPAnalysisPanel({ initialText }) {
                     </table>
                   </div>
                   <p className="muted" style={{ fontSize: "0.78rem" }}>
-                    Fette/hervorgehobene Zellen = Viterbi-Pfad (beste Tag-Sequenz)
+                    Bold/highlighted cells = Viterbi path (best tag sequence)
                   </p>
                 </div>
               )}
 
               <div style={{ marginTop: "1rem" }}>
-                <h4>Übergangswahrscheinlichkeiten P(tag_i | tag_i-1)</h4>
+                <h4>Transition Probabilities P(tag_i | tag_i-1)</h4>
                 <div style={{ overflowX: "auto" }}>
                   <table className="small-table">
                     <thead>
                       <tr>
-                        <th>Von →</th>
+                        <th>From →</th>
                         {pos.transition_table[0] &&
                           Object.keys(pos.transition_table[0])
                             .filter((k) => k !== "from_tag")
@@ -373,7 +373,7 @@ export default function NLPAnalysisPanel({ initialText }) {
               </div>
 
               <div style={{ marginTop: "1rem" }}>
-                <h4>Top Emissionswahrscheinlichkeiten P(wort | tag)</h4>
+                <h4>Top Emission Probabilities P(word | tag)</h4>
                 <div className="emission-grid">
                   {Object.entries(pos.emission_table || {}).map(
                     ([tag, words]) =>
@@ -415,12 +415,12 @@ export default function NLPAnalysisPanel({ initialText }) {
                 </div>
 
                 <div className="fe-card">
-                  <div className="fe-card-title">N-Gramm-Vokabular</div>
+                  <div className="fe-card-title">N-Gram Vocabulary</div>
                   <table className="small-table">
                     <thead>
                       <tr>
                         <th>N-Gram</th>
-                        <th>Vocab-Größe</th>
+                        <th>Vocab Size</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -441,7 +441,7 @@ export default function NLPAnalysisPanel({ initialText }) {
                 </div>
 
                 <div className="fe-card">
-                  <div className="fe-card-title">Top TF-IDF Terme</div>
+                  <div className="fe-card-title">Top TF-IDF Terms</div>
                   {fe.tfidf?.top_10_terms?.map(({ word, score }) => (
                     <div key={word} className="tfidf-row">
                       <span className="tfidf-word">{word}</span>
@@ -457,12 +457,12 @@ export default function NLPAnalysisPanel({ initialText }) {
                 </div>
 
                 <div className="fe-card">
-                  <div className="fe-card-title">Top PPMI-Wortpaare</div>
+                  <div className="fe-card-title">Top PPMI Word Pairs</div>
                   <table className="small-table">
                     <thead>
                       <tr>
-                        <th>Wort 1</th>
-                        <th>Wort 2</th>
+                        <th>Word 1</th>
+                        <th>Word 2</th>
                         <th>PPMI</th>
                       </tr>
                     </thead>
@@ -480,52 +480,52 @@ export default function NLPAnalysisPanel({ initialText }) {
               </div>
 
               <div className="fe-comparison-table-wrap">
-                <h4>Vergleich der Feature-Repräsentationen</h4>
+                <h4>Comparison of Feature Representations</h4>
                 <table className="comparison-table">
                   <thead>
                     <tr>
-                      <th>Feature-Typ</th>
-                      <th>Dimensionalität</th>
-                      <th>Sparsität</th>
-                      <th>Semantische Info</th>
-                      <th>Sprachspezifisch</th>
+                      <th>Feature Type</th>
+                      <th>Dimensionality</th>
+                      <th>Sparsity</th>
+                      <th>Semantic Info</th>
+                      <th>Language-Specific</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>BoW</td>
-                      <td>Hoch ({fe.bow?.vocab_size})</td>
+                      <td>High ({fe.bow?.vocab_size})</td>
                       <td>{fe.bow?.sparsity_pct}%</td>
                       <td>❌</td>
-                      <td>Niedrig</td>
+                      <td>Low</td>
                     </tr>
                     <tr>
                       <td>TF-IDF</td>
-                      <td>Hoch ({fe.bow?.vocab_size})</td>
-                      <td>Hoch</td>
+                      <td>High ({fe.bow?.vocab_size})</td>
+                      <td>High</td>
                       <td>⚠️</td>
-                      <td>Mittel</td>
+                      <td>Medium</td>
                     </tr>
                     <tr>
-                      <td>N-Gramme</td>
-                      <td>Sehr hoch ({fe.ngrams?.bigram_vocab} Bi)</td>
-                      <td>Sehr hoch</td>
-                      <td>⚠️ Lokal</td>
-                      <td>Mittel</td>
+                      <td>N-Grams</td>
+                      <td>Very high ({fe.ngrams?.bigram_vocab} Bi)</td>
+                      <td>Very high</td>
+                      <td>⚠️ Local</td>
+                      <td>Medium</td>
                     </tr>
                     <tr>
                       <td>PMI/PPMI</td>
                       <td>V²</td>
-                      <td>Hoch</td>
-                      <td>✅ Ko-Okkurrenz</td>
-                      <td>Hoch</td>
+                      <td>High</td>
+                      <td>✅ Co-occurrence</td>
+                      <td>High</td>
                     </tr>
                     <tr>
                       <td>Embeddings (MiniLM)</td>
-                      <td>Niedrig (384)</td>
-                      <td>Niedrig (dicht)</td>
+                      <td>Low (384)</td>
+                      <td>Low (dense)</td>
                       <td>✅✅</td>
-                      <td>Hoch (multilingual)</td>
+                      <td>High (multilingual)</td>
                     </tr>
                   </tbody>
                 </table>
@@ -538,18 +538,18 @@ export default function NLPAnalysisPanel({ initialText }) {
             <div className="nlp-tab-content">
               <div className="lm-stats-row">
                 <div className="lm-stat-card">
-                  <span>Trainierungssequenzen</span>
+                  <span>Training Sequences</span>
                   <strong>{lm.trained_on_sequences}</strong>
                 </div>
                 <div className="lm-stat-card">
-                  <span>Bigram Perplexität (Train)</span>
+                  <span>Bigram Perplexity (Train)</span>
                   <strong>{lm.bigram_perplexity_self ?? "—"}</strong>
                 </div>
               </div>
               <p className="muted" style={{ fontSize: "0.82rem", marginBottom: "0.5rem" }}>
-                Das N-Gram-Sprachmodell ist über alle Glossen-Sequenzen aus dem
-                DGS-Korpus trainiert (Laplace-Smoothing). Niedrige Perplexität
-                bedeutet bessere Vorhersage der Zeichenabfolge.
+                The N-gram language model is trained on all gloss sequences from the
+                DGS corpus (Laplace smoothing). Lower perplexity means better
+                prediction of sign sequence.
               </p>
 
               <div className="ngram-tables-row">
@@ -564,10 +564,10 @@ export default function NLPAnalysisPanel({ initialText }) {
                   (count(w_{"{n-1}"}) + |V|)
                 </p>
                 <p className="muted">
-                  Smoothing verhindert Zero-Probability für ungesehene N-Gramme.
-                  Kandidaten-Übersetzungen werden mit dem Bigram-LM bewertet —
-                  die Sequenz mit dem höchsten Log-Wahrscheinlichkeitswert wird
-                  als "flüssigste" DGS-Abfolge gewählt.
+                  Smoothing prevents zero probability for unseen N-grams.
+                  Candidate translations are evaluated with the bigram LM —
+                  the sequence with the highest log-probability score is chosen
+                  as the "most fluent" DGS sequence.
                 </p>
               </div>
             </div>
