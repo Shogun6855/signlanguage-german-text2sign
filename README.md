@@ -102,8 +102,17 @@ Open `http://localhost:5173` in your browser.
    - Scrubber — drag to any frame
    - Frame counter — shows current / total frames
 
-### Supported input
-The system fuzzy-matches your input to one of **105 German sentences** from the DGS-Korpus sample recording. See [`german_sentences.md`](german_sentences.md) for the full list.
+### Live Sign Recognition → Sentence Prediction
+
+Open the **Live-Erkennung** tab:
+1. Click **▶ Start Camera & Begin Recognition** (or upload a video file).
+2. Hold signs in front of the camera — detected glosses appear as chips in the *Detected Gloss Sequence* strip.
+3. Once the strip contains at least one gloss, click **🔤 Predict German Sentence**.
+4. The system queries `POST /api/gloss_to_sentence` and shows:
+   - **Predicted sentence** (corpus retrieval when Jaccard ≥ 25%, word reconstruction otherwise)
+   - **Match confidence** and **method badge** (📚 Retrieval / 🔧 Reconstruction)
+   - **Gloss → Word mapping** table
+   - **Top-3 nearest corpus segments**
 
 ---
 
@@ -138,9 +147,10 @@ Requires `dataset/1413451-11105600-11163240_1a1.mp4` to be present.
 
 ## Known Limitations
 
-- Only 105 sentences from a single DGS-Korpus recording — unmatched input falls back to the closest token match.
+- Only 460 segments from multiple DGS-Korpus recordings — unmatched input falls back to the closest token match.
 - Lower-body joints are partially detected in some segments (upper-body filming angle).
-- Only one segment plays at a time — multi-gloss chaining is not yet implemented.
+- Gloss-to-sentence prediction uses Jaccard set similarity; accuracy improves when the signer uses glosses that appear in the training corpus.
+- Live recognition accuracy depends on lighting and sign clarity — hold each sign steady for ∼ 0.5 s.
 
 ---
 

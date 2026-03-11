@@ -316,3 +316,36 @@
   3. Mode badge: blue "Gloss-Ebene" or orange "Segment-Ebene".
 - Result: "Wie mein Leben aussieht?" -> 5 glosses -> 43 frames / 0.9s
   (was 97 frames / 1.9s full-segment before).
+
+### Step 10 — Gloss-to-Sentence Prediction from Live Recognition (March 11, 2026)
+
+**Status:** Completed
+
+#### 10a — Backend: `POST /api/gloss_to_sentence`
+- New Pydantic models `GlossToSentenceRequest` / `GlossToSentenceResponse` in `backend/src/main.py`.
+- New endpoint inside `create_app()` that converts a recognized gloss sequence into a proper German sentence using a **two-tier strategy**:
+  1. **Retrieval** — normalizes each input gloss (strips `*`, `^`, `$` variant markers), then computes Jaccard set-similarity against every segment in `segments_manifest.json`. If best score ≥ 25%, returns that segment's German text.
+  2. **Reconstruction** (fallback) — maps each gloss to the most frequently co-occurring German word in the corpus (built from paired segment gloss/text data), joins them into a readable sentence.
+- Response fields: `predicted_sentence`, `confidence`, `method` (`"retrieval"` | `"reconstruction"`), `top_matches` (top-3 nearest segments), `gloss_word_map` (per-gloss `{gloss, normalized, word}`), `reconstruction`.
+- Helper functions (all inside `create_app()` closure):
+  - `_norm_gloss(g)` — strips DGS variant suffixes/prefixes.
+  - `_gloss_to_lemma(g)` — converts a gloss label to a human-readable German word fragment.
+  - `_load_manifest_segments()` — lazy-loads and caches the segment manifest for fast lookup.
+  - `_build_gloss_word_map(manifest)` — builds reverse index: normalized_gloss → list of co-occurring German words.
+
+#### 10b — Frontend: sentence prediction UI in `WebcamRecognition.jsx`
+- New state variables: `predicting`, `prediction`, `predError`.
+- `predictSentence()` callback: calls `POST /api/gloss_to_sentence` with the current `glossHistory`, stores response in `prediction`.
+- **"🔤 Predict German Sentence"** button appears inside the gloss history panel once ≥ 1 gloss is collected; disabled during request.
+- **Prediction result panel** shows:
+  - Predicted sentence (large, bold)
+  - Method badge (📚 Retrieval / 🔧 Reconstruction)
+  - Match confidence percentage
+  - Gloss → Word mapping (chip grid)
+  - Word-for-word reconstruction (shown as alternative when retrieval wins)
+  - Top-3 nearest corpus segments with their gloss chips and scores
+- "Clear" button inside the gloss panel resets both history and prediction.
+- State is cleared on `handleStart` and `handleModeSwitch`.
+
+#### 10c — CSS: `web/src/style.css`
+New classes added: `.predict-row`, `.btn-predict`, `.prediction-panel`, `.prediction-heading`, `.prediction-method-badge` (`.retrieval` / `.reconstruction`), `.prediction-sentence`, `.prediction-meta`, `.gloss-word-map`, `.gloss-word-map-rows`, `.gloss-word-row`, `.gwm-gloss`, `.gwm-arrow`, `.gwm-word`, `.prediction-alt`, `.top-matches`, `.top-match-row`, `.top-match-rank`, `.top-match-body`, `.top-match-german`, `.top-match-glosses`, `.top-match-score`.

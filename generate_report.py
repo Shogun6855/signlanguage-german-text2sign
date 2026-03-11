@@ -162,7 +162,8 @@ table(
         ["7","POS Tagging",        "nlp_pipeline.py  (Exercise 4)",    "HMM + Viterbi decoding on German input text"],
         ["8","Translation",        "text_to_gloss_map.py",             "German \u2192 ordered DGS gloss sequence"],
         ["9","Live Recognition",   "main.py  /ws/live_recognition",    "MediaPipe hand detection + cosine centroid matching"],
-        ["10","API & Frontend",    "main.py (FastAPI) + React/Vite",   "REST + WebSocket; 3-D skeleton animation viewer"],
+        ["10","Gloss-to-Sentence",  "main.py  /api/gloss_to_sentence",  "Recognized gloss strip \u2192 German sentence (retrieval or reconstruction)"],
+        ["11","API & Frontend",    "main.py (FastAPI) + React/Vite",   "REST + WebSocket; 3-D skeleton animation viewer"],
     ],
     widths=[0.25,1.45,2.0,2.8]
 )
@@ -550,6 +551,7 @@ table(
         ["/api/nlp/gloss_lm",        "GET",       "N-gram LM stats and top n-gram frequency tables"],
         ["/api/nlp/score_glosses",   "POST",      "Score gloss sequence with all three LM orders"],
         ["/api/nlp/pos_tables",      "GET",       "HMM transition and emission probability tables"],
+        ["/api/gloss_to_sentence",  "POST",      "Recognized gloss list \u2192 predicted German sentence (retrieval + reconstruction)"],
         ["/ws/live_recognition",     "WebSocket", "Real-time per-frame gloss recognition stream"],
     ],
     widths=[2.2,0.9,3.3]
@@ -563,14 +565,85 @@ table(
         ["App.jsx",               "Root layout; two-column grid; panel routing."],
         ["NLPAnalysisPanel.jsx",  "Text input \u2192 /api/nlp/analyze \u2192 renders tokenisation, POS table, Viterbi matrix, TF-IDF, PMI tabs."],
         ["SkeletonViewer3D.jsx",  "Renders 134-D keypoint array as animated 3-D stick figure (Three.js / React-Three-Fiber)."],
-        ["WebcamRecognition.jsx", "Live camera + video-file modes \u2192 WebSocket frame streaming \u2192 gloss chip history."],
+        ["WebcamRecognition.jsx", "Live camera + video-file modes \u2192 WebSocket frame streaming \u2192 gloss chip history \u2192 gloss-to-sentence prediction panel."],
     ],
     widths=[2.0,4.4]
 )
 body("Stack: React 18, Vite 5, Three.js, React-Three-Fiber. No UI component library.", italic=True)
 
-# ── 10. END-TO-END FLOW ───────────────────────────────────────────────────────
-h1("10.  End-to-End Data Flow  (Text-to-Sign Path)")
+# ── 10. GLOSS-TO-SENTENCE PREDICTION ─────────────────────────────────────────────────────
+h1("10.  Gloss-to-Sentence Prediction  (/api/gloss_to_sentence)")
+body(
+    "The gloss-to-sentence module closes the recognition loop: after a signer performs "
+    "a sequence of signs that are detected by the live recogniser, the accumulated gloss "
+    "history can be instantly decoded into a natural German sentence. The endpoint uses a "
+    "two-tier strategy that requires no additional model training."
+)
+h2("Request / Response")
+code(
+    'POST /api/gloss_to_sentence\n'
+    '{\n'
+    '  "glosses": ["ICH1", "LEBEN1A*", "ALLEIN1C*"]\n'
+    '}\n'
+    '\n'
+    'Response:\n'
+    '{\n'
+    '  "predicted_sentence": "Ich habe ... wenn ich allein bin ...",\n'
+    '  "confidence": 0.25,\n'
+    '  "method": "retrieval",\n'
+    '  "top_matches": [{"german_text": "...", "score": 0.25, "glosses": [...]}],\n'
+    '  "gloss_word_map": [{"gloss": "ICH1", "normalized": "ICH1", "word": "ich"}, ...],\n'
+    '  "reconstruction": "Ich Leben Allein."\n'
+    '}'
+)
+h2("Tier 1 \u2014 Corpus Retrieval (Jaccard Set Similarity)")
+body(
+    "Variant markers (* ^ $) are stripped from the input glosses and from every "
+    "corpus segment\u2019s gloss sequence to produce normalised canonical forms. "
+    "Jaccard similarity between the input set and each segment set is computed:"
+)
+code(
+    "norm(g):  strip leading '$', trailing '*' and '^'\n"
+    "\n"
+    "J(A, B) = |A \u2229 B| / |A \u222a B|\n"
+    "\n"
+    "Threshold for retrieval: J \u2265 0.25\n"
+    "Applies to all 460 corpus segments; O(N \u00d7 |input_set|) per request."
+)
+body(
+    "If the best Jaccard score meets the threshold, the matched segment\u2019s German sentence "
+    "is returned as-is. This preserves authentic DGS-phrased German from the annotated corpus."
+)
+h2("Tier 2 \u2014 Word-Level Reconstruction (Fallback)")
+body(
+    "When no segment scores \u2265 0.25, each normalised input gloss is mapped to the "
+    "most frequently co-occurring German word in the training corpus:"
+)
+bullet("For every segment, extract its German text words and pair them with the segment\u2019s glosses.")
+bullet("Accumulate word counts per normalised gloss into a reverse index.")
+bullet("For each input gloss: pick the most common word (Counter.most_common(1)).")
+bullet("Fallback if gloss has no entry: _gloss_to_lemma() strips numeric variant code and title-cases.")
+bullet("Join reconstructed words into a sentence with a trailing full stop.")
+table(
+    ["Input gloss", "Normalized", "Corpus-derived word"],
+    [
+        ["ICH1",                   "ICH1",              "ich"],
+        ["LEBEN1A*",               "LEBEN1A",           "leben"],
+        ["ALLEIN1C*",              "ALLEIN1C",          "allein"],
+        ["TAUB-GEH\u00d6RLOS1A*", "TAUB-GEH\u00d6RLOS1A", "geh\u00f6rlos"],
+    ],
+    widths=[1.8, 1.8, 2.8]
+)
+h2("Frontend Integration")
+body(
+    "The prediction feature lives entirely in the Live-Erkennung tab (WebcamRecognition.jsx). "
+    "A 'Predict German Sentence' button appears once \u22651 gloss has been appended to the history strip. "
+    "The result panel shows the predicted sentence with method badge, confidence metre, "
+    "gloss\u2192word chip grid, and the top-3 nearest corpus segments."
+)
+
+# ── 11. END-TO-END FLOW ─────────────────────────────────────────────────────
+h1("11.  End-to-End Data Flow  (Text-to-Sign Path)")
 code(
     'Input  "Ich bin taub aufgewachsen."\n'
     '   |\n'
@@ -595,14 +668,17 @@ code(
     '  SkeletonViewer3D renders animated DGS sign sequence'
 )
 
-# ── 11. DESIGN DECISIONS ──────────────────────────────────────────────────────
-h1("11.  Key Design Decisions & Limitations")
+# ── 12. DESIGN DECISIONS ─────────────────────────────────────────────────────
+h1("12.  Key Design Decisions & Limitations")
 table(
     ["Aspect","Decision","Limitation / Trade-off"],
     [
         ["Gloss recognition",
          "Zero-shot cosine similarity on time-averaged hand centroids. No classifier training.",
          "Sensitive to signer variation; centroids from a single reference signer."],
+        ["Gloss-to-sentence",
+         "Two-tier: Jaccard retrieval (\u226525%) then word-level reconstruction. No seq2seq model needed.",
+         "Jaccard threshold may miss partially-signed sequences; reconstruction ignores word order."],
         ["LM order",
          "Bigram used for re-ranking (trigram too sparse on ~700 training sequences).",
          "High perplexity on OOV gloss sequences; limited generalisation."],
@@ -626,6 +702,8 @@ table(
 )
 
 # SAVE
-out = r"d:\College\Sem 6\Lab\NLIP\Project\signlanguage-german-text2sign\DGS_Pipeline_Report.docx"
+import os as _os
+_here = _os.path.dirname(_os.path.abspath(__file__))
+out = _os.path.join(_here, "team12_project.docx")
 doc.save(out)
 print("Saved ->", out)

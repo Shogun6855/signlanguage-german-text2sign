@@ -78,10 +78,18 @@ Runs on `http://localhost:5173`
 ## API Endpoints
 
 | Method | Path | Description |
-|--------|------|-------------|
+|--------|------|--------------|
 | GET | `/api/health` | Health check |
 | POST | `/api/translate` | `{"text": "German sentence"}` → `{gloss, segments, ...}` |
 | GET | `/api/motion/{segment_id}` | Returns `{keypoints: [[134 floats]×T], fps, start_ms, end_ms}` |
+| POST | `/api/motion/by_glosses` | Gloss list → concatenated keypoint animation |
+| POST | `/api/motion/chained` | Segment IDs → chained keypoint animation |
+| POST | `/api/nlp/analyze` | Full NLP pipeline on German text |
+| GET | `/api/nlp/gloss_lm` | N-gram LM stats |
+| POST | `/api/nlp/score_glosses` | Score gloss sequence with N-gram LM |
+| GET | `/api/nlp/pos_tables` | HMM transition/emission tables |
+| **POST** | **`/api/gloss_to_sentence`** | **Recognized gloss list → predicted German sentence** |
+| WebSocket | `/ws/live_recognition` | Real-time per-frame gloss recognition |
 
 ---
 
@@ -117,7 +125,7 @@ Previously the old extractor (`extract_keypoints_for_segments.py`) used OpenPose
 - `start_ms` / `end_ms`: timestamp range in the video
 
 ### `backend/src/main.py`
-FastAPI app. `/api/translate` does fuzzy token matching against segment German texts. Returns the best matching `segment_id`. `/api/motion/{segment_id}` loads the `.npz` and returns the keypoints as JSON.
+FastAPI app. `/api/translate` does semantic sentence-embedding matching against segment German texts (falls back to Jaccard). `/api/motion/{segment_id}` loads the `.npz` and returns keypoints as JSON. **`/api/gloss_to_sentence`** converts a recognized gloss list into a German sentence via Jaccard-based corpus retrieval (≥ 25% match) or word-level reconstruction fallback.
 
 ### `web/src/SkeletonViewer3D.jsx`
 2D HTML canvas renderer. Despite the name it is **not** 3D — it was renamed from the Three.js version that was replaced. It draws:
@@ -131,10 +139,11 @@ FastAPI app. `/api/translate` does fuzzy token matching against segment German t
 ## Current State / Issues
 
 1. **Animation works**: body + both hands animate with real MediaPipe data.
-2. **Text matching is fuzzy/limited**: only 105 German sentences in the dataset. Typing anything not in the dataset returns no match. Improvement needed: better NLP matching or sentence embeddings.
-3. **Only one segment plays at a time**: segment chaining (playing multiple glosses in sequence) is not yet implemented.
-4. **`SkeletonViewer3D.jsx` is misnamed**: it is a 2D canvas component. Rename to `SkeletonViewer.jsx` if desired (update import in `App.jsx` too).
-5. **`extract_keypoints_for_segments.py`** in `backend/src/` is dead code (the old OpenPose extractor). Safe to delete.
+2. **Text matching**: sentence-transformers (multilingual-MiniLM-L12-v2) provides semantic matching; Jaccard fallback if library not installed.
+3. **Gloss-level animation**: `POST /api/motion/by_glosses` plays one clip per gloss with hold+lerp transitions.
+4. **Live recognition → sentence prediction**: `POST /api/gloss_to_sentence` converts a detected gloss strip to a German sentence (retrieval or reconstruction).
+5. **`SkeletonViewer3D.jsx` is misnamed**: it is a 2D canvas component. Rename to `SkeletonViewer.jsx` if desired (update import in `App.jsx` too).
+6. **`extract_keypoints_for_segments.py`** in `backend/src/` is dead code (the old OpenPose extractor). Safe to delete.
 
 ---
 
@@ -147,14 +156,15 @@ FastAPI app. `/api/translate` does fuzzy token matching against segment German t
 5. Wrote `extract_hands.py` for targeted per-segment MediaPipe extraction (seeks to each segment's timestamp, skips unneeded frames — much faster than full-video scan).
 6. Re-extracted all 105 segments. Example: `seg_0001` now has `lhand=3906, rhand=4074` non-zero values.
 7. Created new `.venv` inside this project folder (Python 3.10). Install with: `pip install -r backend/requirements_full.txt`.
+8. Added full NLP pipeline (Lab 1, Feature Engineering, Exercise 3, Exercise 4) in `nlp_pipeline.py`.
+9. Implemented live webcam/video recognition via WebSocket (`/ws/live_recognition`).
+10. **Implemented gloss-to-sentence prediction** (`POST /api/gloss_to_sentence`): Jaccard-based corpus retrieval with word-reconstruction fallback; full prediction result panel in `WebcamRecognition.jsx`.
 
 ---
 
 ## Next Steps (suggested)
 
-- [ ] Verify fingers render in browser after backend restart
-- [ ] Improve text→gloss matching (try sentence-transformers or spaCy similarity)
-- [ ] Chain multiple segment animations when a sentence maps to multiple glosses
 - [ ] Rename `SkeletonViewer3D.jsx` → `SkeletonViewer.jsx`
 - [ ] Remove dead code: `backend/src/extract_keypoints_for_segments.py`
+- [ ] Improve gloss-to-sentence with an n-gram LM re-ranking step over the reconstruction candidates
 - [ ] Write project report / demo for coursework submission

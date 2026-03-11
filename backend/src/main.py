@@ -47,6 +47,19 @@ class NLPAnalyzeRequest(BaseModel):
     text: str
 
 
+class GlossToSentenceRequest(BaseModel):
+    glosses: list[str]  # gloss sequence from live recognition e.g. ["ICH1", "LEBEN1A*"]
+
+
+class GlossToSentenceResponse(BaseModel):
+    predicted_sentence: str      # best-match German sentence
+    confidence: float            # Jaccard similarity of best match (0–1)
+    method: str                  # "retrieval" or "reconstruction"
+    top_matches: list[dict]      # top-3 [{german_text, score, glosses}]
+    gloss_word_map: list[dict]   # per input gloss: [{gloss, word}]
+    reconstruction: str          # simple word-for-word German reconstruction
+
+
 def _concat_with_transitions(
     clips: list,          # list of np.ndarray [T_i, 134]
     hold_frames: int = 3, # repeat last frame of each clip (natural sign hold)
@@ -266,6 +279,178 @@ def create_app() -> FastAPI:
             "transition_table": tagger.get_transition_table(),
             "emission_table": tagger.get_emission_table(top_n=8),
         }
+
+    # ── Gloss-to-Sentence prediction ─────────────────────────────────────────
+
+    import re as _re
+
+    def _norm_gloss(g: str) -> str:
+        """Strip DGS variant markers to get a canonical comparison form.
+
+        Examples:
+            SEHEN1*  → SEHEN1
+            LEBEN1A* → LEBEN1A
+            $GEST-OFF^ → GEST-OFF
+            ICH1*   → ICH1
+        """
+        g = g.strip().lstrip("$").rstrip("*^").strip()
+        return g
+
+    def _gloss_to_lemma(g: str) -> str:
+        """Convert a gloss label to a readable German word fragment.
+
+        Strips trailing numeric variant identifier (e.g. '1A', '3') and
+        title-cases the result so it looks like a German word.
+
+        Examples:
+            LEBEN1A* → Leben
+            ICH1     → Ich
+            TAUB-GEHÖRLOS1A* → Taub-Gehörlos
+        """
+        base = _norm_gloss(g)
+        # Remove trailing digit + optional letter variant code (e.g. 1, 1A, 3B)
+        base = _re.sub(r"\d+[A-Z]?$", "", base).strip("-_")
+        if not base:
+            base = _norm_gloss(g)
+        parts = base.split("-")
+        return "-".join(p.capitalize() for p in parts if p)
+
+    # Pre-build segment index for fast gloss-to-sentence retrieval
+    _manifest_segments: list[dict] = []
+    _manifest_loaded = False
+
+    def _load_manifest_segments() -> list[dict]:
+        nonlocal _manifest_segments, _manifest_loaded
+        if _manifest_loaded:
+            return _manifest_segments
+        manifest_path = backend_root / "data" / "segments_manifest.json"
+        if not manifest_path.exists():
+            _manifest_loaded = True
+            return _manifest_segments
+        raw = json.loads(manifest_path.read_text(encoding="utf-8"))
+        segs = raw if isinstance(raw, list) else raw.get("segments", [])
+        for seg in segs:
+            glosses = seg.get("gloss_sequence", [])
+            _manifest_segments.append({
+                "id": seg.get("id", ""),
+                "german_text": seg.get("german_text", ""),
+                "glosses": glosses,
+                "norm_glosses": set(_norm_gloss(g) for g in glosses),
+            })
+        _manifest_loaded = True
+        return _manifest_segments
+
+    def _build_gloss_word_map(manifest: list[dict]) -> dict[str, list[str]]:
+        """Build reverse map: normalized_gloss → list of German words from
+        paired segment texts.  Used for word-level reconstruction."""
+        import re as _re2
+        german_word_re = _re2.compile(r"[a-zA-ZäöüÄÖÜß]+")
+        result: dict[str, list[str]] = {}
+        for seg in manifest:
+            words = german_word_re.findall(seg["german_text"])
+            lower_words = [w.lower() for w in words]
+            for g in seg["glosses"]:
+                key = _norm_gloss(g)
+                if key not in result:
+                    result[key] = []
+                result[key].extend(lower_words)
+        return result
+
+    @app.post("/api/gloss_to_sentence", response_model=GlossToSentenceResponse)
+    async def gloss_to_sentence(req: GlossToSentenceRequest) -> GlossToSentenceResponse:
+        """
+        Predict a German sentence from a sequence of recognized DGS glosses.
+
+        Strategy
+        --------
+        1. Normalize each input gloss (strip variant markers).
+        2. Compute Jaccard similarity between the normalized input set and
+           every segment's normalized gloss set from the manifest.
+        3. If best Jaccard ≥ 0.25, return the matching segment's German text
+           as the predicted sentence (retrieval).
+        4. Otherwise fall back to word-for-word reconstruction using a
+           gloss→lemma mapping (reconstruction).
+        Always also returns a simple lemma-based reconstruction string and a
+        per-gloss word map.
+        """
+        manifest = _load_manifest_segments()
+        gloss_word_map_raw = _build_gloss_word_map(manifest)
+
+        input_glosses = [g.strip() for g in req.glosses if g.strip()]
+        if not input_glosses:
+            return GlossToSentenceResponse(
+                predicted_sentence="",
+                confidence=0.0,
+                method="none",
+                top_matches=[],
+                gloss_word_map=[],
+                reconstruction="",
+            )
+
+        norm_input = [_norm_gloss(g) for g in input_glosses]
+        input_set = set(norm_input)
+
+        # ── 1. Retrieval: Jaccard similarity against all manifest segments ──
+        scored: list[tuple[float, dict]] = []
+        for seg in manifest:
+            seg_set = seg["norm_glosses"]
+            if not seg_set and not input_set:
+                sim = 0.0
+            elif not seg_set or not input_set:
+                sim = 0.0
+            else:
+                sim = len(input_set & seg_set) / len(input_set | seg_set)
+            scored.append((sim, seg))
+
+        scored.sort(key=lambda x: x[0], reverse=True)
+        top3_matches = scored[:3]
+        best_score, best_seg = top3_matches[0] if top3_matches else (0.0, {})
+
+        # ── 2. Per-gloss word mapping ──────────────────────────────────────
+        from collections import Counter
+        gloss_word_entries: list[dict] = []
+        for g, ng in zip(input_glosses, norm_input):
+            candidates = gloss_word_map_raw.get(ng, [])
+            if candidates:
+                most_common_word = Counter(candidates).most_common(1)[0][0]
+            else:
+                most_common_word = _gloss_to_lemma(g).lower()
+            gloss_word_entries.append({
+                "gloss": g,
+                "normalized": ng,
+                "word": most_common_word,
+            })
+
+        # ── 3. Simple lemma reconstruction ────────────────────────────────
+        reconstruction_words = [e["word"].capitalize() for e in gloss_word_entries]
+        reconstruction = " ".join(reconstruction_words) + ("." if reconstruction_words else "")
+
+        # ── 4. Choose predicted sentence ──────────────────────────────────
+        if best_score >= 0.25 and best_seg:
+            method = "retrieval"
+            predicted = best_seg.get("german_text", reconstruction)
+        else:
+            method = "reconstruction"
+            predicted = reconstruction
+
+        top_matches_out = [
+            {
+                "german_text": s.get("german_text", ""),
+                "score": round(sc, 4),
+                "glosses": s.get("glosses", []),
+            }
+            for sc, s in top3_matches
+            if s
+        ]
+
+        return GlossToSentenceResponse(
+            predicted_sentence=predicted,
+            confidence=round(best_score, 4),
+            method=method,
+            top_matches=top_matches_out,
+            gloss_word_map=gloss_word_entries,
+            reconstruction=reconstruction,
+        )
 
     # ── WebSocket: Live sign recognition from webcam ─────────────────────────
     # Loads gloss clip keypoint centroids on first connection for fast matching.

@@ -43,6 +43,11 @@ export default function WebcamRecognition() {
   const [errorMsg, setErrorMsg] = useState("");
   const [frameCount, setFrameCount] = useState(0);
 
+  // Gloss-to-sentence prediction state
+  const [predicting, setPredicting] = useState(false);
+  const [prediction, setPrediction] = useState(null);   // GlossToSentenceResponse | null
+  const [predError, setPredError] = useState("");
+
   // ── Camera helpers ────────────────────────────────────────────────────────
   const startCamera = useCallback(async () => {
     try {
@@ -195,6 +200,28 @@ export default function WebcamRecognition() {
     );
   }, []);
 
+  // ── Gloss-to-Sentence prediction ─────────────────────────────────────────
+  const predictSentence = useCallback(async () => {
+    if (glossHistory.length === 0) return;
+    setPredicting(true);
+    setPredError("");
+    setPrediction(null);
+    try {
+      const res = await fetch("http://127.0.0.1:8000/api/gloss_to_sentence", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ glosses: glossHistory }),
+      });
+      if (!res.ok) throw new Error(`Server error ${res.status}`);
+      const data = await res.json();
+      setPrediction(data);
+    } catch (err) {
+      setPredError(`Prediction failed: ${err.message}`);
+    } finally {
+      setPredicting(false);
+    }
+  }, [glossHistory]);
+
   // ── Start / Stop ──────────────────────────────────────────────────────────
   const handleStop = useCallback(() => {
     clearInterval(timerRef.current);
@@ -213,6 +240,8 @@ export default function WebcamRecognition() {
     setConfidence(0);
     setTop3([]);
     setErrorMsg("");
+    setPrediction(null);
+    setPredError("");
 
     const ok =
       mode === "camera" ? await startCamera() : await startVideoFile();
@@ -260,6 +289,8 @@ export default function WebcamRecognition() {
       setConfidence(0);
       setTop3([]);
       setFrameCount(0);
+      setPrediction(null);
+      setPredError("");
     },
     [isRunning, handleStop]
   );
@@ -331,15 +362,6 @@ export default function WebcamRecognition() {
         ) : (
           <button className="btn-stop" onClick={handleStop}>
             ■ Stop
-          </button>
-        )}
-        {glossHistory.length > 0 && (
-          <button
-            className="btn-clear"
-            onClick={() => setGlossHistory([])}
-            style={{ marginLeft: "0.5rem" }}
-          >
-            Clear History
           </button>
         )}
       </div>
@@ -438,7 +460,97 @@ export default function WebcamRecognition() {
             ))
           )}
         </div>
+
+        {/* Predict-sentence action row */}
+        {glossHistory.length > 0 && (
+          <div className="predict-row">
+            <button
+              className="btn-predict"
+              onClick={predictSentence}
+              disabled={predicting}
+            >
+              {predicting ? "⏳ Predicting…" : "🔤 Predict German Sentence"}
+            </button>
+            <button
+              className="btn-clear"
+              onClick={() => { setGlossHistory([]); setPrediction(null); setPredError(""); }}
+            >
+              Clear
+            </button>
+          </div>
+        )}
       </div>
+
+      {/* Prediction result panel */}
+      {predError && (
+        <p className="error" style={{ marginTop: "0.5rem" }}>⚠ {predError}</p>
+      )}
+      {prediction && (
+        <div className="prediction-panel">
+          <div className="prediction-heading">
+            <span>Predicted German Sentence</span>
+            <span className={`prediction-method-badge ${prediction.method}`}>
+              {prediction.method === "retrieval" ? "📚 Retrieval" : "🔧 Reconstruction"}
+            </span>
+          </div>
+
+          <div className="prediction-sentence">{prediction.predicted_sentence}</div>
+
+          <div className="prediction-meta">
+            <span className="prediction-conf">
+              Match confidence: <strong>{Math.round(prediction.confidence * 100)}%</strong>
+            </span>
+          </div>
+
+          {/* Per-gloss word mapping */}
+          {prediction.gloss_word_map.length > 0 && (
+            <div className="gloss-word-map">
+              <div className="gloss-word-map-heading">Gloss → Word Mapping</div>
+              <div className="gloss-word-map-rows">
+                {prediction.gloss_word_map.map((entry, i) => (
+                  <div key={i} className="gloss-word-row">
+                    <span className="gwm-gloss">{entry.gloss}</span>
+                    <span className="gwm-arrow">→</span>
+                    <span className="gwm-word">{entry.word}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Simple reconstruction (always shown as alternative) */}
+          {prediction.method === "retrieval" && prediction.reconstruction && (
+            <div className="prediction-alt">
+              <span className="prediction-alt-label">Word-for-word reconstruction:</span>
+              <span className="prediction-alt-text">{prediction.reconstruction}</span>
+            </div>
+          )}
+
+          {/* Top-3 nearest segments */}
+          {prediction.top_matches.length > 0 && (
+            <div className="top-matches">
+              <div className="top-matches-heading">Top-3 Nearest Segments</div>
+              {prediction.top_matches.map((m, i) => (
+                <div key={i} className="top-match-row">
+                  <span className="top-match-rank">#{i + 1}</span>
+                  <div className="top-match-body">
+                    <div className="top-match-german">{m.german_text}</div>
+                    <div className="top-match-glosses">
+                      {m.glosses.slice(0, 6).map((g, j) => (
+                        <span key={j} className="gloss-chip" style={{ fontSize: "0.72rem" }}>{g}</span>
+                      ))}
+                      {m.glosses.length > 6 && (
+                        <span className="muted" style={{ fontSize: "0.72rem" }}>+{m.glosses.length - 6} more</span>
+                      )}
+                    </div>
+                  </div>
+                  <span className="top-match-score">{Math.round(m.score * 100)}%</span>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
 
       <p className="muted" style={{ fontSize: "0.78rem", marginTop: "0.5rem" }}>
         Recognition rate ~8 fps · Confidence threshold 60% for auto-append ·

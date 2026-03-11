@@ -156,8 +156,20 @@ The interface has three tabs:
 | Tab | What it does |
 |---|---|
 | ✍️ **Text → Gebärde** | Type German text → get gloss sequence → watch 3D skeleton animation |
-| 📷 **Live-Erkennung** | Click **Start** → sign in front of your webcam → real-time gloss recognition appears |
+| 📷 **Live-Erkennung** | Click **Start** → sign in front of your webcam → real-time gloss recognition appears; once signs are collected click **🔤 Predict German Sentence** to convert the detected gloss strip into a proper German sentence |
 | 🔬 **NLP-Pipeline** | Type any German sentence → see all NLP stages: tokenization, POS tags, TF-IDF, N-gram LM |
+
+### Live recognition → sentence prediction
+
+After at least one gloss appears in the *Detected Gloss Sequence* strip, a **🔤 Predict German Sentence** button appears. Clicking it calls the backend and shows:
+
+| Field | Description |
+|---|---|
+| Predicted sentence | Best-matching German sentence from the corpus |
+| Match confidence | Jaccard set-similarity between your glosses and the nearest corpus segment |
+| Method badge | 📚 Retrieval (corpus match ≥ 25%) or 🔧 Reconstruction (word-for-word fallback) |
+| Gloss → Word map | Per-gloss mapping to the most frequent co-occurring German word |
+| Top-3 segments | The three nearest corpus segments with their gloss sequences |
 
 ---
 
@@ -178,6 +190,11 @@ curl -s http://127.0.0.1:8000/api/nlp/gloss_lm | python -m json.tool
 curl -s -X POST http://127.0.0.1:8000/api/translate \
   -H "Content-Type: application/json" \
   -d '{"text": "Wie geht es Ihnen?"}' | python -m json.tool
+
+# Predict German sentence from a recognized gloss sequence
+curl -s -X POST http://127.0.0.1:8000/api/gloss_to_sentence \
+  -H "Content-Type: application/json" \
+  -d '{"glosses": ["ICH1", "LEBEN1A*", "ALLEIN1C*"]}' | python -m json.tool
 ```
 
 Interactive API docs: **http://127.0.0.1:8000/docs**
@@ -200,6 +217,8 @@ Produces `team12_project.docx` in the repo root.
 | Problem | Fix |
 |---|---|
 | `ModuleNotFoundError: No module named 'src'` | Make sure you run uvicorn **from inside the `backend/` directory** |
+| Prediction returns empty sentence | Ensure `segments_manifest.json` is present and non-empty; restart the backend |
+| Method shows "Reconstruction" instead of "Retrieval" | The detected gloss sequence has < 25% Jaccard overlap with any corpus segment — sign more deliberately or for longer |
 | `npm: cannot be loaded` (PowerShell) | Run `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser` as admin, or use `node "C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js" run dev` |
 | Backend port 8000 already in use | `lsof -ti:8000 \| xargs kill` (macOS/Linux) or `netstat -ano \| findstr :8000` then `taskkill /PID <pid> /F` (Windows) |
 | Webcam not detected | Grant camera permission in your browser; only one app can use the webcam at a time |
@@ -220,7 +239,7 @@ signlanguage-german-text2sign/
 │   │   ├── segments_manifest.json
 │   │   └── motion/seg_XXXX.npz   ← 460 keypoint clip files
 │   └── src/
-│       ├── main.py               ← FastAPI app + all endpoints
+│       ├── main.py               ← FastAPI app + all endpoints (incl. /api/gloss_to_sentence)
 │       ├── nlp_pipeline.py       ← Lab1 + Feature Eng + Ex3 + Ex4
 │       └── text_to_gloss_map.py  ← German text → DGS gloss mapper
 ├── web/
@@ -229,7 +248,8 @@ signlanguage-german-text2sign/
 │       ├── App.jsx               ← 3-tab shell
 │       ├── SkeletonViewer3D.jsx  ← Three.js animation viewer
 │       ├── WebcamRecognition.jsx ← Live sign recognition UI
-│       └── NLPAnalysisPanel.jsx  ← NLP pipeline visualisation
+│       ├── NLPAnalysisPanel.jsx  ← NLP pipeline visualisation
+│       └── WebcamRecognition.jsx ← Live recognition + gloss-to-sentence prediction
 ├── generate_report.py            ← Generates team12_project.docx
 └── QUICKSTART.md                 ← This file
 ```
